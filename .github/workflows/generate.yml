@@ -66,6 +66,7 @@ jobs:
             Resources/SharedMaps \
             Resources/Maps/_Mono/Shuttles \
             Resources/Maps/_Exodus/Shuttles \
+            Resources/Maps/_Exodus/ShuttleEvent \
             Resources/Maps/Shuttles
           do
             if [ -d "$dir" ]; then
