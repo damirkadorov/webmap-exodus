@@ -114,6 +114,10 @@ jobs:
           else
             find "${map_images_dirs[@]}" -name "*.png" -type f -exec cp -t current-repo/static/ {} +
           fi
+      - name: Adjust Shuttle Groups for Eighth Fleet
+        run: |
+          # Set group to eighth_fleet for shuttles with name containing АСЗ or Азимут
+          jq '( .[] | select(.name | test("АСЗ|Азимут")) | .group ) = "eighth_fleet"' current-repo/src/lib/data/shuttles.json > tmp.json && mv tmp.json current-repo/src/lib/data/shuttles.json
 
       - name: Commit and push
         run: |
