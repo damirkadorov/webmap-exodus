@@ -1,6 +1,9 @@
 import adapter from '@sveltejs/adapter-static';
 import configJson from './config.json' with { type: 'json' };
 
+const isVercel = Boolean(process.env.VERCEL);
+const isProd = process.env.NODE_ENV === 'production';
+
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	compilerOptions: {
@@ -10,7 +13,7 @@ const config = {
 	kit: {
 		adapter: adapter(),
 		paths: {
-			base: process.env.NODE_ENV === 'production' ? `/${configJson.base_path}` : '',
+			base: isProd ? (isVercel ? '' : `/${configJson.base_path}`) : ''
 		},
 		alias: {
 			$root: process.cwd()
