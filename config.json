@@ -17,7 +17,8 @@
             "shipyard": "Гражданские",
             "sr": "Колосс-Централ",
             "ussp": "СССП",
-            "scrapyard": "Заброшенные"
+            "scrapyard": "Заброшенные",
+            "eighth_fleet": "Восьмой Экспедиционный флот"
         },
         "classes": {
             "capital": "Флагман",
@@ -69,6 +70,7 @@
         "ussp": "#FE0000",
         "shipyard": "#0B9FC0",
         "sr": "#0BC051",
-        "scrapyard": "#808080"
+        "scrapyard": "#808080",
+        "eighth_fleet": "#800080"
     }
 }
