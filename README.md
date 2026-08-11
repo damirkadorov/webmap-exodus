@@ -45,3 +45,21 @@ pnpm run build
 ```
 
 You can preview the production build with `pnpm run preview`.
+
+## Updating shuttle images
+
+The source of актуальные shuttle images is:
+- `SerbiaStrong-220/Monolith` (`master`) in `.github/workflows/generate.yml`
+
+To replace all shuttle photos using the existing flow:
+1. Run the **Generate webmap** workflow (`workflow_dispatch`) in GitHub Actions.
+2. The workflow regenerates and copies:
+   - `/home/runner/work/webmap-exodus/webmap-exodus/static/*.png`
+   - `/home/runner/work/webmap-exodus/webmap-exodus/src/lib/data/shuttles.json`
+3. Validate image links locally:
+
+```sh
+pnpm run validate:shuttle-images
+```
+
+4. Verify UI in list/card views and ensure there are no broken images.
