@@ -63,6 +63,7 @@ jobs:
           cd monolith
           map_dirs=()
           for dir in \
+            Resources/SharedMaps \
             Resources/Maps/_Mono/Shuttles \
             Resources/Maps/_Exodus/Shuttles \
             Resources/Maps/Shuttles
