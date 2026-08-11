@@ -61,7 +61,22 @@ jobs:
       - name: Run Map Renderer
         run: |
           cd monolith
-          find Resources/Maps/_Mono/Shuttles Resources/Maps/_Exodus/Shuttles -name "*.yml" -type f -exec dotnet run --project Content.MapRenderer --no-build -- {} +
+          map_dirs=()
+          for dir in \
+            Resources/Maps/_Mono/Shuttles \
+            Resources/Maps/_Exodus/Shuttles \
+            Resources/Maps/Shuttles
+          do
+            if [ -d "$dir" ]; then
+              map_dirs+=("$dir")
+            fi
+          done
+
+          if [ "${#map_dirs[@]}" -eq 0 ]; then
+            echo "No shuttle directories found, skipping renderer run"
+          else
+            find "${map_dirs[@]}" -name "*.yml" -type f -exec dotnet run --project Content.MapRenderer --no-build -- {} +
+          fi
         continue-on-error: true
 
       - name: Checkout current repo
@@ -81,8 +96,22 @@ jobs:
 
       - name: Copy generated files into current repo
         run: |
-          cp monolith/bin/Content.Server/data/vessels_data.json current-repo/src/lib/data/shuttles.json
-          find monolith/Resources/MapImages/ -name "*.png" -exec cp -t current-repo/static/ {} +
+          if [ -f monolith/bin/Content.Server/data/vessels_data.json ]; then
+            cp monolith/bin/Content.Server/data/vessels_data.json current-repo/src/lib/data/shuttles.json
+          else
+            echo "vessels_data.json not found, keeping existing shuttles.json"
+          fi
+
+          map_images_dirs=()
+          while IFS= read -r dir; do
+            map_images_dirs+=("$dir")
+          done < <(find monolith -type d -name "MapImages")
+
+          if [ "${#map_images_dirs[@]}" -eq 0 ]; then
+            echo "No MapImages directories found, skipping PNG copy"
+          else
+            find "${map_images_dirs[@]}" -name "*.png" -type f -exec cp -t current-repo/static/ {} +
+          fi
 
       - name: Commit and push
         run: |
