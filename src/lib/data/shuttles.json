@@ -6,8 +6,14 @@
     "price": 148000,
     "group": "blackmarket",
     "size": "small",
-    "classes": ["fighter", "mercenary"],
-    "engines": ["apu", "welding"],
+    "classes": [
+      "fighter",
+      "mercenary"
+    ],
+    "engines": [
+      "apu",
+      "welding"
+    ],
     "image": "/atom.png"
   },
   {
@@ -17,8 +23,12 @@
     "price": 112000,
     "group": "medical",
     "size": "small",
-    "classes": ["medical"],
-    "engines": ["ame"],
+    "classes": [
+      "medical"
+    ],
+    "engines": [
+      "ame"
+    ],
     "image": "/atom.png"
   },
   {
@@ -28,8 +38,13 @@
     "price": 176000,
     "group": "expedition",
     "size": "medium",
-    "classes": ["expedition", "cargo"],
-    "engines": ["teg"],
+    "classes": [
+      "expedition",
+      "cargo"
+    ],
+    "engines": [
+      "teg"
+    ],
     "image": "/atom.png"
   },
   {
@@ -39,8 +54,208 @@
     "price": 189000,
     "group": "nfsd",
     "size": "medium",
-    "classes": ["patrol", "detainment"],
-    "engines": ["rtg"],
+    "classes": [
+      "patrol",
+      "detainment"
+    ],
+    "engines": [
+      "rtg"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-azimuth",
+    "name": "8ЭФ Azimuth",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-concord-x",
+    "name": "8ЭФ Concord X",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-crow",
+    "name": "8ЭФ Crow",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-mantaray",
+    "name": "8ЭФ Mantaray",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-nebula",
+    "name": "8ЭФ Nebula",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-omen",
+    "name": "8ЭФ Omen",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-razorn",
+    "name": "8ЭФ Razorn",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-stratostar",
+    "name": "8ЭФ Stratostar",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-wyrm",
+    "name": "8ЭФ Wyrm",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-wyvern",
+    "name": "8ЭФ Wyvern",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-zenith",
+    "name": "8ЭФ Zenith",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-zenith-a",
+    "name": "8ЭФ Zenith A",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "eighth-zenith-e",
+    "name": "8ЭФ Zenith E",
+    "description": "Шаттл Восьмого Экспедиционного флота.",
+    "price": 150000,
+    "group": "eighth_fleet",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "apu"
+    ],
     "image": "/atom.png"
   }
 ]
