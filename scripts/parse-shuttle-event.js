@@ -60,12 +60,32 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 	const price = 0; // Eighth Fleet shuttles are not for sale
 
 	// Check if PNG file exists for this shuttle in static directory
+	// MapRenderer generates files with -0 suffix, so check both variants
+	// Also handle filename differences (underscores vs hyphens)
 	const staticDir = path.join(__dirname, '..', 'static');
 	const pngName = `${id}.png`;
+	const pngNameWithSuffix = `${id}-0.png`;
 	const pngPath = path.join(staticDir, pngName);
+	const pngPathWithSuffix = path.join(staticDir, pngNameWithSuffix);
+
+	// Also check with underscores instead of hyphens (MapRenderer preserves original filename)
+	const idWithUnderscores = id.replace(/-/g, '_');
+	const pngNameWithUnderscores = `${idWithUnderscores}.png`;
+	const pngNameWithUnderscoresAndSuffix = `${idWithUnderscores}-0.png`;
+	const pngPathWithUnderscores = path.join(staticDir, pngNameWithUnderscores);
+	const pngPathWithUnderscoresAndSuffix = path.join(staticDir, pngNameWithUnderscoresAndSuffix);
 
 	// Use shuttle-specific image if it exists, otherwise fallback to placeholder
-	const imagePath = fs.existsSync(pngPath) ? `/${pngName}` : '/atom.png';
+	let imagePath = '/atom.png';
+	if (fs.existsSync(pngPath)) {
+		imagePath = `/${pngName}`;
+	} else if (fs.existsSync(pngPathWithSuffix)) {
+		imagePath = `/${pngNameWithSuffix}`;
+	} else if (fs.existsSync(pngPathWithUnderscores)) {
+		imagePath = `/${pngNameWithUnderscores}`;
+	} else if (fs.existsSync(pngPathWithUnderscoresAndSuffix)) {
+		imagePath = `/${pngNameWithUnderscoresAndSuffix}`;
+	}
 
 	return {
 		id: `eighth-${id}`,
