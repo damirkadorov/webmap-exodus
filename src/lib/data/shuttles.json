@@ -1,67 +1,3055 @@
 [
   {
-    "id": "bt-y-atom",
-    "name": "BT-Y Atom",
-    "description": "Небольшой боевой шаттл с упором на броню и автономность.",
-    "price": 148000,
+    "id": "Comet",
+    "name": "Комета",
+    "description": "Демилитаризованный универсальный вспомогательный шаттл с экспедиционным функционалом.",
+    "price": 120000,
+    "group": "expedition",
+    "size": "large",
+    "classes": [
+      "expedition",
+      "science",
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/comet-0.png"
+  },
+  {
+    "id": "Parabellum",
+    "name": "Парабеллум",
+    "description": "Парабеллум - патрульный шаттл, созданный для сопровождения и, как несложно догадаться, для патрулирования сектора для защиты от вражеских шаттлов. Оснащён двумя АДМХ-23 Товек, а также двумя М220 Рубикон для более серьёзных столкновений.",
+    "price": 92000,
+    "group": "sr",
+    "size": "medium",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/parabellum-0.png"
+  },
+  {
+    "id": "McChicken",
+    "name": "МакЧикен",
+    "description": "Дешёвый фастфуд шаттл-ресторан. Для тех, кто любит немыслимое количество калорий - теперь прямо на лету!",
+    "price": 28875,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "civilian",
+      "kitchen"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/mcchicken-0.png"
+  },
+  {
+    "id": "Jitterbug",
+    "name": "Джиттербаг",
+    "description": "Ботанический шаттл с десятью лотками и некоторым количеством материалов для старта. Имеет уникальную форму жука - как мило.",
+    "price": 36050,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "civilian",
+      "botany"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/jitterbug-0.png"
+  },
+  {
+    "id": "Saturn",
+    "name": "Сатурн",
+    "description": "Заказан Династией Фаэтон ввиду острой необходимости в тяжёлой огневой мощи против Федерации. Уникальный шаттл, специально разработанный с учётом запросово Династии, расквартированного на Гелиосе.",
+    "price": 1540950,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "capital",
+      "destroyer",
+      "medical",
+      "chemistry",
+      "pursuit",
+      "patrol"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/saturn-0.png"
+  },
+  {
+    "id": "Reaver",
+    "name": "VG Reaver",
+    "description": "A small assualt and escort craft outsourced by the Viper Group. It was designed recently, opting for more modern forms of weaponry off the black market.",
+    "price": 61440,
+    "group": "viper",
+    "size": "small",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/reaver-0.png"
+  },
+  {
+    "id": "Spitfire",
+    "name": "Spitfire",
+    "description": "Small fighter designed with escorting larger vessels in mind, Utilzing its large amount of flares to ward off incoming missles. It is equiped with two RAC-30s and a rubicon, alongside rear mounted flare launchers.",
+    "price": 27000,
+    "group": "sr",
+    "size": "small",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/spitfire-0.png"
+  },
+  {
+    "id": "Siebel",
+    "name": "Зибель",
+    "description": "Зибель - шаттл, созданный для борьбы с химерами, однако многие используют его для экспедиционных исследований.",
+    "price": 175000,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition",
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/siebel-0.png"
+  },
+  {
+    "id": "Kortik",
+    "name": "PDV-NCI Kortik-EM",
+    "description": "A further upgrade to the Kortik-R, swapping the 2 R-300 howitzers for 2 CHARON mass drivers. FULLY UNABLE TO USE SHIELD GENERATORS.",
+    "price": 298000,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/kortik-0.png"
+  },
+  {
+    "id": "Fracture",
+    "name": "TSF-SKR Fracture",
+    "description": "A one-man ship with the armor of a brawler and the guns of a sniper. Armed with 2 220mm CYREXAs and 2 150mm TARNYXs, but no PD. Don't miss your bursts.",
+    "price": 112500,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/fracture-0.png"
+  },
+  {
+    "id": "Kalisto",
+    "name": "BT-Y Kalisto",
+    "description": "A quick and mass produced corvette, armed with 2x Palladin misile launchers in its maw and 3x DRAVON 90mm autocannons on its left side, along with some PD.",
+    "price": 120750,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "corvette"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/kalisto-0.png"
+  },
+  {
+    "id": "Autumn",
+    "name": "Аутум",
+    "description": "Грузовой шаттл дальнего следования. Грузовой отсек тяжелобронирован внутренним слоем из пластитана, а шаттл оснащён тяжёлым модулем БСС. Вооружение 4×57-мм орудия.",
+    "price": 115320,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/autumn-0.png"
+  },
+  {
+    "id": "Tarantula",
+    "name": "Тарантула",
+    "description": "Живучий шаттл, созданный для затяжных боев на ближней дистанции. Оснащён четырьмя Цербера и двумя Мародёрами, чтобы испепелять корабли противника.",
+    "price": 140850,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/tarantula-0.png"
+  },
+  {
+    "id": "Rosetta",
+    "name": "NOV-Rosetta",
+    "description": "A science vessel built by the enigmatic \"System\" the Rosetta model is a heavy duty, yet luxurious xenoarcheological ship. A hulking laboratory with enough firepower to persuade the undesired (and stationary) \"customer\" to leave.",
+    "price": 99000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "science"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/Rosetta-0.png"
+  },
+  {
+    "id": "Medicus",
+    "name": "Медикус",
+    "description": "Надёжный медицинский шаттл, оснащённый криокапсулой, ботаническим отсеком, химической лабораторией и рабочим местом для парамедиков.",
+    "price": 76500,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "medical",
+      "chemistry",
+      "botany"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/medicus-0.png"
+  },
+  {
+    "id": "SentinelF",
+    "name": "Центинел-Ф",
+    "description": "Корвет с пушками Cerberus и Dravon, 20-мм L85, RAC-30 и сервером артиллерийского управления High.",
+    "price": 210200,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/sentinel_f-0.png"
+  },
+  {
+    "id": "Venom",
+    "name": "VG Venom",
+    "description": "A medium sized destroyer with detainment capabilities. Armed with a Cyrex as its main cannon, 4 Dravon 90mm autocannons and 2 AK57 for maximum destruction",
+    "price": 120000,
+    "group": "viper",
+    "size": "medium",
+    "classes": [
+      "destroyer",
+      "detainment"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/venom-0.png"
+  },
+  {
+    "id": "Eris",
+    "name": "PDV Eris",
+    "description": "A small, run down vessel designed for material aquisition and cargo hauling around the sector.",
+    "price": 85500,
     "group": "blackmarket",
     "size": "small",
     "classes": [
-      "fighter",
-      "mercenary"
+      "pirate"
     ],
     "engines": [
-      "apu",
-      "welding"
+      "bananium"
     ],
-    "image": "/atom.png"
+    "image": "/eris-0.png"
   },
   {
-    "id": "msc-lyra",
-    "name": "MSC Lyra",
-    "description": "Медицинский шаттл для выездных операций и стабилизации экипажа.",
+    "id": "Tayfun",
+    "name": "Тайфун",
+    "description": "Бронированный шаттл с четырьмя 90-мм орудиями, двумя 30-мм орудиями и двумя ракетными установками Веспера.",
+    "price": 74200,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/tayfun-0.png"
+  },
+  {
+    "id": "Balor",
+    "name": "Z-22 Balor",
+    "description": "Directly translated to the common tongue, the 'Evil Eye' is a drone hunter, meant to patrol the deep periphery until its prey reveals itself, then parks and unleashes its malicious intent. EVA is required to access the core.",
+    "price": 188000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "patrol",
+      "capital"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/balor-0.png"
+  },
+  {
+    "id": "QJ490",
+    "name": "КД-490",
+    "description": "Оснащён четырьмя орудиями Тип-54С и малым малым боевым отсеком вооружения.",
+    "price": 36500,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/qj490-0.png"
+  },
+  {
+    "id": "Hermes",
+    "name": "Гермес",
+    "description": "Почтовый многофункциональный служебный шаттл, спроектированный с приоритетом его скорости в ушерб некоторых других элементов. Разработан и произведён Пантеон Коллектив.",
+    "price": 37500,
+    "group": "sr",
+    "size": "small",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/hermes-0.png"
+  },
+  {
+    "id": "Sirius",
+    "name": "Сириус",
+    "description": "Экспедиционный шаттл, оснащённый четырьмя 57-мм орудиями, двумя 90-мм орудиями и полным коплектом химического оборудования.",
+    "price": 80750,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/sirius-0.png"
+  },
+  {
+    "id": "Magus",
+    "name": "Магус",
+    "description": "Экспедиционный шаттл, на удивление имеющий много медицинского оборудования для своего вида.",
+    "price": 69420,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/magus-0.png"
+  },
+  {
+    "id": "Victoria",
+    "name": "Виктория",
+    "description": "Переработанный шаттл неизвестного производителя, переоборудованный для ксеноархеологии, но сохранивший некоторые свои добывающие и утилизаторские способности.",
+    "price": 60000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "science",
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/victoria-0.png"
+  },
+  {
+    "id": "Manus",
+    "name": "Манус",
+    "description": "Корабль в форме когтя с внушительным вооружением. Имеет четыре АОЭД-7 Дравона, два АСМ-302 Ванека и один ЭМИ ОАД-31 Тарникс.",
+    "price": 62125,
+    "group": "sr",
+    "size": "medium",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/manus-0.png"
+  },
+  {
+    "id": "ZephyrEC",
+    "name": "TSF-SKR Zephyr-EC",
+    "description": "A Zephyr w/ an TSFN-EC overhaul package, converting it into a light unmanned drone.",
+    "price": 19600,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/zephyr_ec-0.png"
+  },
+  {
+    "id": "Jaguar",
+    "name": "TSF-SKR Jaguar",
+    "description": "A support fighter to assist other ships in combat, armed with TARYNX EMP cannon for disabling ships and 4 L-1 phalanxes to shred anything that gets too close.",
+    "price": 58500,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/jaguar-0.png"
+  },
+  {
+    "id": "Pillbox",
+    "name": "Пилюля",
+    "description": "Модифицированная версия шаттла Вынос, превращённый из уютного ресторанчика в передвижную аптеку и бар, со всем необходимым для химика, желающего сбывать свои товары. Солнечные панели сняты, а генератор заменён на термоядерный реактор.",
+    "price": 91000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/pillbox-0.png"
+  },
+  {
+    "id": "Mock",
+    "name": "Мак",
+    "description": "Легкобронированный дрон, оснащённый двумя 90-мм автопушками для подавления целей и уничтожения вражеских истребителей.",
+    "price": 13500,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/mock-0.png"
+  },
+  {
+    "id": "Aldebaran",
+    "name": "Альдебаран",
+    "description": "Корвет с усиленным носовым вооружением, оснащённый двумя Цирексами для боя на дальних дистанциях и ракетами для тяжёлых целей и ближнего боя.",
+    "price": 160200,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/aldebaran-0.png"
+  },
+  {
+    "id": "Odenta",
+    "name": "Одента",
+    "description": "Одента - тяжелобронированный медицинский шаттл, созданный для спасательных операций и медицинской работы в условиях высокого риска. Вооружён сдвоенными лазерными пушками Прометей, одной 255-мм пушкой «Бофорс», 30-мм пушкой «Драупнир», 20-мм пушкой и зенитными лазерами для защиты бортового химического отсека и криогенного комплекса.",
     "price": 112000,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "medical",
+      "chemistry",
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/odenta-0.png"
+  },
+  {
+    "id": "Scarab",
+    "name": "Скарабей",
+    "description": "Тяжеловооружённый эскорт Династии Фаэтон, рассчитанный на длительные боевые вылеты.",
+    "price": 300000,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/scarab-0.png"
+  },
+  {
+    "id": "Sellsword",
+    "name": "Селлсворд",
+    "description": "Шаттл сопровождения, представляющий собой клаустрофобический гроб из литого пластитана, внутри которого размещены 255-мм орудие и Вспеоа. Ожидаемая продолжительность жизни шаттла в бою - 4 минуты.",
+    "price": 56000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/sellsword-0.png"
+  },
+  {
+    "id": "Gruznyk",
+    "name": "Грузчик",
+    "description": "Тесный грузовой шаттл СССП, используемый для перевозки легальных и нелегальных грузов. Оснащён лёгким вооружением и бронёй, а также модулем БСС. Рекомендуемый размер экипажа - 1–3 человека. Произведён Народным производственным союзом.",
+    "price": 64200,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "cargo",
+      "patrol"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/gruznyk-0.png"
+  },
+  {
+    "id": "Notch",
+    "name": "Нотч",
+    "description": "Небольшой утилизаторский шаттл с самым необходимым для любого начинающего старателя в секторе. Быстрый и компактный. Гордая часть коллекции гражданских космических кораблей Дрэйк Индастрис.",
+    "price": 25900,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/notch-0.png"
+  },
+  {
+    "id": "Ample",
+    "name": "Эмпл",
+    "description": "Лёгкий шахтёрский шаттл, использующий для работы PTK-800.",
+    "price": 6250,
+    "group": "custom",
+    "size": "micro",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/ample-0.png"
+  },
+  {
+    "id": "Littora",
+    "name": "Литтора",
+    "description": "Экспедиционный шаттл среднего-крупного размера с утилизаторским оборудованием.",
+    "price": 76000,
+    "group": "expedition",
+    "size": "large",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/littora-0.png"
+  },
+  {
+    "id": "Enceladus",
+    "name": "Энцелад",
+    "description": "Корвет Династии Фаэтон с 220-мм «Тифоном», 30-мм РАК-30 и системой вспышек. Универсальный боевой корабль для сопровождения и патруля.",
+    "price": 165000,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/enceladus-0.png"
+  },
+  {
+    "id": "Trilobit",
+    "name": "Трилобит",
+    "description": "Трилобит представляет собой массивный корабль для дальних экспедиций. Оснащен полным спектром автономных систем жизнеобеспечения, навигации и защиты, позволяющим экипажу годами существовать в изоляции без внешней поддержки.",
+    "price": 314159,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "expedition"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/trilobit-0.png"
+  },
+  {
+    "id": "Kunai",
+    "name": "Кунай",
+    "description": "Высококлассный боевой корвет, легально утилизированный и теперь продающийся в секторе. Вооружён четырьмя 30-мм, двумя 20-мм, одной торпедной установкой и одним 50-мм орудием АК. Включает небольшой медицинский отсек и жилые помещения с камбузом для длительных патрулей. Оснащён модулем БСС.",
+    "price": 130700,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/kunai-0.png"
+  },
+  {
+    "id": "Twilight",
+    "name": "Сумрак",
+    "description": "Небольшой, быстрый прыжковый грузовой шаттл с лёгким кормовым оборонительным вооружением.",
+    "price": 50000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/twilight-0.png"
+  },
+  {
+    "id": "Tokarev",
+    "name": "Токарев",
+    "description": "Многоцелевой шаттл, который может сопровождать медицинский персонал в исследовании новых рубежей, всегда оставаясь готовым прийти на помощь нуждающимся. Имеет в своем снаряжении кинетический якорь, что может помочб вытащить и отбуксировать шаттл пострадавшего если это нужно.",
+    "price": 120000,
+    "group": "medical",
+    "size": "large",
+    "classes": [
+      "science",
+      "medical"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/tokarev-0.png"
+  },
+  {
+    "id": "Dervi",
+    "name": "Дерви",
+    "description": "Медицинский шаттл необычной формы с двумя защитными элементами. Оснащён базовым медотсеком, химической лабораторией и установкой для клонирования.",
+    "price": 64300,
     "group": "medical",
     "size": "small",
     "classes": [
       "medical"
     ],
     "engines": [
-      "ame"
+      "plasma"
     ],
-    "image": "/atom.png"
+    "image": "/dervi-0.png"
   },
   {
-    "id": "ex-vanguard",
-    "name": "EX Vanguard",
-    "description": "Экспедиционный универсал с усиленной дальностью и складом.",
-    "price": 176000,
+    "id": "Argent",
+    "name": "Аргент",
+    "description": "Списанный фрегат, полностью переоборудованный для грузовых перевозок.",
+    "price": 61150,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/argent-0.png"
+  },
+  {
+    "id": "Fenrir",
+    "name": "Фенрир",
+    "description": "Универсальный шаттл поддержки, вооружённый M381 Харон, двумя АОЭД-7 Дравон, двумя Гадюками, четырьмя 20-мм орудиями и имеющий два средних мех-ангара, способных нести мехов S2 и S1 (мехи в комплект не входят). Хорошо бронирован, но медлителен.",
+    "price": 150750,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/fenrir-0.png"
+  },
+  {
+    "id": "Tanuki",
+    "name": "Тануки",
+    "description": "Тануки - это прочный милитаризированный грузовой шаттл. С лёгко модифицируемым грузовым отсеком и усиленной бронёй, он задуман как идеальная основа (и охотник на дронов) для ополченцев и независимых пилотов. Обладает внушительной лазерной огневой мощью для своих размеров, а именно у него два лазерных орудия Прометей для эффективного огня на дальних дистанциях и три Цербера для уничтожения врагов в ближнем бою. Оснащён небольшим камбузом и медотсеком - стандарт для кораблей ополчения.",
+    "price": 115000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/tanuki-0.png"
+  },
+  {
+    "id": "Scorpion",
+    "name": "Скорпион",
+    "description": "Необычный вариант шаттла, использующий комбинацию ракетных пусковых установок и двух крупнокалиберных пушек.",
+    "price": 113200,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/scorpion-0.png"
+  },
+  {
+    "id": "Bratan",
+    "name": "Братан",
+    "description": "Передвижной ночной клуб, кафетерий, гидропоника, секретная лаборатория по производству наркотиков и контрабандный шаттл - всё в одном флаконе! Предоставлено вам Бухгалтерией.",
+    "price": 142000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "civilian",
+      "kitchen",
+      "botany"
+    ],
+    "engines": [
+      "ame",
+      "solar"
+    ],
+    "image": "/bratan-0.png"
+  },
+  {
+    "id": "Mercury",
+    "name": "TSF-SKR Mercury",
+    "description": "Naval designation Type-32D Missile Corvette. Equipped with 4 frontal facing Paladin missile pods, and some light PD in the form of 4 L85 20mms.",
+    "price": 228621,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/mercury-0.png"
+  },
+  {
+    "id": "Spekter",
+    "name": "TSF-SKR Spekter",
+    "description": "An averagely armored corvette with an armament focused on it's 3 torpedo mounts on both sides.",
+    "price": 195000,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "nfr"
+    ],
+    "image": "/spekter-0.png"
+  },
+  {
+    "id": "Intermission",
+    "name": "Антракт",
+    "description": "Большой медицинский шаттл с холлом, баром, едой и медицинскими примочками. Способен спасать жизни и утолять аппетиты - всё здесь и сразу.",
+    "price": 134750,
+    "group": "medical",
+    "size": "large",
+    "classes": [
+      "medical",
+      "chemistry",
+      "kitchen",
+      "botany"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/intermission-0.png"
+  },
+  {
+    "id": "Flyssa",
+    "name": "Флисса",
+    "description": "Передан вам, КПВ ТСФ, от Флота ТСФ. В этом шаттле - целый флот в одном.",
+    "price": 1225950,
+    "group": "security",
+    "size": "large",
+    "classes": [
+      "capital",
+      "destroyer",
+      "medical",
+      "chemistry",
+      "pursuit",
+      "patrol"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/flyssa-0.png"
+  },
+  {
+    "id": "Horsefly",
+    "name": "Слепень",
+    "description": "Лёгкий вооруженный шаттл, сваренный из металлолома шайкой безумных наёмников. Спроектирован так, чтобы сделать один выстрел и умереть. Не оснащён никакой атмосферой - берите свой скафандр.",
+    "price": 32500,
+    "group": "scrap",
+    "size": "small",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/horsefly-0.png"
+  },
+  {
+    "id": "Hound",
+    "name": "Гончая",
+    "description": "Дрон, оснащённый орудием Прометеус.",
+    "price": 35000,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/hound-0.png"
+  },
+  {
+    "id": "Antares",
+    "name": "Антарес",
+    "description": "Капитальный эсминец с ракетами Rain и Sliver, 20-мм орудиями L85, лазерными турелями и сервером артиллерийского управления Омега.",
+    "price": 1225950,
+    "group": "security",
+    "size": "large",
+    "classes": [
+      "capital",
+      "destroyer",
+      "medical",
+      "chemistry",
+      "pursuit",
+      "patrol"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/antares-0.png"
+  },
+  {
+    "id": "Windreign",
+    "name": "Виндрейн",
+    "description": "Огромный высококлассный корабль Горизонт Энерджи, созданный для длительных атмосферных работ и добычи газа. Является носителем с небольшим флотом газодобывающих и утилизаторских шаттлов. Оснащён большой роскошной зоной отдыха для экипажа. Рекомендуемый экипаж - 2–6 человек.",
+    "price": 250000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "science",
+      "atmospherics",
+      "salvage"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/windreign-0.png"
+  },
+  {
+    "id": "Zephyr",
+    "name": "Зефир",
+    "description": "Шаттл, сделанный наспех из обломков старых шаттлов.",
+    "price": 16400,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/zephyr-0.png"
+  },
+  {
+    "id": "Triage",
+    "name": "Триэйдж",
+    "description": "Чрезвычайно компактный медицинский корабль, который способен удивить своей огневой мощью.",
+    "price": 49200,
+    "group": "medical",
+    "size": "small",
+    "classes": [
+      "medical"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/triage-0.png"
+  },
+  {
+    "id": "Noble",
+    "name": "Нобл",
+    "description": "Утилизаторский шаттл, оснащённый как переработчиком металлолома, так и рудоперерабатывающим оборудованием, а также четырьмя шахтёрскими  М25. В остальном он довольно скуден, если не считать термоядерный реактор.",
+    "price": 52100,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/noble-0.png"
+  },
+  {
+    "id": "Epione",
+    "name": "Эпиона",
+    "description": "Современный военно-медицинский шаттл, предназначенный для спасательных операций и оказания медицинской помощи в самых тяжёлых условиях. Имеет на борту генератор щита MS-100 и весьма неплохое корабельное вооружение. Его задача — вытащить вас из любой беды, невзирая на угрозы.",
+    "price": 195000,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "corvette",
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/epione-0.png"
+  },
+  {
+    "id": "Sakuratsu",
+    "name": "Сакуратсу",
+    "description": "Ксеноархеологический шаттл с отдельным усиленным для этого отсеком. Также оснащён шахтёрским оборудованием.",
+    "price": 58250,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "science",
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/sakuratsu-0.png"
+  },
+  {
+    "id": "Vrikaash",
+    "name": "VOX-Vrikaash",
+    "description": "A warship produced by a Vox Arkship using debris from a battlefield. this vessel is highly unconventional, and filled with a nitrogen atmosphere. While Vox typically treat their vessels as their Kin, this one lacks any of the organic components, as it was built to be disposable. Unlike most vessels with a sensible weapons layout or doctrine, the Vrikaash places almost all of its weapons and armor on the starboard side, focusing firepower in standoff engagements.",
+    "price": 224000,
+    "group": "scrap",
+    "size": "medium",
+    "classes": [
+      "destroyer",
+      "scrapyard"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/vrikaash-0.png"
+  },
+  {
+    "id": "MClass",
+    "name": "М-Класс",
+    "description": "A large salvage carrier with space for 2 salvage microshuttles to dock.",
+    "price": 155000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/mclass-0.png"
+  },
+  {
+    "id": "Ravager",
+    "name": "Опустошитель",
+    "description": "Большой материнский корабль безопасности класса, созданный для быстрой нейтрализации угроз гражданам.",
+    "price": 875800,
+    "group": "sr",
+    "size": "large",
+    "classes": [
+      "science",
+      "capital"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/ravager-0.png"
+  },
+  {
+    "id": "Kestrel",
+    "name": "Кестрель",
+    "description": "Небольшой научный шаттл с возможностью БСС скачка, предназначенный для длительных изучений. Оснащён жилым отсеком и неплохим оборонительным вооружением для своих размеров, хотя манёвренность из-за этого оставляет желать лучшего.",
+    "price": 57500,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "science"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/kestrel-0.png"
+  },
+  {
+    "id": "Ethereal",
+    "name": "Эзериал",
+    "description": "Научный шаттл в форме бабочки. Оснащён помещениями для ботаники и исследования артефактов, а также химической лабораторией. Имеет бассейн и бар.",
+    "price": 120000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "science"
+    ],
+    "engines": [
+      "ame",
+      "solar"
+    ],
+    "image": "/ethereal-0.png"
+  },
+  {
+    "id": "Hunter",
+    "name": "Охотник",
+    "description": "Дешёвый бронированный шаттл, вооружённый четырьмя 90мм орудиями.",
+    "price": 50000,
+    "group": "syndicate",
+    "size": "small",
+    "classes": [
+      "syndicate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/hunter-0.png"
+  },
+  {
+    "id": "Hazel",
+    "name": "Хейзел",
+    "description": "Маленький, тесный шаттл, оснащённый синдикатской трёхствольной 220-мм батареей и двумя АСМ-302 Ванек. Хорошо бронирован для своих размеров. Не имеет модуля БСС. Дешёвый вариант, но надёжность при этом вызывает вопросы.",
+    "price": 67000,
+    "group": "blackmarket",
+    "size": "small",
+    "classes": [
+      "pirate",
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/hazel-0.png"
+  },
+  {
+    "id": "Carrion",
+    "name": "Керрион",
+    "description": "Истребитель, вооружённый четырьмя 90-мм Дравонами и малым боевым отсеком вооружения. Создан для разведки и скоротечных боёв на больших скоростях.",
+    "price": 29000,
+    "group": "blackmarket",
+    "size": "small",
+    "classes": [
+      "pirate",
+      "fighter"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/carrion-0.png"
+  },
+  {
+    "id": "Molotok",
+    "name": "М-Молот",
+    "description": "Таран с широким наконечником, подходящий для стыковочного порта Ледокола.",
+    "price": 60000,
+    "group": "custom",
+    "size": "large",
+    "classes": [],
+    "engines": [],
+    "image": "/molotok-0.png"
+  },
+  {
+    "id": "Serkesh",
+    "name": "Серкеш",
+    "description": "Железный кулак Корсаров Красного Паруса. Не самый большой, не самый страшный и уж точно не самый быстрый. Собран в захолустных портах галактики по наполовину сгоревшим и наполовину утерянным чертежам Андромеды - когда как Серкеш - дитя-франкенштейн. Он некрасив, не умеет показывать фокусы, но своё дело делает. Вооружённая тяжёлым баллистическим оружием, эта тяжелобронированная машина способна обмениваться ударами с любым шаттлом на коротких и средних дистанциях.",
+    "price": 262000,
+    "group": "scrap",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "scrapyard"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/serkesh-0.png"
+  },
+  {
+    "id": "Shareholder",
+    "name": "Пайщик",
+    "description": "Дешёвый и доступный утилизаторский шаттл, который оснащён удобной гостиной в ущерб всему остальному (на остальное бюджета просто не хватило).",
+    "price": 19000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/shareholder-0.png"
+  },
+  {
+    "id": "twilightmk2",
+    "name": "Сумрак М2",
+    "description": "Шаттл, переоборудованный сомнительными методами в боеспособный корабль. В основном используется отчаявшимися или экономными.",
+    "price": 59000,
     "group": "expedition",
     "size": "medium",
     "classes": [
       "expedition",
+      "pursuit"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/twilightmk2-0.png"
+  },
+  {
+    "id": "Merchant",
+    "name": "МАВК Мерчант",
+    "description": "«Экспериментальный» проект гражданского звездолета, разработанный с возможностью продажи товаров в его задней части благодаря компактному складскому модулю! Просто не обращайте внимания на военную систему опознавания «свой-чужой». Предположительно изготовлен некой сомнительной оружейной корпорацией.",
+    "price": 360000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/merchant-0.png"
+  },
+  {
+    "id": "Olympus",
+    "name": "Олимп",
+    "description": "Огромный грузовой шаттл, гордость и отрада Дрейк Индастрис. Оснащён 185 квадратными метрами специального грузового пространства, модулем БСС-50, а также собственной системой щитов и обороны. В общем - всё, что нужно для бесперебойных крупных транспортных поставок.",
+    "price": 225500,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
       "cargo"
     ],
     "engines": [
-      "teg"
+      "ame"
     ],
-    "image": "/atom.png"
+    "image": "/olympus-0.png"
   },
   {
-    "id": "nfsd-warden",
-    "name": "NFSD Warden",
-    "description": "Патрульный корабль для задержаний и сопровождения конвоев.",
-    "price": 189000,
-    "group": "nfsd",
-    "size": "medium",
+    "id": "Luxury",
+    "name": "Лакшери",
+    "description": "Имперская яхта класса «Лакшери» — роскошное судно Цитадели Кхси'Ра с апартаментами, кухней, баром, генератором щита. Доступно только по ваучеру на верфи Цитадели.",
+    "price": 385000,
+    "group": "citadel",
+    "size": "large",
     "classes": [
-      "patrol",
-      "detainment"
+      "civilian",
+      "frigate"
     ],
     "engines": [
       "rtg"
     ],
-    "image": "/atom.png"
+    "image": "/luxury-0.png"
+  },
+  {
+    "id": "Sabinemk2",
+    "name": "Сабина М2",
+    "description": "Сабина М2 - боевая модификация гражданского шаттла Сабина, доработанная и переоборудованная для планетарных экспедиций. Шаттл имеет военную маркировку системы \"свой-чужой\".",
+    "price": 62000,
+    "group": "expedition",
+    "size": "large",
+    "classes": [
+      "expedition",
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/sabinemk2-0.png"
+  },
+  {
+    "id": "Akula",
+    "name": "Акула",
+    "description": "Дальнобойный шаттл СССП, предназначенный для быстрых боёв. Оснащён двумя Дравонами и модулем БСС-25.",
+    "price": 64000,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "patrol"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/akula-0.png"
+  },
+  {
+    "id": "Infiltrator",
+    "name": "Лазутчик",
+    "description": "Лёгкий фрегат Синдиката, предназначенный для нападения на вражеские станции. Вооружён до зубов ракетами и Гидрами.",
+    "price": 275000,
+    "group": "syndicate",
+    "size": "large",
+    "classes": [
+      "syndicate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/infiltrator-0.png"
+  },
+  {
+    "id": "Talon",
+    "name": "Коготь",
+    "description": "Тяжёлый перехватчик синдиката с четырьмя носовыми Клыками и двумя боковыми Гадюками.",
+    "price": 45000,
+    "group": "syndicate",
+    "size": "small",
+    "classes": [
+      "syndicate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/talon-0.png"
+  },
+  {
+    "id": "Brute",
+    "name": "Брут",
+    "description": "То, что по сути является большегрузом, отдел маркетинга Дрейк Индастрис рекламирует как новое чудо грузоперевозок. Имеет четыре слоя стен для защиты вашего драгоценного груза во время пьяного вождения.",
+    "price": 77850,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/brute-0.png"
+  },
+  {
+    "id": "Hoplite",
+    "name": "Гоплит",
+    "description": "Патрульный шаттл, предназначенный для перехвата контрабандистов и легких вражеских кораблей, оснащённый мощными двигателями и ЭМИ-орудиями. Вооружён двумя Рубиконами, двумя плазменными пульсаторами и двумя Мародёрами.",
+    "price": 78500,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol",
+      "pursuit"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/hoplite-0.png"
+  },
+  {
+    "id": "HeavensDrill",
+    "name": "Небесный Бур",
+    "description": "Крупный многоцелевой корабль для добычи, утилизации. Оснащён промышленным оборудованием, научным блоком, ядром ИИ. Снабжен тремя курсовыми Л-20 Аполлон.",
+    "price": 220000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "salvage",
+      "science",
+      "medical"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/heavensdrill-0.png"
+  },
+  {
+    "id": "StratoRat",
+    "name": "Страто-Рат",
+    "description": "Крайне простой газодобывающий шаттл. Оснащён газовой камерой на 120 КМоль и одним М25.",
+    "price": 15000,
+    "group": "custom",
+    "size": "micro",
+    "classes": [
+      "atmospherics"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/stratorat-0.png"
+  },
+  {
+    "id": "Bow-Man",
+    "name": "Z-22 Bow-Man",
+    "description": "An assault drone with a mounted 90mm autocannon for long range fire.",
+    "price": 23000,
+    "group": "custom",
+    "size": "micro",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/bowman-0.png"
+  },
+  {
+    "id": "Sentinel",
+    "name": "Центинел",
+    "description": "Бронированный корвет с двумя носовыми орудиями Бофорс, четырьмя плазменными пушками Мародёр и двумя кормовыми 20-мм орудиями Л85 для обороны.",
+    "price": 210200,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/sentinel-0.png"
+  },
+  {
+    "id": "Tumour",
+    "name": "Тумор",
+    "description": "Уродливая картофелина-носитель. Почти не имеет вооружения для самообороны, но оснащена техфаюами для поддержки своих шаттлов.",
+    "price": 68250,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "patrol"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/tumour-0.png"
+  },
+  {
+    "id": "Kuldi",
+    "name": "Мороз",
+    "description": "Оснащённый полной химической лабораторией и криокапсулой, этот корабль - хорошее решение для большинства медицинских потребностей.",
+    "price": 95000,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/kuldi-0.png"
+  },
+  {
+    "id": "Artemis",
+    "name": "Артемида",
+    "description": "Артемида - компактный шаттл-амбулатория, предназначенный для быстрой эвакуации пациентов и выхода из зоны так же быстро, как и прибыл.",
+    "price": 34000,
+    "group": "medical",
+    "size": "small",
+    "classes": [
+      "medical"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/artemis-0.png"
+  },
+  {
+    "id": "Stubby",
+    "name": "Стабби",
+    "description": "Бронированный лёгкий шаттл с минимальным медицинским оборудованием. Тесноват, но юркий и живучий, как пёс.",
+    "price": 31000,
+    "group": "medical",
+    "size": "small",
+    "classes": [
+      "medical"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/stubby-0.png"
+  },
+  {
+    "id": "Praetorian",
+    "name": "Преторианец",
+    "description": "Более компактный и продвинутый Арчер, оснащённый генератором щита, четырьмя АК570, двумя Л85 и двумя Мародёрами.",
+    "price": 101520,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/praetorian-0.png"
+  },
+  {
+    "id": "Arribane",
+    "name": "Аррибан",
+    "description": "Шаттл, специально построенный Горизонт Энерджи для атмосферных работ и добычи газа. Жилые отсеки тесные, но удобные.",
+    "price": 97500,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "atmospherics"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/arribane-0.png"
+  },
+  {
+    "id": "Inertia",
+    "name": "Инерция",
+    "description": "Шаттл с высокой манёвренностью и двумя Драупнирами для отвлечениря огня врага.",
+    "price": 15000,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "fighter",
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/inertia-0.png"
+  },
+  {
+    "id": "Tiger",
+    "name": "Тигр",
+    "description": "Списанный гоночный шаттл. Используется компанией Нова Шаркс как хотрод и как безумно быстрый грузовой шаттл.",
+    "price": 32000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/tiger-0.png"
+  },
+  {
+    "id": "Padval",
+    "name": "Падвал",
+    "description": "Падвал - это и фабрика, и магазин в одном флаконе. Шаттл предназначен для производства товаров на продажу всему сектору Колосс.",
+    "price": 79000,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/padval-0.png"
+  },
+  {
+    "id": "Talonuran",
+    "name": "VG Talonuran",
+    "description": "A small heavy support craft, comissioned by the Viper Group for fleet support. Magboots suggested.",
+    "price": 47500,
+    "group": "viper",
+    "size": "small",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/talonuran-0.png"
+  },
+  {
+    "id": "EnceladusPrime",
+    "name": "Энцелад Прайм",
+    "description": "Эсминец из семейства \"Энцеладов\": 220-мм «Тифон», 30-мм РАК-30, «Бофорс», «Товек» и система вспышек. Тяжёлый ударный эскорт Династии Фаэтон.",
+    "price": 420000,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "pursuit",
+      "destroyer"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/enceladus_prime-0.png"
+  },
+  {
+    "id": "Spyglass",
+    "name": "СпайГласс",
+    "description": "Исследовательский корабль Ульман Индастрис. Эта малютка способна заниматься ксеноархеологией - и ничем больше.",
+    "price": 47500,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "science"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/spyglass-0.png"
+  },
+  {
+    "id": "MotleyAnne",
+    "name": "Матерь Анна",
+    "description": "Шаттл поддержки, предназначенный для усиления тыла с помощью отряда мехов и дронов, платящий за это отсутвием нормального вооружения.",
+    "price": 280000,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "patrol"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/motleyanne-0.png"
+  },
+  {
+    "id": "Wolfsnake",
+    "name": "VG Wolfsnake",
+    "description": "A heavy duty artillery platform outsourced to GS. Comes with a massive cannon from the corporate wars.",
+    "price": 161093,
+    "group": "viper",
+    "size": "large",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/wolfsnake-0.png"
+  },
+  {
+    "id": "Hydra",
+    "name": "Гидра",
+    "description": "Ракетный корвет Синдиката, предназначенный для скрытных быстрых налётов и подавления противника.",
+    "price": 135000,
+    "group": "syndicate",
+    "size": "medium",
+    "classes": [
+      "syndicate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/hydra-0.png"
+  },
+  {
+    "id": "Prowler",
+    "name": "PDV Prowler",
+    "description": "A very stealth-focused craft, with special thrusters and power generation to minimize thermal signature. Guzzles plasma like a demon though. Thermal signature of about ~750m with generator on, and a visual signature of ~330m with SMES power (rated for 16 minutes).",
+    "price": 250000,
+    "group": "blackmarket",
+    "size": "small",
+    "classes": [
+      "pirate"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/prowler-0.png"
+  },
+  {
+    "id": "Fujian",
+    "name": "TSF-SKR Fujian",
+    "description": "A decently-sized escort carrier, capable of holding 4 Zephyrs or Zephyr-ECs. Carries quite a bit of armor to defend itself and its fighters.",
+    "price": 258680,
+    "group": "security",
+    "size": "large",
+    "classes": [
+      "patrol",
+      "frigate"
+    ],
+    "engines": [
+      "nfr"
+    ],
+    "image": "/fujian-0.png"
+  },
+  {
+    "id": "Taser",
+    "name": "Тазер",
+    "description": "Дрон, оснащённый ЭМИ-пусковой установкой.",
+    "price": 12500,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/taser-0.png"
+  },
+  {
+    "id": "Calypso",
+    "name": "TSF-SKR Calypso",
+    "description": "Moderately armed and (relatively) heavily armored multipurpose corvette. Armed with 2 AK-820s and 2 AK-570s for consistent damage, 4 Phalanxes for PD, and 2 ASM-220s for the biggest targets.",
+    "price": 134000,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/calypso-0.png"
+  },
+  {
+    "id": "Spica",
+    "name": "Спика",
+    "description": "Лёгкая фронтовая опора флотов ТСФ. Удивительный набор вооружения в компактном корпусе, созданный для боя с более крупными целями.",
+    "price": 117000,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol",
+      "pursuit"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/spica-0.png"
+  },
+  {
+    "id": "caracara",
+    "name": "КараКара",
+    "description": "Утилизаторский фрегат, оснащённый Аполлоном. Носовая рубка обеспечивает отличный обзор места раскопок. Включает сверхэффективный z-пинч реактор, базовый модуль БСС и компактный камбуз для долгих смен в поясе астероидов. В паре с Аполлоном три 20-мм орудия обеспечивают адекватную оборонительную мощь.",
+    "price": 71000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "salvage",
+      "frigate"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/caracara-0.png"
+  },
+  {
+    "id": "Klesh",
+    "name": "Клещ",
+    "description": "Пехотный корабль Синдиката, предназначенный для высадок на вражеские судна. Оборудован ЭМИ торпедами для выведение из строя систем противника.",
+    "price": 275000,
+    "group": "syndicate",
+    "size": "small",
+    "classes": [
+      "syndicate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/klesh-0.png"
+  },
+  {
+    "id": "Kupol",
+    "name": "М-Купол",
+    "description": "Оружейный модуль, созданный для компенсации недостаточной огневой мощи Ледокола.",
+    "price": 90000,
+    "group": "custom",
+    "size": "small",
+    "classes": [],
+    "engines": [],
+    "image": "/kupol-0.png"
+  },
+  {
+    "id": "Veska",
+    "name": "Веска",
+    "description": "Модифицированный Эмпл, из которого убрали рудодобывающее оборудование и установили лёгкое корабельное орудие.",
+    "price": 6500,
+    "group": "custom",
+    "size": "micro",
+    "classes": [
+      "pirate",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/veska-0.png"
+  },
+  {
+    "id": "Canister",
+    "name": "Канистра",
+    "description": "Газодобывающий шаттл, произведённый и введённый в эксплуатацию Горизонт Энерджи для первых шагов новых газодобытчиков в этой отрасли.",
+    "price": 33000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "atmospherics"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/canister-0.png"
+  },
+  {
+    "id": "QJ340",
+    "name": "КД-340",
+    "description": "Шаттл с усиленным носовым вооружением две Л-1 Фаланга, АСМ-302 Ванек и М220 Рубикон.",
+    "price": 33600,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/qj340-0.png"
+  },
+  {
+    "id": "Ganymede",
+    "name": "IDY Ganymede",
+    "description": "A Heavy \"frigate\" armed with 4x Hydra 220mm cannons, lots of PD, 2x Fang 90mm autocannons and some flares to top it all off!",
+    "price": 320650,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/ganymede-0.png"
+  },
+  {
+    "id": "Svinya",
+    "name": "Свинья",
+    "description": "Компактный штурмовой шаттл, усеянный малокалиберным вооружением.",
+    "price": 39000,
+    "group": "ussp",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/svinya-0.png"
+  },
+  {
+    "id": "Strayk",
+    "name": "Страус",
+    "description": "Плохо оснащённый и тесный ударный шаттл. Оснащён двумя торпедными установками и одним 30-мм орудием.",
+    "price": 45820,
+    "group": "ussp",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/strayk-0.png"
+  },
+  {
+    "id": "Antlion",
+    "name": "Муравьиный лев",
+    "description": "Добывающий дрон. По сути — кусок металла с приделанным шахтёрским орудием. Скафандр и кислород в комплект не входят.",
+    "price": 7250,
+    "group": "custom",
+    "size": "micro",
+    "classes": [
+      "fighter",
+      "salvage"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/antlion-0.png"
+  },
+  {
+    "id": "Neptune",
+    "name": "Нептун",
+    "description": "Оснащён тяжёлой лобовой бронёй, шестью тяжёлыми 90-мм орудиями Клык и двумя АСМ-220 Трезубец. Хорош для борьбы с крупными целями в лобовых столкновениях, но неспособен эффективно сражаться с юркими и мелкими целями.",
+    "price": 153555,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/neptune-0.png"
+  },
+  {
+    "id": "Promise",
+    "name": "Обещание",
+    "description": "Старая вариация медицинского корабля, относящаяся ещё к эпохе Раскола. Оснащён всем, что только можно пожелать от медицинского судна, а также просторными жилыми помещениями для экипажа на время долгих смен.",
+    "price": 106500,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/promise-0.png"
+  },
+  {
+    "id": "Takeaway",
+    "name": "Вынос",
+    "description": "Средний ботаническо-кухонный шаттл с гостевой галереей для заказов на вынос. Также есть места для питания прямо на нём.",
+    "price": 64000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "civilian",
+      "kitchen",
+      "botany"
+    ],
+    "engines": [
+      "uranium",
+      "solar"
+    ],
+    "image": "/takeaway-0.png"
+  },
+  {
+    "id": "Altair",
+    "name": "Альтаир",
+    "description": "Тяжеловооружённый фрегат с четырьмя Цирексами, лазерными орудиями и главной фишкой — рельсотроном Харон. Создан как тяжёлый фронтовой боец и основа небольшого флота.",
+    "price": 425000,
+    "group": "security",
+    "size": "large",
+    "classes": [
+      "frigate",
+      "pursuit",
+      "patrol"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/altair-0.png"
+  },
+  {
+    "id": "Mite",
+    "name": "Клещ",
+    "description": "Куча металлолома неизвестного происхождения, по-видимому, переоборудованная утилизаторами в военный шаттл с использованием утилизаторского вооружения. Был найден брошенным в космосе, а теперь его перепродают даже без минимальной подготовки.",
+    "price": 45000,
+    "group": "scrap",
+    "size": "small",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/mite-0.png"
+  },
+  {
+    "id": "Europa",
+    "name": "Европа",
+    "description": "Переоборудованный медицинский шаттл с акцентом на бортовую огневую мощь и броню.",
+    "price": 280650,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/europa-0.png"
+  },
+  {
+    "id": "Garm",
+    "name": "WEN Garm",
+    "description": "Gruff hull with 3 GPOL's and long-range Bofors artillery for station bombardments and fleet support.",
+    "price": 105200,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/garm-0.png"
+  },
+  {
+    "id": "Ocelot",
+    "name": "Оцелот",
+    "description": "Высокоманевренный корвет, предназначенный для работы в паре с \"Ягуаром\". Способен обнаруживать полностью замаскированные корабли. Вооружение: 2 плазменные рассеивающие пушки \"Цербер\", 2 плазменных автопульсатора и 2 20-мм зенитных орудия.",
+    "price": 68500,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/ocelot-0.png"
+  },
+  {
+    "id": "QJ270",
+    "name": "КД-270",
+    "description": "Оснащён двумя 57-мм орудиями и двумя малыми малыми боевыми отсеками вооружения. В отличие от других шаттлов, его корпус выполнен из пластитана вместо пластали, что обеспечивает гораздо большую защиту.",
+    "price": 30300,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/qj270-0.png"
+  },
+  {
+    "id": "Razorback",
+    "name": "TSF-SKR Razorback",
+    "description": "An experimental TSF stealth ship. Cramped as hell and unarmed, but really fucking hard to find! Guzzles fuel like a demon.",
+    "price": 250000,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/razorback-0.png"
+  },
+  {
+    "id": "Picses",
+    "name": "Пиксес",
+    "description": "Компактный, но вместительный экспедиционный шаттл, обладающий прочным корпусом. Также шаттл имеет военную систему \"свой-чужой\".",
+    "price": 77150,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/picses-0.png"
+  },
+  {
+    "id": "Drakon",
+    "name": "Дракон",
+    "description": "Быстрый боевой шаттл с довольно опасным баллистическим арсеналом орудий.",
+    "price": 85290,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/drakon-0.png"
+  },
+  {
+    "id": "Atom",
+    "name": "Атом",
+    "description": "Пока нет описания, но оно обязательно скоро появится!",
+    "price": 148000,
+    "group": "blackmarket",
+    "size": "small",
+    "classes": [
+      "pirate",
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/atom-0.png"
+  },
+  {
+    "id": "KortikR",
+    "name": "PDV-NCI Kortik-R",
+    "description": "Converted from recently purchased & outdated USSP Kortik hulls. A heavily armored frigate, with multiple layers of reinforced plastitanium hull. Comes with a full medbay & chemlab, and equipped with 2 spinal R-300s, 2 HADES, 2 CYREXA, 4 Draupnirs, 4 VESPERAs, and 4 20mms. FULLY UNABLE TO USE SHIELD GENERATORS.",
+    "price": 278000,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/kortik_t2-0.png"
+  },
+  {
+    "id": "Judiciary",
+    "name": "Судья",
+    "description": "Переоборудованное исследовательское судно, оснащённое экспедиционным и боевым оборудованием.",
+    "price": 70001,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/judiciary-0.png"
+  },
+  {
+    "id": "Layak",
+    "name": "PD-VI Layak",
+    "description": "A light escort corvette for combating light ships and incoming missiles. Outfitted with 4 DRAVONs for flak, 4 AK-570s, 2 CYREXAs, and 2 flare pods.",
+    "price": 134000,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/layak-0.png"
+  },
+  {
+    "id": "Mudskipper",
+    "name": "Мурекс",
+    "description": "Сильно модифицированный шаттл для боевого использования. Внешние слои внутренних отсеков обрушены ради дополнительного слоя брони, интерьер перестроен для установки генератора щитов, а на обшивку теперь установлены четыре Драупнира.",
+    "price": 75000,
+    "group": "scrap",
+    "size": "medium",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/mudskipper-0.png"
+  },
+  {
+    "id": "Leaf",
+    "name": "Лист",
+    "description": "Списанный военный шаттл, большая часть обшивки которого убрана, чтобы он доживал свои дни в качестве ботанического и химического судна.",
+    "price": 69500,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "botany",
+      "chemistry"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/leaf-0.png"
+  },
+  {
+    "id": "Claymore",
+    "name": "Клэймор",
+    "description": "Шаттл для полнолобовой атаки, оснащён сокрушительным носовым вооружением в ущерб всему остальному. Любой наёмник, желающий обрушить на врага мощный фронтальный залп, может использовать этот шаттл для вотворения своих фантазий.",
+    "price": 200000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "uranium",
+      "rtg"
+    ],
+    "image": "/claymore-0.png"
+  },
+  {
+    "id": "Thorax",
+    "name": "Торакс",
+    "description": "Лёгкий носитель мехов с заранее построенной фабрикой, включающая 4 различных дока для обеспечения поддержки.",
+    "price": 63450,
+    "group": "sr",
+    "size": "medium",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/thorax-0.png"
+  },
+  {
+    "id": "Tethys",
+    "name": "Тефида",
+    "description": "Медицинский шаттл Династии Фаэтона. Оснащён четырьмя 90-мм орудиями и двумя ракетными установками АДМХ-23 Товек.",
+    "price": 72000,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/tethys-0.png"
+  },
+  {
+    "id": "Tick",
+    "name": "Жук",
+    "description": "Сверхлёгкий бомбардировщик из металлолома, оснащённый малым боевым отсеком вооружения и двумя 57-мм орудиями.",
+    "price": 15000,
+    "group": "scrap",
+    "size": "small",
+    "classes": [
+      "scrapyard",
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/tick-0.png"
+  },
+  {
+    "id": "Piva",
+    "name": "Пива",
+    "description": "Небольшой, но манёвренный грузовой шаттл с боковым выходом в космос для обмена грузами в космосе без стыковки.",
+    "price": 18500,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/piva-0.png"
+  },
+  {
+    "id": "Fortunate",
+    "name": "Фортуна",
+    "description": "Будучи частым шаттлом в флотилии Всемирных Штатов Америки, Фортуна - это штурмовой шаттл, оснащённый лобовой бронёй и орудиями для пробивания корпусов. В конструкцию входит абордажный порт, позволяющий доставлять солдат к пробитому корпусу врага для подавления и уничтожения угрозы в ближнем бою.",
+    "price": 152000,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition",
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/fortunate-0.png"
+  },
+  {
+    "id": "Arkansaw",
+    "name": "Аркансоу",
+    "description": "Шаттл, используемый как транспортёр мехов с отдельными научным и добывающим отсеками, оснащённый шахтёрскими пушками. Не имеет какой либо брони. Питается от трёх соединённых между собой генераторов на бананиуме.",
+    "price": 262000,
+    "group": "expedition",
+    "size": "large",
+    "classes": [
+      "expedition",
+      "science",
+      "salvage"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/arkansaw-0.png"
+  },
+  {
+    "id": "Natisk",
+    "name": "Натиск",
+    "description": "Шаттл-танк со слоем усиленных стен под внешним корпусом, что позволяет ему выдерживать колоссальную нагрузку и использовать чудовищное количество огневой мощи.",
+    "price": 53500,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/natisk-0.png"
+  },
+  {
+    "id": "Sulak",
+    "name": "Судак",
+    "description": "Эсминец среднего размера, вооружённый Хароном для уничтожения крупных целей.",
+    "price": 142500,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/sulak-0.png"
+  },
+  {
+    "id": "Peregrine",
+    "name": "Перегрин",
+    "description": "Специализированный утилизаторский шаттл с \"вооружением\" ввиде шести шахтёрских автопульсаторов М25. Оснащён модулем БСС.",
+    "price": 59525,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/peregrine-0.png"
+  },
+  {
+    "id": "Welder",
+    "name": "Велдер",
+    "description": "Многоцелевой, утилитарный, но тесный шаттл, задуманный как универсальный инструмент для ремонта шаттлов и добычи ресурсов. Способен обнаруживать замаскированные шаттлы.",
+    "price": 78200,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol",
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/welder-0.png"
+  },
+  {
+    "id": "Hammerhead",
+    "name": "Молотоглав",
+    "description": "Многоцелевой наёмнический шаттл с вооружением из четырёх 225-мм пушек, четырёх 20-мм орудий и шести 57-мм. Немного уступает в защите полноценным военным шаттлам такого же размера.",
+    "price": 200000,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "patrol",
+      "corvette",
+      "science",
+      "salvage",
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/hammerhead-0.png"
+  },
+  {
+    "id": "Duran",
+    "name": "Дюран",
+    "description": "Экспедиционный шаттл общего назначения с дополнительным камбузом. Дешёвый, медленный, а по прочности корпуса — как хрустящий осенний лист. Но, боже, он шикарен.",
+    "price": 40600,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "expedition"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/duran-0.png"
+  },
+  {
+    "id": "Buran",
+    "name": "Буран",
+    "description": "Фрегат СССП с огромной бортовой огневой мощью и толстой бронёй. Слава великому комиссариату!",
+    "price": 320000,
+    "group": "ussp",
+    "size": "large",
+    "classes": [
+      "frigate"
+    ],
+    "engines": [
+      "nfr"
+    ],
+    "image": "/buran-0.png"
+  },
+  {
+    "id": "Phaeron",
+    "name": "Фарон",
+    "description": "Часть новой инициативы Горизонт Энерджи по добыче газа. Этот гигантский газовоз способен добывать и хранить пугающее количество газа. Идеален для добычи плазмы в секторе Колосс.",
+    "price": 52450,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "atmospherics"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/phaeron-0.png"
+  },
+  {
+    "id": "TSFNPolaris",
+    "name": "TSFN-SKR Polaris",
+    "description": "Officially designated as a Type-56D Frigate in the TSFN. Armed with a single CHARON mass driver, 6 AK820 120mm autocannons, and 2 Phalanxes for PD. Large amount of redundant electrical systems to ensure constant combat readiness, but poor rear defenses.",
+    "price": 283000,
+    "group": "security",
+    "size": "large",
+    "classes": [
+      "frigate",
+      "capital"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/polaris-0.png"
+  },
+  {
+    "id": "Sunrise",
+    "name": "Восход",
+    "description": "Шаттл оборудованный под нужды частного детектива. Оснащён набором криминалистических инструментов для расследований. Способен останавливать контрабандистов и гражданские корабли с помощью М220 Рубикон и сбегать от всего, что опаснее его самого.",
+    "price": 59000,
+    "group": "sr",
+    "size": "small",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/sunrise-0.png"
+  },
+  {
+    "id": "McChilly",
+    "name": "МакЧилли",
+    "description": "Небольшой шаттл для продажи мороженого. На случай, когда припекает, лучше всего взять... Кто это писал?",
+    "price": 17500,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "civilian",
+      "kitchen"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/mcchilly-0.png"
+  },
+  {
+    "id": "Bastion",
+    "name": "Бастион",
+    "description": "Дальнобойный шаттл, ооружённый двумя 220-мм пушками Гидра и четырьмя 57-мм автопушками АК570. Ваша задача — стоять насмерть и топить врага.",
+    "price": 95500,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/bastion-0.png"
+  },
+  {
+    "id": "Valkyrie",
+    "name": "Валькирия",
+    "description": "Древний перехватчик династии Фаэтона. Его приборы устарели, а корпус проржавел. Тем не менее, Валькирия всё ещё может соперничать с шаттлами своего класса.",
+    "price": 93950,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/valkyrie-0.png"
+  },
+  {
+    "id": "Ladya",
+    "name": "Ладья",
+    "description": "Пока нет описания, но оно обязательно скоро появится!",
+    "price": 210200,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "pursuit"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/ladya-0.png"
+  },
+  {
+    "id": "Saintie",
+    "name": "Сэнти",
+    "description": "Дорогостоящий фрегат, разработанный верфью Династии Фаэтона. Используется для стремительных атак на вражеские шаттлы.",
+    "price": 345000,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/saintie-0.png"
+  },
+  {
+    "id": "Vulture",
+    "name": "Гриф",
+    "description": "Тяжёлый утилизаторский шаттл производства \"Ульман Индастрис\", изначально созданный для добычи в глубоком космосе, но недавно был переделан под более боевые задачи и продан Династии Фаэтона. Оснащён тремя орудиями Бофорс.",
+    "price": 285580,
+    "group": "blackmarket",
+    "size": "large",
+    "classes": [
+      "pirate",
+      "frigate"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/vulture-0.png"
+  },
+  {
+    "id": "Rook",
+    "name": "Грач",
+    "description": "Хрупкий, но мощный боевой шаттл. Оснащён два Дваронами и одиночным 30мм пулемётом.",
+    "price": 15000,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/rook-0.png"
+  },
+  {
+    "id": "Pacem",
+    "name": "Пасем",
+    "description": "Патрульный артиллерийский корвет для обороны внутреннего кольца и его патрулирования. Рекомендуемый экипаж - 2 человека.",
+    "price": 220000,
+    "group": "sr",
+    "size": "medium",
+    "classes": [
+      "patrol"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/pacem-0.png"
+  },
+  {
+    "id": "Archer",
+    "name": "Арчер",
+    "description": "Боевой шаттл, оснащённый четырьмя плазменными турелями и шестью лёгкими орудиями. Корабль имеет консоль системы «свой-чужой».",
+    "price": 85200,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/archer-0.png"
+  },
+  {
+    "id": "Phantom",
+    "name": "Фантом",
+    "description": "Экспериментальный шаттл с  возможностью развития огромных скоростей. Имеет модуль БСС-25У.",
+    "price": 90000,
+    "group": "medical",
+    "size": "small",
+    "classes": [
+      "medical"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/phantom-0.png"
+  },
+  {
+    "id": "Vaquita",
+    "name": "Вакита",
+    "description": "Небольшой шаттл, оснащённый всем необходимым для оптимальной утилизации в одиночку, включая шахтёрские пульсаторы и мощные двигатели для быстрого отхода. «Добывай руду прямо из кабины, не напрягая ничего кроме пальца!» - по крайней мере, так его рекламирует Дрейк Индастрис.",
+    "price": 37900,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/vaquita-0.png"
+  },
+  {
+    "id": "Solarsail",
+    "name": "Парусник",
+    "description": "Личный транспорт и мобильный офис Коменданта.",
+    "price": 25500,
+    "group": "sr",
+    "size": "small",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/solarsail-0.png"
+  },
+  {
+    "id": "Sekunda",
+    "name": "Секунда",
+    "description": "Корабль медицинской и огневой поддержки СССП. Оснащён модулем БСС, небольшим медицинским и химическим отсеками, лёгким вооружением и тесным интерьером. Произведён народным производственным союзом.",
+    "price": 60000,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/sekunda-0.png"
+  },
+  {
+    "id": "Scallywag",
+    "name": "Пройдоха",
+    "description": "Появившийся из глубин Тесея примерно столетие назад от неизвестного создателя, Пройдоха был сделан не по чертежам, не за месяцы исследований и не трудами инженеров. Он был сделан из того, что было под рукой, и задуман как остриё копья против тех, кто пытался обдирать \"честных\" граждан, и для установления справедливости и закона - как они это сами называли.",
+    "price": 120000,
+    "group": "scrap",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "scrapyard"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/scallywag-0.png"
+  },
+  {
+    "id": "Borer",
+    "name": "Борер",
+    "description": "Разработанный мануфактурным комплекс Стальной молот и произведённый в сотрудничестве с Дрэйк Индастрис, Борер - экономичный шаттл для утилизации брошенных шаттлов.",
+    "price": 20525,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/borer-0.png"
+  },
+  {
+    "id": "Scout",
+    "name": "Скаут",
+    "description": "Компактный разведывательный шаттл, спроектированный для исследования туманностей. Четыре 30-мм турели RAC, модуль БСС, генератор щита. Оснащён медицинским отсеком и плазменным z-пинч реактором для автономного исследования.",
+    "price": 89500,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/scout-0.png"
+  },
+  {
+    "id": "Syringe",
+    "name": "Сиренж",
+    "description": "Небольшой шаттл, предназначенный для сопровождения и оказания помощи другим шаттлам ТСФ. Имеет тесный интерьер и лёгкое вооружение.",
+    "price": 58500,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "patrol"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/syringe-0.png"
+  },
+  {
+    "id": "Rig",
+    "name": "Риг",
+    "description": "Тяжёлый рудодобывающий шаттл, произведённый на верфях Дрэйк Индастрис. Способен добывать, собирать и перерабатывать материалы, превращая их в то, что требует постоянно меняющийся рынок Колоссеи. Оснащён двумя пусковыми установками для фальшфейеров для противоракетной обороны, четырьмя шахтёрскими пульсаторами и специальной системой для подачи руды прямо на встроенную конвеерную систему.",
+    "price": 104900,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/rig-0.png"
+  },
+  {
+    "id": "Ferz",
+    "name": "Ферзь",
+    "description": "Пока нет описания, но оно обязательно скоро появится!",
+    "price": 267000,
+    "group": "blackmarket",
+    "size": "small",
+    "classes": [
+      "pirate",
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/ferz-0.png"
+  },
+  {
+    "id": "Femur",
+    "name": "Фемур",
+    "description": "Фемур - шаттл среднего класса с модулем БСС, созданный Дрейк Индастрис. Спроектирован и оснащён всеми необходимыми средствами для агрессивных абордажных операций. Хотя Дрэйк Индастрис в целом известна своей политикой ненападения в секторе, недавно они начали выпускать этот агрессивный шаттл. Совет директоров не сделал о этом никаких публичных заявлений.",
+    "price": 93900,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/femur-0.png"
+  },
+  {
+    "id": "Dagger",
+    "name": "Даггер",
+    "description": "Прямо с верфей Транс-Солнечной Федерации, этот шаттл оснащён рельсотроном в качестве основного орудия для дальней огневой поддержки.",
+    "price": 120000,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "pursuit"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/dagger-0.png"
+  },
+  {
+    "id": "Sagittarius",
+    "name": "Сагиттариус",
+    "description": "Сагиттариус - старший брат Сириуса. Его фишки - более мощное вооружение и большее свободное пространства.",
+    "price": 165000,
+    "group": "expedition",
+    "size": "large",
+    "classes": [
+      "expedition",
+      "chemistry",
+      "salvage"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/sagittarius-0.png"
+  },
+  {
+    "id": "Remontnik",
+    "name": "Ремонтник",
+    "description": "Инженерно-добывающий корабль СССП, спроектированный народным производственным союзом. Оснащён модулем БСС, картошкой с маслом и алкоголем в холодильнике.",
+    "price": 102000,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "engineering",
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/remontnik-0.png"
+  },
+  {
+    "id": "Andromeda",
+    "name": "Андромеда",
+    "description": "Экспериментальный тяжёлый фрегат с мощным залповым носовым вооружением и высокой манёвренностью.",
+    "price": 320000,
+    "group": "security",
+    "size": "large",
+    "classes": [
+      "frigate"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/andromeda-0.png"
+  },
+  {
+    "id": "Baeg",
+    "name": "Баег",
+    "description": "По иронии судьбы названный так, этот шаттл крошечный, компактный и используется в основном для коротких вылазок или мелких добывающих операций КПБ... Или органиками, которые не поняли смысл названия, или просто отчаялись.",
+    "price": 6000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "civilian",
+      "salvage"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/baeg-0.png"
+  },
+  {
+    "id": "Rac-Man",
+    "name": "Z-22 Rac-Man",
+    "description": "An assault drone with two forward mounted 30mm rotary autocannons.",
+    "price": 22000,
+    "group": "custom",
+    "size": "micro",
+    "classes": [
+      "pursuit"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/racman-0.png"
+  },
+  {
+    "id": "Ledokol",
+    "name": "Ледокол",
+    "description": "Массивный шаттл, изначально созданный для тарана сквозь плотные поля обломков. Жертвует огневой мощью ради мощности двигателей.",
+    "price": 425000,
+    "group": "ussp",
+    "size": "large",
+    "classes": [
+      "capital",
+      "frigate",
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/ledokol-0.png"
+  },
+  {
+    "id": "Kopye",
+    "name": "М-Копьё",
+    "description": "Тонкий заострённый таран, подходящий для стыковочного порта Ледокола.",
+    "price": 45000,
+    "group": "custom",
+    "size": "large",
+    "classes": [],
+    "engines": [],
+    "image": "/kopye-0.png"
+  },
+  {
+    "id": "Termite",
+    "name": "Термит",
+    "description": "Альтернативная конфигурация корвета класса «Альдебаран».",
+    "price": 369000,
+    "group": "security",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/termite-0.png"
+  },
+  {
+    "id": "Velios",
+    "name": "Велиос",
+    "description": "Медицинский шаттл многофункционального назначения. Включает медотсек, криокапсулу, операционную и отсек для спасательного снаряжения. Несмотря на большие размеры и усиленные пластиатновые стены, двигатели обеспечивают достаточную скорость для быстрого реагирования на медицинские вызовы.",
+    "price": 76080,
+    "group": "medical",
+    "size": "medium",
+    "classes": [
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/velios-0.png"
+  },
+  {
+    "id": "Betelgeuse",
+    "name": "Бетельгейзе",
+    "description": "Тесный утилизаторский шаттл, работающий на надеждах и мечтах, но оснащённый одним из самых мощных шахтёрских орудий в этом секторе.",
+    "price": 43500,
+    "group": "scrap",
+    "size": "small",
+    "classes": [
+      "salvage"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/betelgeuse-0.png"
+  },
+  {
+    "id": "Shiv",
+    "name": "Шив",
+    "description": "Рабочая лошадка флота ТСФ. Оснащена исследовательским отсеком для изучения артефактов и хорошими рудодобывающими возможностями.",
+    "price": 65000,
+    "group": "security",
+    "size": "small",
+    "classes": [
+      "salvage",
+      "science"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/shiv-0.png"
+  },
+  {
+    "id": "Metis",
+    "name": "BT-Y Metis",
+    "description": "A tiny, hit and run missile corvette armed with 2x \"Vanquisher\" missile swarm racks, some PD cannons and a flare launcher to ward off missiles.",
+    "price": 79500,
+    "group": "blackmarket",
+    "size": "medium",
+    "classes": [
+      "pirate",
+      "corvette"
+    ],
+    "engines": [
+      "bananium"
+    ],
+    "image": "/metis-0.png"
+  },
+  {
+    "id": "Spessbite",
+    "name": "Спексбит",
+    "description": "Фудтрак, оснащённый всевозможными удобствами, втиснутыми в почти клаустрофобический интерьер. Зато очень уютно.",
+    "price": 35000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "civilian",
+      "kitchen",
+      "botany"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/spessbite-0.png"
+  },
+  {
+    "id": "Snakelet",
+    "name": "Змеёныш",
+    "description": "Дрон с усиленным носовым вооружением и малым боевым отсеком вооружения с ручной перезарядкой. Предназначен для быстрых бомбардировочных ударов.",
+    "price": 20000,
+    "group": "custom",
+    "size": "small",
+    "classes": [
+      "pursuit",
+      "fighter"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/snakelet-0.png"
+  },
+  {
+    "id": "Zeros",
+    "name": "Зерос",
+    "description": "Шаттл-закусочная, стилизованный под тягач с полуприцепом. Имеет обеденный зал с доступом из открытого космоса и небольшой грузовой отсек.",
+    "price": 112500,
+    "group": "shipyard",
+    "size": "large",
+    "classes": [
+      "civilian",
+      "kitchen",
+      "botany"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/zeros-0.png"
+  },
+  {
+    "id": "Tzipora",
+    "name": "Тзипора",
+    "description": "Продвинутый медицинский шаттл, оснащённый криокапсулой, химической лабораторией и другим хирургическим оборудованием.",
+    "price": 145530,
+    "group": "medical",
+    "size": "large",
+    "classes": [
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/tzipora-0.png"
+  },
+  {
+    "id": "Plutomkii",
+    "name": "Плутон М2",
+    "description": "Лёгкий грузовой скоростной шаттл производства Дрейк Индастрис. Замена легендарному Плутону. Превосходит своего предшественника по всем параметрам, а именно у него больший грузовой отсек, более прочный корпус, выше максимальная скорость и более обтекаемый дизайн.",
+    "price": 32900,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "cargo"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/plutomkii-0.png"
+  },
+  {
+    "id": "Framework",
+    "name": "Остов",
+    "description": "Самая дешёвая груда металлолома в этом секторе. Не создана для долгой жизни, но может стать кем угодно.",
+    "price": 10000,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "civilian",
+      "cargo"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/framework-0.png"
+  },
+  {
+    "id": "skelraak",
+    "name": "VOX-Skelraak",
+    "description": "An imposing near-capital warship of Vox design - Featuring a nitrogen atmosphere. It comes equipped with a dizzying array of weaponry, centered around a spinally mounted Leviathan Siege Cannon. It struggles when used outside of fleet engagements, as Vox raiding fleets typically include countless escorts - A ship of this class is reserved for experienced Vox captains.",
+    "price": 376500,
+    "group": "scrap",
+    "size": "large",
+    "classes": [
+      "frigate",
+      "scrapyard"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/skelraak-0.png"
+  },
+  {
+    "id": "Bucket",
+    "name": "Бакет",
+    "description": "Шаттл, используемый уборщиками для выполнения их работы.",
+    "price": 18000,
+    "group": "sr",
+    "size": "micro",
+    "classes": [
+      "civilian"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/bucket-0.png"
+  },
+  {
+    "id": "Iapetus",
+    "name": "Ипетус",
+    "description": "Стандартный шаттл для ксеноархеологии с минимальным вооружением.",
+    "price": 36900,
+    "group": "shipyard",
+    "size": "small",
+    "classes": [
+      "science"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/iapetus-0.png"
   },
   {
     "id": "eighth-azimuth",
