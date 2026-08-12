@@ -76,7 +76,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/azimuth.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-concord-x",
@@ -91,7 +91,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/concord-x.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-crow",
@@ -106,7 +106,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/crow.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-mantaray",
@@ -121,7 +121,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/mantaray.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-nebula",
@@ -136,7 +136,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/nebula.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-omen",
@@ -151,7 +151,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/omen.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-razorn",
@@ -166,7 +166,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/razorn.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-stratostar",
@@ -181,7 +181,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/stratostar.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-wyrm",
@@ -196,7 +196,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/wyrm.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-wyvern",
@@ -211,7 +211,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/wyvern.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-zenith",
@@ -226,7 +226,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/zenith.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-zenith-a",
@@ -241,7 +241,7 @@
     "engines": [
       "apu"
     ],
-    "image": "/zenith-a.png"
+    "image": "/atom.png"
   },
   {
     "id": "eighth-zenith-e",
@@ -256,6 +256,6 @@
     "engines": [
       "apu"
     ],
-    "image": "/zenith-e.png"
+    "image": "/atom.png"
   }
 ]

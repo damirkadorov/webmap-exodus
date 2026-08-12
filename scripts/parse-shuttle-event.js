@@ -34,9 +34,13 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 			.join(' ');
 	}
 
-	// Check if PNG file exists for this shuttle
+	// Check if PNG file exists for this shuttle in static directory
+	const staticDir = path.join(__dirname, '..', 'static');
 	const pngName = `${id}.png`;
-	const imagePath = `/${pngName}`;
+	const pngPath = path.join(staticDir, pngName);
+
+	// Use shuttle-specific image if it exists, otherwise fallback to placeholder
+	const imagePath = fs.existsSync(pngPath) ? `/${pngName}` : '/atom.png';
 
 	return {
 		id: `eighth-${id}`,
