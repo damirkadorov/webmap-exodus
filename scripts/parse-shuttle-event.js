@@ -5,23 +5,49 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function createShuttleFromFile(filename) {
+function parseShuttleName(ymlContent) {
+	// Extract name from MetaData component
+	const nameMatch = ymlContent.match(/- type: MetaData\s+name:\s*(.+)/);
+	if (nameMatch) {
+		return nameMatch[1].trim();
+	}
+	return null;
+}
+
+function createShuttleFromFile(filename, shuttleEventDir) {
 	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
-	const name = path.basename(filename, '.yml')
-		.split(/[_\s]/)
-		.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-		.join(' ');
+	const ymlPath = path.join(shuttleEventDir, filename);
+
+	let name = null;
+	try {
+		const content = fs.readFileSync(ymlPath, 'utf-8');
+		name = parseShuttleName(content);
+	} catch (error) {
+		console.warn(`Warning: Could not parse ${filename}: ${error.message}`);
+	}
+
+	// Fallback to filename if name not found in YML
+	if (!name) {
+		name = path.basename(filename, '.yml')
+			.split(/[_\s]/)
+			.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+			.join(' ');
+	}
+
+	// Check if PNG file exists for this shuttle
+	const pngName = `${id}.png`;
+	const imagePath = `/${pngName}`;
 
 	return {
 		id: `eighth-${id}`,
-		name: `8ЭФ ${name}`,
+		name: name,
 		description: `Шаттл Восьмого Экспедиционного флота.`,
 		price: 150000,
 		group: 'eighth_fleet',
 		size: 'medium',
 		classes: ['expedition'],
 		engines: ['apu'],
-		image: '/atom.png'
+		image: imagePath
 	};
 }
 
@@ -41,7 +67,7 @@ function main() {
 
 	const otherShuttles = existingShuttles.filter(s => s.group !== 'eighth_fleet');
 
-	const newEighthFleetShuttles = ymlFiles.map(createShuttleFromFile);
+	const newEighthFleetShuttles = ymlFiles.map(f => createShuttleFromFile(f, shuttleEventDir));
 
 	const allShuttles = [...otherShuttles, ...newEighthFleetShuttles];
 
