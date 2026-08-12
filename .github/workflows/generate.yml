@@ -114,10 +114,23 @@ jobs:
           else
             find "${map_images_dirs[@]}" -name "*.png" -type f -exec cp -t current-repo/static/ {} +
           fi
-      - name: Adjust Shuttle Groups for Eighth Fleet
+      - name: Copy ShuttleEvent maps to current repo
         run: |
-          # Set group to eighth_fleet for shuttles with name containing АСЗ or Азимут
-          jq '(map(if .name | test("АСЗ|Азимут") then .group = "eighth_fleet" else . end))' current-repo/src/lib/data/shuttles.json > tmp.json && mv tmp.json current-repo/src/lib/data/shuttles.json
+          if [ -d "monolith/Resources/Maps/_Exodus/ShuttleEvent" ]; then
+            mkdir -p current-repo/ShuttleEvent
+            cp monolith/Resources/Maps/_Exodus/ShuttleEvent/*.yml current-repo/ShuttleEvent/ 2>/dev/null || echo "No ShuttleEvent YML files found"
+          else
+            echo "ShuttleEvent directory not found in game repository"
+          fi
+
+      - name: Generate Eighth Fleet shuttles from ShuttleEvent
+        run: |
+          cd current-repo
+          if [ -d "ShuttleEvent" ] && [ "$(ls -A ShuttleEvent/*.yml 2>/dev/null)" ]; then
+            node scripts/parse-shuttle-event.js
+          else
+            echo "No ShuttleEvent files to process, skipping eighth_fleet generation"
+          fi
 
       - name: Commit and push
         run: |
