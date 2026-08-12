@@ -67,9 +67,9 @@
     "id": "eighth-azimuth",
     "name": "АСЗ Азимут",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 196900,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "large",
     "classes": [
       "expedition"
     ],
@@ -82,7 +82,7 @@
     "id": "eighth-concord-x",
     "name": "АСЗ Конкорд-Х",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 148050,
     "group": "eighth_fleet",
     "size": "medium",
     "classes": [
@@ -97,7 +97,7 @@
     "id": "eighth-crow",
     "name": "АСЗ Кроу",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 126050,
     "group": "eighth_fleet",
     "size": "medium",
     "classes": [
@@ -112,9 +112,9 @@
     "id": "eighth-mantaray",
     "name": "АСЗ Мантарэй",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 248500,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "large",
     "classes": [
       "expedition"
     ],
@@ -127,9 +127,9 @@
     "id": "eighth-nebula",
     "name": "АСЗ Небула",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 124550,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "small",
     "classes": [
       "expedition"
     ],
@@ -142,9 +142,9 @@
     "id": "eighth-omen",
     "name": "АСЗ Омен",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 124250,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "small",
     "classes": [
       "expedition"
     ],
@@ -157,9 +157,9 @@
     "id": "eighth-razorn",
     "name": "АСЗ Разор",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 111150,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "small",
     "classes": [
       "expedition"
     ],
@@ -172,9 +172,9 @@
     "id": "eighth-stratostar",
     "name": "ВЭФ Стратостар",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 201900,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "large",
     "classes": [
       "expedition"
     ],
@@ -187,7 +187,7 @@
     "id": "eighth-wyrm",
     "name": "АСЗ Вирм",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 126450,
     "group": "eighth_fleet",
     "size": "medium",
     "classes": [
@@ -202,9 +202,9 @@
     "id": "eighth-wyvern",
     "name": "АСЗ Виверна",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 524100,
     "group": "eighth_fleet",
-    "size": "medium",
+    "size": "large",
     "classes": [
       "expedition"
     ],
@@ -217,7 +217,7 @@
     "id": "eighth-zenith",
     "name": "АСЗ Зенит",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 133550,
     "group": "eighth_fleet",
     "size": "medium",
     "classes": [
@@ -232,7 +232,7 @@
     "id": "eighth-zenith-a",
     "name": "АСЗ Зенит-А",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 131900,
     "group": "eighth_fleet",
     "size": "medium",
     "classes": [
@@ -247,7 +247,7 @@
     "id": "eighth-zenith-e",
     "name": "АСЗ Зенит-Е",
     "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 150000,
+    "price": 133650,
     "group": "eighth_fleet",
     "size": "medium",
     "classes": [

@@ -5,13 +5,30 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-function parseShuttleName(ymlContent) {
+function parseShuttleData(ymlContent) {
 	// Extract name from MetaData component
 	const nameMatch = ymlContent.match(/- type: MetaData\s+name:\s*(.+)/);
-	if (nameMatch) {
-		return nameMatch[1].trim();
-	}
-	return null;
+	const name = nameMatch ? nameMatch[1].trim() : null;
+
+	// Extract entity count to determine size
+	const entityCountMatch = ymlContent.match(/entityCount:\s*(\d+)/);
+	const entityCount = entityCountMatch ? parseInt(entityCountMatch[1]) : 0;
+
+	return { name, entityCount };
+}
+
+function determineShuttleSize(entityCount) {
+	if (entityCount < 500) return 'small';
+	if (entityCount < 1000) return 'medium';
+	if (entityCount < 2500) return 'large';
+	return 'large'; // Very large shuttles
+}
+
+function calculatePrice(entityCount) {
+	// Base price + entity count based pricing
+	const basePrice = 100000;
+	const pricePerEntity = 50;
+	return basePrice + Math.floor(entityCount * pricePerEntity);
 }
 
 function createShuttleFromFile(filename, shuttleEventDir) {
@@ -19,9 +36,13 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 	const ymlPath = path.join(shuttleEventDir, filename);
 
 	let name = null;
+	let entityCount = 0;
+
 	try {
 		const content = fs.readFileSync(ymlPath, 'utf-8');
-		name = parseShuttleName(content);
+		const data = parseShuttleData(content);
+		name = data.name;
+		entityCount = data.entityCount;
 	} catch (error) {
 		console.warn(`Warning: Could not parse ${filename}: ${error.message}`);
 	}
@@ -33,6 +54,10 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 			.map(word => word.charAt(0).toUpperCase() + word.slice(1))
 			.join(' ');
 	}
+
+	// Determine size and price based on entity count
+	const size = determineShuttleSize(entityCount);
+	const price = calculatePrice(entityCount);
 
 	// Check if PNG file exists for this shuttle in static directory
 	const staticDir = path.join(__dirname, '..', 'static');
@@ -46,9 +71,9 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 		id: `eighth-${id}`,
 		name: name,
 		description: `Шаттл Восьмого Экспедиционного флота.`,
-		price: 150000,
+		price: price,
 		group: 'eighth_fleet',
-		size: 'medium',
+		size: size,
 		classes: ['expedition'],
 		engines: ['apu'],
 		image: imagePath
