@@ -57,7 +57,7 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 
 	// Determine size and price based on entity count
 	const size = determineShuttleSize(entityCount);
-	const price = calculatePrice(entityCount);
+	const price = 0; // Eighth Fleet shuttles are not for sale
 
 	// Check if PNG file exists for this shuttle in static directory
 	const staticDir = path.join(__dirname, '..', 'static');

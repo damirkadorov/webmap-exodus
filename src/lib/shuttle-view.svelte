@@ -34,8 +34,10 @@
 			<span class="h1 text-white!">{shuttle.name}</span>
 			<span style="color: {borderColor}">{shuttleConfig.shipyard[shuttle.group]}</span>
 		</div>
-		<div class="w-full h-fit flex flex-row justify-between items-center">
-			<span class="text-(--text-primary-2)">Стоимость: {formatPrice(shuttle.price)}</span>
-		</div>
+		{#if shuttle.price > 0}
+			<div class="w-full h-fit flex flex-row justify-between items-center">
+				<span class="text-(--text-primary-2)">Стоимость: {formatPrice(shuttle.price)}</span>
+			</div>
+		{/if}
 	</div>
 </a>
