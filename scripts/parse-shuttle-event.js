@@ -5,6 +5,27 @@ import { fileURLToPath } from 'url';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
+/**
+ * Returns true if the string looks like an unresolved SS14 localization key
+ * rather than a real human-readable name.
+ * Patterns: "company-vessel-blackhawk-kortic-name", "shuttle-omen-name", etc.
+ */
+function isLocalizationKey(str) {
+	if (!str) return true;
+	// Localization keys are all-lowercase with hyphens, no spaces, often end in "-name"
+	return /^[a-z0-9]+(-[a-z0-9]+){2,}$/.test(str);
+}
+
+/**
+ * Convert a filename like "blackhawk_kortic.yml" → "Blackhawk Kortic"
+ */
+function nameFromFilename(filename) {
+	return path.basename(filename, '.yml')
+		.split(/[_\-\s]+/)
+		.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+		.join(' ');
+}
+
 function parseShuttleData(ymlContent) {
 	// Extract name from MetaData component
 	const nameMatch = ymlContent.match(/- type: MetaData\s+name:\s*(.+)/);
@@ -21,82 +42,67 @@ function determineShuttleSize(entityCount) {
 	if (entityCount < 500) return 'small';
 	if (entityCount < 1000) return 'medium';
 	if (entityCount < 2500) return 'large';
-	return 'large'; // Very large shuttles
-}
-
-function calculatePrice(entityCount) {
-	// Base price + entity count based pricing
-	const basePrice = 100000;
-	const pricePerEntity = 50;
-	return basePrice + Math.floor(entityCount * pricePerEntity);
+	return 'large';
 }
 
 function createShuttleFromFile(filename, shuttleEventDir) {
 	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
 	const ymlPath = path.join(shuttleEventDir, filename);
 
-	let name = null;
+	let rawName = null;
 	let entityCount = 0;
 
 	try {
 		const content = fs.readFileSync(ymlPath, 'utf-8');
 		const data = parseShuttleData(content);
-		name = data.name;
+		rawName = data.name;
 		entityCount = data.entityCount;
 	} catch (error) {
 		console.warn(`Warning: Could not parse ${filename}: ${error.message}`);
 	}
 
-	// Fallback to filename if name not found in YML
-	if (!name) {
-		name = path.basename(filename, '.yml')
-			.split(/[_\s]/)
-			.map(word => word.charAt(0).toUpperCase() + word.slice(1))
-			.join(' ');
+	// If the name is a localization key (e.g. "company-vessel-blackhawk-kortic-name")
+	// or missing, fall back to a human-readable name derived from the filename.
+	const name = (!rawName || isLocalizationKey(rawName))
+		? nameFromFilename(filename)
+		: rawName;
+
+	if (rawName && isLocalizationKey(rawName)) {
+		console.warn(`  ⚠ Unresolved localization key "${rawName}" in ${filename} → using "${name}"`);
 	}
 
-	// Determine size and price based on entity count
+	// Determine size based on entity count
 	const size = determineShuttleSize(entityCount);
-	const price = 0; // Eighth Fleet shuttles are not for sale
 
 	// Check if PNG file exists for this shuttle in static directory
-	// MapRenderer generates files with -0 suffix, so check both variants
-	// Also handle filename differences (underscores vs hyphens)
 	const staticDir = path.join(__dirname, '..', 'static');
-	const pngName = `${id}.png`;
-	const pngNameWithSuffix = `${id}-0.png`;
-	const pngPath = path.join(staticDir, pngName);
-	const pngPathWithSuffix = path.join(staticDir, pngNameWithSuffix);
-
-	// Also check with underscores instead of hyphens (MapRenderer preserves original filename)
 	const idWithUnderscores = id.replace(/-/g, '_');
-	const pngNameWithUnderscores = `${idWithUnderscores}.png`;
-	const pngNameWithUnderscoresAndSuffix = `${idWithUnderscores}-0.png`;
-	const pngPathWithUnderscores = path.join(staticDir, pngNameWithUnderscores);
-	const pngPathWithUnderscoresAndSuffix = path.join(staticDir, pngNameWithUnderscoresAndSuffix);
 
-	// Use shuttle-specific image if it exists, otherwise fallback to placeholder
+	const candidates = [
+		`${id}.png`,
+		`${id}-0.png`,
+		`${idWithUnderscores}.png`,
+		`${idWithUnderscores}-0.png`,
+	];
+
 	let imagePath = '/atom.png';
-	if (fs.existsSync(pngPath)) {
-		imagePath = `/${pngName}`;
-	} else if (fs.existsSync(pngPathWithSuffix)) {
-		imagePath = `/${pngNameWithSuffix}`;
-	} else if (fs.existsSync(pngPathWithUnderscores)) {
-		imagePath = `/${pngNameWithUnderscores}`;
-	} else if (fs.existsSync(pngPathWithUnderscoresAndSuffix)) {
-		imagePath = `/${pngNameWithUnderscoresAndSuffix}`;
+	for (const candidate of candidates) {
+		if (fs.existsSync(path.join(staticDir, candidate))) {
+			imagePath = `/${candidate}`;
+			break;
+		}
 	}
 
 	return {
 		id: `eighth-${id}`,
-		name: name,
-		description: `Шаттл Восьмого Экспедиционного флота.`,
-		price: price,
+		name,
+		description: 'Шаттл Восьмого Экспедиционного флота.',
+		price: 0,
 		group: 'eighth_fleet',
-		size: size,
+		size,
 		classes: ['expedition'],
 		engines: ['apu'],
-		image: imagePath
+		image: imagePath,
 	};
 }
 
@@ -114,6 +120,7 @@ function main() {
 
 	const existingShuttles = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
 
+	// Keep all non-eighth_fleet shuttles (including manually-managed groups)
 	const otherShuttles = existingShuttles.filter(s => s.group !== 'eighth_fleet');
 
 	const newEighthFleetShuttles = ymlFiles.map(f => createShuttleFromFile(f, shuttleEventDir));
@@ -124,7 +131,8 @@ function main() {
 
 	console.log(`✓ Обработано ${ymlFiles.length} файлов из ShuttleEvent`);
 	console.log(`✓ Создано ${newEighthFleetShuttles.length} шаттлов группы eighth_fleet`);
-	console.log(`✓ Обновлен ${outputPath}`);
+	console.log(`✓ Сохранено ${otherShuttles.length} шаттлов из других групп`);
+	console.log(`✓ Итого: ${allShuttles.length} шаттлов → ${outputPath}`);
 }
 
 main();
