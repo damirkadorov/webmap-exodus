@@ -18,6 +18,8 @@
             "sr": "Колосс-Централ",
             "ussp": "СССП",
             "scrapyard": "Мусорная верфь",
+            "syndicate": "Синдикат",
+            "viper": "Viper",
             "eighth_fleet": "Восьмой Экспедиционный флот"
         },
         "classes": {
@@ -71,6 +73,8 @@
         "shipyard": "#0B9FC0",
         "sr": "#0BC051",
         "scrapyard": "#808080",
+        "syndicate": "#cc0000",
+        "viper": "#4caf50",
         "eighth_fleet": "#800080"
     }
 }

@@ -52,7 +52,7 @@
     "name": "NFSD Warden",
     "description": "Патрульный корабль для задержаний и сопровождения конвоев.",
     "price": 189000,
-    "group": "nfsd",
+    "group": "security",
     "size": "medium",
     "classes": [
       "patrol",
@@ -257,5 +257,74 @@
       "apu"
     ],
     "image": "/zenith_e-0.png"
+  },
+  {
+    "id": "syn-spectre",
+    "name": "Spectre",
+    "description": "Быстрый диверсионный шаттл Синдиката. Предназначен для скрытых операций и быстрой эвакуации.",
+    "price": 0,
+    "group": "syndicate",
+    "size": "small",
+    "classes": [
+      "syndicate",
+      "fighter"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "syn-phantom",
+    "name": "Phantom",
+    "description": "Тяжёлый корабль поддержки Синдиката. Оснащён усиленной бронёй и системами подавления.",
+    "price": 0,
+    "group": "syndicate",
+    "size": "medium",
+    "classes": [
+      "syndicate",
+      "mercenary",
+      "fighter"
+    ],
+    "engines": [
+      "plasma",
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "vip-fang",
+    "name": "Fang",
+    "description": "Лёгкий перехватчик группировки Viper. Высокая скорость, минимальный экипаж.",
+    "price": 0,
+    "group": "viper",
+    "size": "micro",
+    "classes": [
+      "fighter",
+      "pursuit"
+    ],
+    "engines": [
+      "welding",
+      "apu"
+    ],
+    "image": "/atom.png"
+  },
+  {
+    "id": "vip-mamba",
+    "name": "Mamba",
+    "description": "Средний боевой шаттл Viper. Применяется для патрулирования и силового сопровождения.",
+    "price": 0,
+    "group": "viper",
+    "size": "small",
+    "classes": [
+      "fighter",
+      "patrol",
+      "mercenary"
+    ],
+    "engines": [
+      "apu",
+      "welding"
+    ],
+    "image": "/atom.png"
   }
 ]

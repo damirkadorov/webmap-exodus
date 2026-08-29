@@ -4,9 +4,10 @@
 	interface Props {
 		options: Record<string, string>;
 		selected: string[];
+		placeholder?: string;
 	}
 
-	let { options, selected = $bindable([]) }: Props = $props();
+	let { options, selected = $bindable([]), placeholder = 'Любая' }: Props = $props();
 
 	let isOpen = $state(false);
 	let container: HTMLElement;
@@ -23,6 +24,10 @@
 		}
 	}
 
+	function clearAll() {
+		selected = [];
+	}
+
 	function handleClickOutside(event: MouseEvent) {
 		if (container && !container.contains(event.target as Node)) {
 			isOpen = false;
@@ -37,7 +42,7 @@
 	});
 
 	const displayText = $derived.by(() => {
-		if (selected.length === 0) return 'Любая';
+		if (selected.length === 0) return placeholder;
 		if (selected.length <= 2) {
 			return selected.map((v) => options[v]).join(', ');
 		}
@@ -45,70 +50,211 @@
 	});
 </script>
 
-<div class="relative w-full" bind:this={container}>
+<div class="multi-select-wrap" bind:this={container}>
 	<button
 		type="button"
-		class="flex h-[34px] w-full cursor-pointer items-center justify-between border border-(--secondary) bg-[#04050a] px-2.5 py-[5px] text-left outline-none transition-colors hover:border-(--primary)"
+		class="ms-trigger"
+		class:open={isOpen}
+		class:has-value={selected.length > 0}
 		onclick={toggleDropdown}
+		aria-expanded={isOpen}
+		aria-haspopup="listbox"
 	>
-		<span class="truncate text-sm">{displayText}</span>
-		<svg
-			class="h-4 w-4 transition-transform duration-200 {isOpen ? 'rotate-180' : ''}"
-			fill="none"
-			stroke="currentColor"
-			viewBox="0 0 24 24"
-		>
-			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-		</svg>
+		<span class="ms-value truncate">{displayText}</span>
+		<div class="ms-controls">
+			{#if selected.length > 0}
+				<span
+					role="button"
+					tabindex="0"
+					class="ms-clear"
+					onclick={(e) => { e.stopPropagation(); clearAll(); }}
+					onkeydown={(e) => e.key === 'Enter' && (e.stopPropagation(), clearAll())}
+					aria-label="Очистить"
+				>
+					<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+						<line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+					</svg>
+				</span>
+				<div class="ms-divider" aria-hidden="true"></div>
+			{/if}
+			<svg
+				class="ms-chevron"
+				class:rotated={isOpen}
+				width="14" height="14"
+				fill="none"
+				stroke="currentColor"
+				viewBox="0 0 24 24"
+				aria-hidden="true"
+			>
+				<polyline stroke-linecap="round" stroke-linejoin="round" stroke-width="2" points="6 9 12 15 18 9" />
+			</svg>
+		</div>
 	</button>
 
 	{#if isOpen}
 		<div
-			class="panel-secondary absolute z-50 mt-1 max-h-60 w-full overflow-y-auto border-t-0 bg-(--background-panel) shadow-xl"
+			role="listbox"
+			aria-multiselectable="true"
+			aria-label="Выбор категорий"
+			class="ms-dropdown"
 		>
-			<div class="flex flex-col">
-				{#each Object.entries(options) as [value, label] (value)}
-					<button
-						type="button"
-						class="flex w-full cursor-pointer items-center gap-2 px-2.5 py-2 text-left transition-colors hover:bg-(--secondary)"
-						onclick={() => handleOptionClick(value)}
-					>
-						<div
-							class="flex h-4 w-4 shrink-0 items-center justify-center border border-(--secondary) {selected.includes(
-								value
-							)
-								? 'bg-(--primary) border-(--primary)'
-								: 'bg-transparent'}"
-						>
-							{#if selected.includes(value)}
-								<svg class="h-3 w-3 text-black" fill="currentColor" viewBox="0 0 20 20">
-									<path
-										fill-rule="evenodd"
-										d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-										clip-rule="evenodd"
-									/>
-								</svg>
-							{/if}
-						</div>
-						<span class="truncate text-sm">{label}</span>
-					</button>
-				{/each}
-			</div>
+			{#each Object.entries(options) as [value, label] (value)}
+				<button
+					type="button"
+					role="option"
+					aria-selected={selected.includes(value)}
+					class="ms-option"
+					class:selected={selected.includes(value)}
+					onclick={() => handleOptionClick(value)}
+				>
+					<div class="ms-checkbox" aria-hidden="true">
+						{#if selected.includes(value)}
+							<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+								<polyline points="20 6 9 17 4 12"/>
+							</svg>
+						{/if}
+					</div>
+					<span class="ms-label">{label}</span>
+				</button>
+			{/each}
 		</div>
 	{/if}
 </div>
 
 <style>
-	::-webkit-scrollbar {
-		width: 6px;
-	}
-	::-webkit-scrollbar-track {
-		background: var(--background);
-	}
-	::-webkit-scrollbar-thumb {
-		background: var(--secondary);
-	}
-	::-webkit-scrollbar-thumb:hover {
-		background: var(--primary);
-	}
+.multi-select-wrap {
+	position: relative;
+	width: 100%;
+}
+
+.ms-trigger {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	padding: 8px 12px;
+	background: rgba(8, 13, 26, 0.8);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	color: var(--text-muted);
+	font-family: var(--font-body);
+	font-size: 0.875rem;
+	cursor: pointer;
+	outline: none;
+	gap: 6px;
+	transition: border-color 0.2s, box-shadow 0.2s;
+	min-height: 36px;
+}
+.ms-trigger.open,
+.ms-trigger:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 3px var(--accent-dim);
+}
+.ms-trigger.has-value {
+	color: var(--text);
+}
+
+.ms-value {
+	flex: 1;
+	text-align: left;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.ms-controls {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	flex-shrink: 0;
+}
+
+.ms-clear {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 18px;
+	height: 18px;
+	border-radius: 50%;
+	color: var(--text-dim);
+	transition: color 0.2s, background 0.2s;
+	cursor: pointer;
+}
+.ms-clear:hover { color: var(--text); background: var(--accent-muted); }
+
+.ms-divider {
+	width: 1px;
+	height: 12px;
+	background: var(--border);
+}
+
+.ms-chevron {
+	color: var(--text-dim);
+	transition: transform 0.2s, color 0.2s;
+}
+.ms-chevron.rotated { transform: rotate(180deg); }
+.ms-trigger.open .ms-chevron { color: var(--accent); }
+
+/* Dropdown */
+.ms-dropdown {
+	position: absolute;
+	top: calc(100% + 6px);
+	left: 0;
+	right: 0;
+	z-index: 200;
+	background: var(--bg-panel);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(65, 182, 251, 0.06);
+	max-height: 220px;
+	overflow-y: auto;
+	padding: 6px;
+	scrollbar-width: thin;
+	scrollbar-color: var(--navy) transparent;
+}
+
+.ms-option {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	width: 100%;
+	padding: 8px 10px;
+	border-radius: var(--radius);
+	border: none;
+	background: transparent;
+	color: var(--text-muted);
+	font-family: var(--font-body);
+	font-size: 0.82rem;
+	cursor: pointer;
+	transition: background 0.15s, color 0.15s;
+	text-align: left;
+	outline: none;
+}
+.ms-option:hover { background: var(--accent-muted); color: var(--text); }
+.ms-option.selected { color: var(--accent); }
+
+.ms-checkbox {
+	width: 16px;
+	height: 16px;
+	flex-shrink: 0;
+	border: 1px solid var(--border);
+	border-radius: 5px;
+	background: transparent;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: border-color 0.15s, background 0.15s;
+}
+.ms-option.selected .ms-checkbox {
+	border-color: var(--accent);
+	background: var(--accent);
+	color: #050810;
+}
+
+.ms-label { line-height: 1.2; }
+
+/* scrollbar */
+.ms-dropdown::-webkit-scrollbar { width: 4px; }
+.ms-dropdown::-webkit-scrollbar-track { background: transparent; }
+.ms-dropdown::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 99px; }
 </style>

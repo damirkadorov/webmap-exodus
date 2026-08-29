@@ -1,82 +1,348 @@
-@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Share+Tech+Mono&display=swap');
 
 @import 'tailwindcss';
 
+/* ─── DESIGN TOKENS ─────────────────────────────────────────── */
 :root {
-	--header-font: Passion One, Calibri;
-	--background-panel: rgb(10, 19, 34);
-	--background: rgb(4, 5, 10);
-	--primary: rgb(65, 182, 251);
-	--secondary: rgb(40, 58, 108);
-	--secondary-dark: rgb(20, 29, 54);
-	--text-primary: rgb(255, 255, 255);
-	--text-primary-2: rgb(206, 226, 255);
-	--h1-size: 26px;
-	--h2-size: 20px;
-	--phaeton: rgb(192, 150, 11); /* TODO: change color based on config.json */
+	/* Fonts */
+	--font-display: 'Rajdhani', 'Exo 2', sans-serif;
+	--font-body: 'Exo 2', system-ui, sans-serif;
+	--font-mono: 'Share Tech Mono', monospace;
+
+	/* Core palette - deep space */
+	--bg:          #050810;
+	--bg-panel:    #080d1a;
+	--bg-card:     #0a1020;
+	--bg-card-hover: #0e1830;
+	--bg-overlay:  rgba(5, 8, 16, 0.85);
+
+	/* Accent - electric cyan */
+	--accent:       #41b6fb;
+	--accent-glow:  rgba(65, 182, 251, 0.3);
+	--accent-dim:   rgba(65, 182, 251, 0.15);
+	--accent-muted: rgba(65, 182, 251, 0.06);
+
+	/* Secondary - navy */
+	--navy:         #28396c;
+	--navy-dark:    #14253e;
+	--navy-bright:  #3a55a0;
+
+	/* Text */
+	--text:         #e8f4ff;
+	--text-muted:   #8facc8;
+	--text-dim:     #4a6080;
+
+	/* Borders */
+	--border:       rgba(65, 182, 251, 0.18);
+	--border-dim:   rgba(65, 182, 251, 0.08);
+	--border-bright: rgba(65, 182, 251, 0.45);
+
+	/* Structural */
+	--radius-sm: 8px;
+	--radius:    12px;
+	--radius-lg: 16px;
+	--radius-xl: 20px;
+	--radius-pill: 999px;
+
+	--header-h: 60px;
+}
+
+/* ─── BASE ───────────────────────────────────────────────────── */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html {
+	scrollbar-color: var(--navy) var(--bg);
+	scrollbar-width: thin;
 }
 
 body {
-	color: var(--text-primary);
+	font-family: var(--font-body);
+	color: var(--text);
+	background-color: var(--bg);
+	/* Subtle star-field texture via radial gradients */
+	background-image:
+		radial-gradient(ellipse 80% 50% at 50% -10%, rgba(65, 182, 251, 0.06) 0%, transparent 60%),
+		radial-gradient(ellipse 40% 30% at 80% 80%, rgba(40, 57, 108, 0.15) 0%, transparent 50%);
+	background-attachment: fixed;
 	overflow: auto !important;
 }
 
-.h1 {
-	color: var(--text-primary-2);
-	font-size: var(--h1-size);
-	font-family: var(--header-font);
+/* ─── SCROLLBAR ──────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 5px; height: 5px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--navy); border-radius: 99px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ─── TYPOGRAPHY ─────────────────────────────────────────────── */
+.text-display {
+	font-family: var(--font-display);
+	font-weight: 700;
+	letter-spacing: 0.03em;
+	line-height: 1;
+	color: var(--text);
 }
 
+.text-mono {
+	font-family: var(--font-mono);
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+}
+
+/* ─── PANEL SYSTEM ───────────────────────────────────────────── */
+.panel {
+	background-color: var(--bg-panel);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow: 0 2px 16px rgba(0,0,0,0.3);
+}
+
+.panel-accent {
+	background-color: var(--bg-panel);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow:
+		0 2px 16px rgba(0,0,0,0.3),
+		0 0 0 1px rgba(65, 182, 251, 0.06) inset;
+	position: relative;
+	overflow: hidden;
+}
+.panel-accent::before {
+	content: '';
+	position: absolute;
+	top: 0; left: 0; right: 0;
+	height: 2px;
+	background: linear-gradient(90deg, transparent, var(--accent), transparent);
+	opacity: 0.5;
+	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* legacy aliases used in existing components */
 .panel-primary {
-	background-color: var(--background-panel);
-	border-block: 3px solid var(--primary);
+	background-color: var(--bg-panel);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow:
+		0 2px 16px rgba(0,0,0,0.3),
+		0 0 0 1px rgba(65, 182, 251, 0.06) inset;
+	position: relative;
+	overflow: hidden;
 }
 
 .panel-secondary {
-	background-color: var(--background-panel);
-	border-block: 3px solid var(--secondary);
+	background-color: var(--bg-panel);
+	border: 1px solid var(--border);
+	border-radius: var(--radius-lg);
+	box-shadow: 0 2px 16px rgba(0,0,0,0.25);
 }
 
+/* ─── INPUTS ─────────────────────────────────────────────────── */
+input[type="text"],
+input[type="search"] {
+	font-family: var(--font-body);
+	font-size: 0.875rem;
+	color: var(--text);
+	background-color: rgba(8, 13, 26, 0.8);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 8px 12px;
+	outline: none;
+	transition: border-color 0.2s, box-shadow 0.2s;
+	width: 100%;
+}
+input[type="text"]::placeholder,
+input[type="search"]::placeholder {
+	color: var(--text-dim);
+}
+input[type="text"]:focus,
+input[type="search"]:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+select {
+	appearance: none;
+	font-family: var(--font-body);
+	font-size: 0.875rem;
+	color: var(--text);
+	background-color: rgba(8, 13, 26, 0.8);
+	border: 1px solid var(--border);
+	border-radius: var(--radius);
+	padding: 8px 32px 8px 12px;
+	outline: none;
+	cursor: pointer;
+	transition: border-color 0.2s, box-shadow 0.2s;
+	width: 100%;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238facc8' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-position: right 10px center;
+}
+select:focus {
+	border-color: var(--accent);
+	box-shadow: 0 0 0 3px var(--accent-dim);
+}
+
+/* ─── LINKS ──────────────────────────────────────────────────── */
+a {
+	color: var(--text-muted);
+	text-decoration: none;
+	transition: color 0.2s;
+}
+a:hover { color: var(--accent); }
+
+/* ─── IMAGES ─────────────────────────────────────────────────── */
+img {
+	image-rendering: pixelated;
+	image-rendering: -moz-crisp-edges;
+	image-rendering: crisp-edges;
+}
+
+/* ─── UTILITY ────────────────────────────────────────────────── */
 .no-select {
 	-webkit-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
 }
 
-input {
-	background-color: #04050a;
-	border: 1px solid var(--secondary);
-	padding-inline: 10px;
-	padding-block: 3px;
-	outline: none;
+/* HUD corner brackets - applied to elements that need sci-fi framing */
+.hud-corner {
+	position: relative;
+}
+.hud-corner::before,
+.hud-corner::after {
+	content: '';
+	position: absolute;
+	width: 10px;
+	height: 10px;
+	border-color: var(--accent);
+	border-style: solid;
+	opacity: 0.6;
+}
+.hud-corner::before {
+	top: 0; left: 0;
+	border-width: 2px 0 0 2px;
+}
+.hud-corner::after {
+	bottom: 0; right: 0;
+	border-width: 0 2px 2px 0;
 }
 
-select {
-	appearance: none;
-	outline: none;
-	background-color: var(--secondary);
-	padding-inline: 10px;
-	padding-block: 5px;
+/* Scanline overlay for pixel images */
+.scanline-overlay {
+	position: relative;
+}
+.scanline-overlay::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: repeating-linear-gradient(
+		0deg,
+		transparent,
+		transparent 3px,
+		rgba(0,0,0,0.08) 3px,
+		rgba(0,0,0,0.08) 4px
+	);
+	pointer-events: none;
 }
 
-select:hover {
-	cursor: pointer;
+/* Faction color glow tag */
+.faction-tag {
+	font-family: var(--font-mono);
+	font-size: 0.7rem;
+	letter-spacing: 0.1em;
+	text-transform: uppercase;
+	padding: 2px 8px;
+	border-radius: var(--radius-sm);
+	border: 1px solid currentColor;
+	background: color-mix(in srgb, currentColor 10%, transparent);
+	opacity: 0.9;
 }
 
-a {
-	transition: color 0.2s ease-in-out;
+/* Class badge */
+.class-badge {
+	font-family: var(--font-mono);
+	font-size: 0.68rem;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+	color: var(--text-muted);
+	padding: 3px 8px;
+	border: 1px solid var(--border);
+	border-radius: var(--radius-pill);
+	background: var(--accent-muted);
+	transition: border-color 0.2s, color 0.2s;
+}
+.class-badge:hover {
+	color: var(--accent);
+	border-color: var(--border-bright);
 }
 
-a:hover {
-	color: var(--text-primary-2);
+/* Stat block used on detail page */
+.stat-block {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+	padding: 12px 16px;
+	background: rgba(65, 182, 251, 0.04);
+	border: 1px solid var(--border-dim);
+	border-radius: var(--radius);
+	transition: border-color 0.2s, background 0.2s;
+}
+.stat-block:hover {
+	border-color: var(--border);
+	background: var(--accent-muted);
+}
+.stat-block .stat-label {
+	font-family: var(--font-mono);
+	font-size: 0.65rem;
+	letter-spacing: 0.12em;
+	text-transform: uppercase;
+	color: var(--text-dim);
+}
+.stat-block .stat-value {
+	font-family: var(--font-display);
+	font-size: 1rem;
+	font-weight: 600;
+	color: var(--text);
 }
 
-button {
-	outline: none;
+/* Price display */
+.price-display {
+	font-family: var(--font-mono);
+	color: var(--accent);
+	font-size: 0.85rem;
+	letter-spacing: 0.04em;
+}
+.price-display.large {
+	font-size: 1.25rem;
+	letter-spacing: 0.06em;
 }
 
-img {
-	image-rendering: pixelated;
-	image-rendering: -moz-crisp-edges;
-	image-rendering: crisp-edges;
+/* Separator line with label */
+.section-divider {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--text-dim);
+	font-family: var(--font-mono);
+	font-size: 0.65rem;
+	letter-spacing: 0.14em;
+	text-transform: uppercase;
+}
+.section-divider::before,
+.section-divider::after {
+	content: '';
+	flex: 1;
+	height: 1px;
+	background: var(--border-dim);
+}
+
+/* h1 alias kept for compat */
+.h1 {
+	font-family: var(--font-display);
+	font-weight: 700;
+	font-size: 1.35rem;
+	letter-spacing: 0.03em;
+	color: var(--text);
+	line-height: 1.1;
 }
