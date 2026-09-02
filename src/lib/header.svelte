@@ -47,21 +47,14 @@
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	background: rgba(5, 8, 16, 0.92);
-	backdrop-filter: blur(12px);
-	-webkit-backdrop-filter: blur(12px);
-	border-bottom: 1px solid var(--border-dim);
+	background: rgba(247, 246, 243, 0.92);
+	backdrop-filter: blur(8px);
+	-webkit-backdrop-filter: blur(8px);
+	border-bottom: 1px solid var(--border);
 }
 
 .accent-bar {
-	width: 100%;
-	height: 2px;
-	background: linear-gradient(90deg,
-		transparent 0%,
-		var(--accent) 30%,
-		rgba(65, 182, 251, 0.6) 70%,
-		transparent 100%
-	);
+	display: none;
 }
 
 .header-inner {
@@ -90,13 +83,12 @@
 	justify-content: center;
 	border: 1px solid var(--border);
 	border-radius: var(--radius);
-	background: rgba(65, 182, 251, 0.06);
+	background: var(--bg-panel);
 	padding: 4px;
-	transition: border-color 0.2s, background 0.2s;
+	transition: border-color 0.15s;
 }
 .brand:hover .brand-icon {
 	border-color: var(--accent);
-	background: rgba(65, 182, 251, 0.14);
 }
 
 .brand-icon img {
@@ -114,11 +106,11 @@
 
 .brand-name {
 	font-family: var(--font-display);
-	font-weight: 700;
-	font-size: 1.05rem;
-	letter-spacing: 0.04em;
+	font-weight: 500;
+	font-size: 1.2rem;
+	letter-spacing: -0.01em;
 	color: var(--text);
-	transition: color 0.2s;
+	transition: color 0.15s;
 }
 .brand:hover .brand-name { color: var(--accent); }
 
@@ -145,21 +137,19 @@
 	display: flex;
 	align-items: center;
 	gap: 6px;
-	padding: 7px 16px;
-	font-family: var(--font-display);
+	padding: 7px 12px;
+	font-family: var(--font-body);
 	font-size: 0.875rem;
 	font-weight: 600;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.01em;
 	color: var(--text-muted);
 	text-decoration: none;
 	border-radius: var(--radius);
-	border: 1px solid transparent;
-	transition: color 0.2s, border-color 0.2s, background 0.2s;
+	transition: color 0.15s, background 0.15s;
 }
 .nav-link:hover {
-	color: var(--accent);
-	border-color: var(--border);
-	background: var(--accent-muted);
+	color: var(--text);
+	background: rgba(29, 28, 26, 0.05);
 }
 
 .ext-icon {

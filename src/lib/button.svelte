@@ -33,27 +33,26 @@
 	align-items: center;
 	justify-content: center;
 	gap: 6px;
-	font-family: var(--font-display);
+	font-family: var(--font-body);
 	font-weight: 600;
 	font-size: 0.875rem;
-	letter-spacing: 0.04em;
+	letter-spacing: 0.01em;
 	padding: 8px 20px;
 	border-radius: var(--radius);
 	border: 1px solid transparent;
 	cursor: pointer;
 	outline: none;
 	transition:
-		background 0.2s,
-		color 0.2s,
-		border-color 0.2s,
-		box-shadow 0.2s,
+		background 0.15s,
+		color 0.15s,
+		border-color 0.15s,
 		transform 0.12s;
 	white-space: nowrap;
 	user-select: none;
 }
 
 .btn:active:not(:disabled) {
-	transform: translateY(1px) scale(0.99);
+	transform: scale(0.98);
 }
 
 .btn:disabled {
@@ -61,52 +60,44 @@
 	cursor: not-allowed;
 }
 
-/* Primary */
+/* Primary: solid ink */
 .btn-primary {
-	background: var(--navy);
-	color: var(--text);
-	border-color: var(--border);
+	background: #111111;
+	color: #ffffff;
 }
 .btn-primary:hover:not(:disabled) {
-	background: var(--navy-bright);
-	border-color: var(--accent);
-	color: var(--accent);
-	box-shadow: 0 0 12px var(--accent-glow);
+	background: #333333;
 }
 
 /* Secondary */
 .btn-secondary {
 	background: transparent;
-	color: var(--text-muted);
+	color: var(--text);
 	border-color: var(--border);
 }
 .btn-secondary:hover:not(:disabled) {
-	background: var(--accent-muted);
-	color: var(--accent);
-	border-color: var(--border-bright);
+	background: rgba(29, 28, 26, 0.05);
+	border-color: var(--text-dim);
 }
 
 /* Ghost */
 .btn-ghost {
 	background: transparent;
-	color: var(--text-dim);
+	color: var(--text-muted);
 	border-color: transparent;
 }
 .btn-ghost:hover:not(:disabled) {
-	background: var(--accent-muted);
-	color: var(--text-muted);
-	border-color: var(--border-dim);
+	background: rgba(29, 28, 26, 0.05);
+	color: var(--text);
 }
 
 /* Danger */
 .btn-danger {
-	background: rgba(220, 50, 50, 0.12);
-	color: #e55;
-	border-color: rgba(220, 50, 50, 0.3);
+	background: #fdebec;
+	color: #9f2f2d;
+	border-color: transparent;
 }
 .btn-danger:hover:not(:disabled) {
-	background: rgba(220, 50, 50, 0.2);
-	border-color: rgba(220, 50, 50, 0.6);
-	box-shadow: 0 0 12px rgba(220, 50, 50, 0.2);
+	background: #f9d9db;
 }
 </style>

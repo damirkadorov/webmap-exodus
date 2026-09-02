@@ -119,7 +119,7 @@
 	background: var(--bg-panel);
 	border: 1px solid var(--border-dim);
 	border-radius: var(--radius-lg);
-	box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+	box-shadow: 0 1px 3px rgba(29, 28, 26, 0.04);
 }
 
 .results-info {
@@ -131,9 +131,9 @@
 }
 
 .results-count {
-	font-size: 1.1rem;
-	font-weight: 700;
-	color: var(--accent);
+	font-size: 1.2rem;
+	font-weight: 500;
+	color: var(--text);
 	font-family: var(--font-display);
 }
 

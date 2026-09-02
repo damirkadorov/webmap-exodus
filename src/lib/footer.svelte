@@ -21,9 +21,8 @@
 <style>
 .footer {
 	width: 100%;
-	border-top: 1px solid var(--border-dim);
-	background: rgba(5, 8, 16, 0.9);
-	backdrop-filter: blur(8px);
+	border-top: 1px solid var(--border);
+	background: var(--bg);
 	margin-top: auto;
 }
 

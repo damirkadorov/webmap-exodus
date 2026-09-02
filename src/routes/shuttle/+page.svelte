@@ -267,7 +267,7 @@
 	padding: 22px;
 	width: 100%;
 	box-shadow:
-		0 4px 30px rgba(0,0,0,0.35),
+		0 1px 3px rgba(29, 28, 26, 0.05),
 		0 0 0 1px color-mix(in srgb, var(--faction, var(--accent)) 10%, transparent);
 	position: relative;
 	overflow: hidden;
@@ -304,9 +304,9 @@
 
 .shuttle-name {
 	font-family: var(--font-display);
-	font-weight: 700;
-	font-size: 1.6rem;
-	letter-spacing: 0.02em;
+	font-weight: 500;
+	font-size: 2rem;
+	letter-spacing: -0.02em;
 	color: var(--text);
 	line-height: 1.1;
 	margin: 0;
@@ -347,7 +347,7 @@
 	padding: 4px 10px;
 	border: 1px solid var(--border);
 	border-radius: var(--radius-pill);
-	background: rgba(65, 182, 251, 0.04);
+	background: var(--bg);
 	display: inline-flex;
 	align-items: center;
 	gap: 4px;
@@ -374,7 +374,7 @@
 	border-radius: var(--radius-xl);
 	overflow: hidden;
 	position: relative;
-	box-shadow: 0 4px 30px rgba(0,0,0,0.3);
+	box-shadow: 0 1px 3px rgba(29, 28, 26, 0.05);
 }
 
 .image-viewer {
@@ -384,7 +384,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: rgba(0, 0, 0, 0.3);
+	background: var(--bg);
 	cursor: zoom-in;
 	border: none;
 	outline: none;
@@ -392,7 +392,7 @@
 	position: relative;
 	transition: background 0.2s;
 }
-.image-viewer:hover { background: rgba(0, 0, 0, 0.4); }
+.image-viewer:hover { background: #efedE8; }
 
 .shuttle-img {
 	max-width: 100%;
@@ -401,7 +401,7 @@
 	height: auto;
 	object-fit: contain;
 	transition: transform 0.3s ease;
-	filter: drop-shadow(0 0 30px rgba(65, 182, 251, 0.12));
+	filter: none;
 }
 .image-viewer:hover .shuttle-img {
 	transform: scale(1.02);
@@ -419,7 +419,7 @@
 	letter-spacing: 0.1em;
 	text-transform: uppercase;
 	color: var(--text-dim);
-	background: rgba(5, 8, 16, 0.75);
+	background: var(--bg-panel);
 	border: 1px solid var(--border-dim);
 	padding: 6px 12px;
 	border-radius: var(--radius-pill);
