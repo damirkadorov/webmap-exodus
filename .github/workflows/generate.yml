@@ -64,6 +64,7 @@ jobs:
           map_dirs=()
           for dir in \
             Resources/SharedMaps \
+            Resources/SharedMaps/_Mono/Shuttles/Mieyo \
             Resources/Maps/_Mono/Shuttles \
             Resources/Maps/_Exodus/Shuttles \
             Resources/Maps/_Exodus/ShuttleEvent \
@@ -121,7 +122,7 @@ jobs:
           const generated = JSON.parse(fs.readFileSync('monolith/bin/Content.Server/data/vessels_data.json', 'utf-8'));
 
           // Groups managed manually in the repo — never overwritten by the game server output
-          const MANUAL_GROUPS = ['syndicate', 'viper', 'mms'];
+          const MANUAL_GROUPS = ['syndicate', 'viper'];
 
           const manual = existing.filter(s => MANUAL_GROUPS.includes(s.group));
           const merged = [...generated, ...manual];
