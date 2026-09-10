@@ -64,9 +64,11 @@ jobs:
           map_dirs=()
           for dir in \
             Resources/SharedMaps \
+            Resources/SharedMaps/_Mono/Shuttles/Mieyo \
             Resources/Maps/_Mono/Shuttles \
             Resources/Maps/_Exodus/Shuttles \
             Resources/Maps/_Exodus/ShuttleEvent \
+            Resources/Maps/_Exodus/POI \
             Resources/Maps/Shuttles
           do
             if [ -d "$dir" ]; then
