@@ -21,7 +21,8 @@
             "syndicate": "Синдикат",
             "viper": "Viper",
             "mms": "ММС",
-            "eighth_fleet": "Восьмой Экспедиционный флот"
+            "eighth_fleet": "Восьмой Экспедиционный флот",
+            "station": "Станции"
         },
         "classes": {
             "capital": "Флагман",
@@ -77,6 +78,7 @@
         "syndicate": "#cc0000",
         "viper": "#4caf50",
         "mms": "#0088cc",
-        "eighth_fleet": "#800080"
+        "eighth_fleet": "#800080",
+        "station": "#5f9ea0"
     }
 }

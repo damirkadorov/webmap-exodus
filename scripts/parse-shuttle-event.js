@@ -45,7 +45,27 @@ function determineShuttleSize(entityCount) {
 	return 'large';
 }
 
-function createShuttleFromFile(filename, shuttleEventDir) {
+function resolveImagePath(id) {
+	const staticDir = path.join(__dirname, '..', 'static');
+	const idWithUnderscores = id.replace(/-/g, '_');
+
+	const candidates = [
+		`${id}.png`,
+		`${id}-0.png`,
+		`${idWithUnderscores}.png`,
+		`${idWithUnderscores}-0.png`,
+	];
+
+	for (const candidate of candidates) {
+		if (fs.existsSync(path.join(staticDir, candidate))) {
+			return `/${candidate}`;
+		}
+	}
+
+	return '/atom.png';
+}
+
+function createEighthFleetShuttleFromFile(filename, shuttleEventDir) {
 	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
 	const ymlPath = path.join(shuttleEventDir, filename);
 
@@ -74,24 +94,7 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 	// Determine size based on entity count
 	const size = determineShuttleSize(entityCount);
 
-	// Check if PNG file exists for this shuttle in static directory
-	const staticDir = path.join(__dirname, '..', 'static');
-	const idWithUnderscores = id.replace(/-/g, '_');
-
-	const candidates = [
-		`${id}.png`,
-		`${id}-0.png`,
-		`${idWithUnderscores}.png`,
-		`${idWithUnderscores}-0.png`,
-	];
-
-	let imagePath = '/atom.png';
-	for (const candidate of candidates) {
-		if (fs.existsSync(path.join(staticDir, candidate))) {
-			imagePath = `/${candidate}`;
-			break;
-		}
-	}
+	const imagePath = resolveImagePath(id);
 
 	return {
 		id: `eighth-${id}`,
@@ -106,31 +109,79 @@ function createShuttleFromFile(filename, shuttleEventDir) {
 	};
 }
 
+function createPoiStationFromFile(filename, poiDir) {
+	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
+	const ymlPath = path.join(poiDir, filename);
+
+	let rawName = null;
+	let entityCount = 0;
+
+	try {
+		const content = fs.readFileSync(ymlPath, 'utf-8');
+		const data = parseShuttleData(content);
+		rawName = data.name;
+		entityCount = data.entityCount;
+	} catch (error) {
+		console.warn(`Warning: Could not parse ${filename}: ${error.message}`);
+	}
+
+	const name = (!rawName || isLocalizationKey(rawName))
+		? nameFromFilename(filename)
+		: rawName;
+
+	if (rawName && isLocalizationKey(rawName)) {
+		console.warn(`  ⚠ Unresolved localization key "${rawName}" in ${filename} → using "${name}"`);
+	}
+
+	const size = determineShuttleSize(entityCount);
+	const imagePath = resolveImagePath(id);
+
+	return {
+		id: `station-${id}`,
+		name,
+		description: 'Станция (POI).',
+		price: 0,
+		group: 'station',
+		size,
+		classes: ['science'],
+		engines: ['apu'],
+		image: imagePath
+	};
+}
+
 function main() {
 	const shuttleEventDir = path.join(__dirname, '..', 'ShuttleEvent');
+	const poiDir = path.join(__dirname, '..', 'POI');
 	const outputPath = path.join(__dirname, '..', 'src', 'lib', 'data', 'shuttles.json');
 
-	if (!fs.existsSync(shuttleEventDir)) {
-		console.error('ShuttleEvent directory not found');
+	const shuttleEventYmlFiles = fs.existsSync(shuttleEventDir)
+		? fs.readdirSync(shuttleEventDir).filter(f => f.endsWith('.yml'))
+		: [];
+	const poiYmlFiles = fs.existsSync(poiDir)
+		? fs.readdirSync(poiDir).filter(f => f.endsWith('.yml'))
+		: [];
+
+	if (shuttleEventYmlFiles.length === 0 && poiYmlFiles.length === 0) {
+		console.error('No ShuttleEvent or POI files found');
 		process.exit(1);
 	}
 
-	const ymlFiles = fs.readdirSync(shuttleEventDir)
-		.filter(f => f.endsWith('.yml'));
-
 	const existingShuttles = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
 
-	// Keep all non-eighth_fleet shuttles (including manually-managed groups)
-	const otherShuttles = existingShuttles.filter(s => s.group !== 'eighth_fleet');
+	// Keep all non-generated groups (including manually-managed groups)
+	const otherShuttles = existingShuttles.filter(s => s.group !== 'eighth_fleet' && s.group !== 'station');
 
-	const newEighthFleetShuttles = ymlFiles.map(f => createShuttleFromFile(f, shuttleEventDir));
+	const newEighthFleetShuttles = shuttleEventYmlFiles.map(f => createEighthFleetShuttleFromFile(f, shuttleEventDir));
+	const newPoiStations = poiYmlFiles.map(f => createPoiStationFromFile(f, poiDir));
 
-	const allShuttles = [...otherShuttles, ...newEighthFleetShuttles];
+	const allShuttles = [...otherShuttles, ...newEighthFleetShuttles, ...newPoiStations];
 
 	fs.writeFileSync(outputPath, JSON.stringify(allShuttles, null, 2), 'utf-8');
 
-	console.log(`✓ Обработано ${ymlFiles.length} файлов из ShuttleEvent`);
+	console.log(`✓ Обработано ${shuttleEventYmlFiles.length} файлов из ShuttleEvent`);
 	console.log(`✓ Создано ${newEighthFleetShuttles.length} шаттлов группы eighth_fleet`);
+	console.log(`✓ Обработано ${poiYmlFiles.length} файлов из POI`);
+	console.log(`✓ Создано ${newPoiStations.length} станций группы station`);
 	console.log(`✓ Сохранено ${otherShuttles.length} шаттлов из других групп`);
 	console.log(`✓ Итого: ${allShuttles.length} шаттлов → ${outputPath}`);
 }
