@@ -20,7 +20,9 @@
             "scrapyard": "Мусорная верфь",
             "syndicate": "Синдикат",
             "viper": "Viper",
-            "eighth_fleet": "Восьмой Экспедиционный флот"
+            "mms": "ММС",
+            "eighth_fleet": "Восьмой Экспедиционный флот",
+            "station": "Станции"
         },
         "classes": {
             "capital": "Флагман",
@@ -75,6 +77,8 @@
         "scrapyard": "#808080",
         "syndicate": "#cc0000",
         "viper": "#4caf50",
-        "eighth_fleet": "#800080"
+        "mms": "#0088cc",
+        "eighth_fleet": "#800080",
+        "station": "#5f9ea0"
     }
 }

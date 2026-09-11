@@ -64,9 +64,11 @@ jobs:
           map_dirs=()
           for dir in \
             Resources/SharedMaps \
+            Resources/SharedMaps/_Mono/Shuttles/Mieyo \
             Resources/Maps/_Mono/Shuttles \
             Resources/Maps/_Exodus/Shuttles \
             Resources/Maps/_Exodus/ShuttleEvent \
+            Resources/Maps/_Exodus/POI \
             Resources/Maps/Shuttles
           do
             if [ -d "$dir" ]; then
@@ -140,13 +142,22 @@ jobs:
             echo "ShuttleEvent directory not found in game repository"
           fi
 
-      - name: Generate Eighth Fleet shuttles from ShuttleEvent
+      - name: Copy POI maps to current repo
+        run: |
+          if [ -d "monolith/Resources/Maps/_Exodus/POI" ]; then
+            mkdir -p current-repo/POI
+            cp monolith/Resources/Maps/_Exodus/POI/*.yml current-repo/POI/ 2>/dev/null || echo "No POI YML files found"
+          else
+            echo "POI directory not found in game repository"
+          fi
+
+      - name: Generate Eighth Fleet shuttles and POI stations
         run: |
           cd current-repo
-          if [ -d "ShuttleEvent" ] && [ "$(ls -A ShuttleEvent/*.yml 2>/dev/null)" ]; then
+          if [ "$(ls -A ShuttleEvent/*.yml 2>/dev/null)" ] || [ "$(ls -A POI/*.yml 2>/dev/null)" ]; then
             node scripts/parse-shuttle-event.js
           else
-            echo "No ShuttleEvent files to process, skipping eighth_fleet generation"
+            echo "No ShuttleEvent or POI files to process, skipping generated entries"
           fi
 
       - name: Commit and push
@@ -157,6 +168,7 @@ jobs:
           git add src/
           git add static/
           git add ShuttleEvent/ 2>/dev/null || true
+          git add POI/ 2>/dev/null || true
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
