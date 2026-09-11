@@ -73,6 +73,100 @@ function resolveImagePath(id: string): string {
 	return '/atom.png';
 }
 
+interface EighthFleetInfo {
+	hullClass: string;
+	classes: string[];
+	desc: string;
+	engines: string[];
+}
+
+const KNOWN_EIGHTH_FLEET_INFO: Record<string, EighthFleetInfo> = {
+	'wyvern.yml': {
+		hullClass: 'battleship',
+		classes: ['fighter'],
+		desc: 'Тяжёлый флагманский дредноут Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'horizont.yml': {
+		hullClass: 'cruiser',
+		classes: ['fighter', 'patrol'],
+		desc: 'Тяжёлый ударный крейсер Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'mantaray.yml': {
+		hullClass: 'destroyer',
+		classes: ['fighter', 'pursuit'],
+		desc: 'Торпедный эсминец Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'stratostar.yml': {
+		hullClass: 'frigate',
+		classes: ['patrol', 'fighter'],
+		desc: 'Тяжёлый боевой фрегат Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'azimuth.yml': {
+		hullClass: 'frigate',
+		classes: ['patrol', 'fighter'],
+		desc: 'Штурмовой фрегат Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'concord_x.yml': {
+		hullClass: 'corvette',
+		classes: ['patrol', 'fighter'],
+		desc: 'Тяжёлый корвет Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'zenith_e.yml': {
+		hullClass: 'corvette',
+		classes: ['patrol'],
+		desc: 'Патрульный корвет модификации «Е» Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'zenith.yml': {
+		hullClass: 'corvette',
+		classes: ['patrol'],
+		desc: 'Боевой корвет Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'zenith_a.yml': {
+		hullClass: 'corvette',
+		classes: ['patrol'],
+		desc: 'Патрульный корвет модификации «А» Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'wyrm.yml': {
+		hullClass: 'corvette',
+		classes: ['fighter', 'pursuit'],
+		desc: 'Скоростной ударный корвет Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'crow.yml': {
+		hullClass: 'corvette',
+		classes: ['fighter', 'patrol'],
+		desc: 'Рейдовый корвет Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'nebula.yml': {
+		hullClass: 'fighter',
+		classes: ['fighter', 'pursuit'],
+		desc: 'Тяжёлый истребитель-перехватчик Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'omen.yml': {
+		hullClass: 'corvette',
+		classes: ['fighter', 'pursuit'],
+		desc: 'Ракетно-торпедный корвет Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	},
+	'razorn.yml': {
+		hullClass: 'fighter',
+		classes: ['pursuit', 'fighter'],
+		desc: 'Лёгкий скоростной истребитель-перехватчик Автоматической Системы Защиты.',
+		engines: ['rtg', 'apu']
+	}
+};
+
 function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: string): Shuttle {
 	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
 	const ymlPath = path.join(shuttleEventDir, filename);
@@ -93,17 +187,18 @@ function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: str
 
 	const size = determineShuttleSize(entityCount);
 	const imagePath = resolveImagePath(id);
+	const known = KNOWN_EIGHTH_FLEET_INFO[filename];
 
 	return {
 		id: `eighth-${id}`,
 		name,
-		description: 'Шаттл Восьмого Экспедиционного флота.',
+		description: known?.desc ?? 'Боевой корабль Автоматической Системы Защиты.',
 		price: 0,
 		group: 'eighth_fleet',
-		hullClass: 'shuttle',
+		hullClass: known?.hullClass ?? 'corvette',
 		size,
-		classes: ['expedition'],
-		engines: ['apu'],
+		classes: known?.classes ?? ['fighter'],
+		engines: known?.engines ?? ['rtg', 'apu'],
 		image: imagePath
 	};
 }
