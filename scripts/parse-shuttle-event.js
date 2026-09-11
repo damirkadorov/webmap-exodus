@@ -86,15 +86,15 @@ const KNOWN_EIGHTH_FLEET_INFO = {
 		engines: ['rtg', 'apu']
 	},
 	'stratostar.yml': {
-		hullClass: 'frigate',
+		hullClass: 'cruiser',
 		classes: ['patrol', 'fighter'],
-		desc: 'Тяжёлый боевой фрегат Автоматической Системы Защиты.',
+		desc: 'Тяжёлый боевой крейсер Автоматической Системы Защиты.',
 		engines: ['rtg', 'apu']
 	},
 	'azimuth.yml': {
-		hullClass: 'frigate',
+		hullClass: 'cruiser',
 		classes: ['patrol', 'fighter'],
-		desc: 'Штурмовой фрегат Автоматической Системы Защиты.',
+		desc: 'Штурмовой крейсер Автоматической Системы Защиты.',
 		engines: ['rtg', 'apu']
 	},
 	'concord_x.yml': {

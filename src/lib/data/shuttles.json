@@ -2438,14 +2438,14 @@
 	{
 		"id": "eighth-azimuth",
 		"name": "АСЗ Азимут",
-		"description": "Штурмовой фрегат Автоматической Системы Защиты.",
+		"description": "Штурмовой крейсер Автоматической Системы Защиты.",
 		"price": 0,
 		"group": "eighth_fleet",
 		"size": "large",
 		"classes": ["patrol", "fighter"],
 		"engines": ["rtg", "apu"],
 		"image": "/azimuth-0.png",
-		"hullClass": "frigate"
+		"hullClass": "cruiser"
 	},
 	{
 		"id": "eighth-concord-x",
@@ -2534,14 +2534,14 @@
 	{
 		"id": "eighth-stratostar",
 		"name": "ВЭФ Стратостар",
-		"description": "Тяжёлый боевой фрегат Автоматической Системы Защиты.",
+		"description": "Тяжёлый боевой крейсер Автоматической Системы Защиты.",
 		"price": 0,
 		"group": "eighth_fleet",
 		"size": "large",
 		"classes": ["patrol", "fighter"],
 		"engines": ["rtg", "apu"],
 		"image": "/stratostar-0.png",
-		"hullClass": "frigate"
+		"hullClass": "cruiser"
 	},
 	{
 		"id": "eighth-wyrm",
