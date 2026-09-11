@@ -517,8 +517,8 @@
 	},
 	{
 		"id": "BlackhawkKortic",
-		"name": "company-vessel-blackhawk-kortic-name",
-		"description": "company-vessel-blackhawk-kortic-description",
+		"name": "Блэкхок «Кортик»",
+		"description": "Компактный корабль ЧВК «Блэкхок» для сопровождения и выполнения контрактных задач.",
 		"price": 92300,
 		"group": "shipyard",
 		"size": "small",
@@ -2209,12 +2209,12 @@
 	},
 	{
 		"id": "HorizonSiphon",
-		"name": "company-vessel-horizon-siphon-name",
-		"description": "company-vessel-horizon-siphon-description",
+		"name": "Горизонт «Сифон»",
+		"description": "Газовый баркас Horizon Energy, оптимизированный под сбор газа в туманностях.",
 		"price": 72000,
 		"group": "shipyard",
 		"size": "small",
-		"classes": ["mercenary"],
+		"classes": ["atmospherics"],
 		"engines": ["uranium"],
 		"image": "/siphon-0.png",
 		"hullClass": "shuttle"
