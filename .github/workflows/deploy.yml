@@ -5,6 +5,7 @@ on:
   push:
     branches:
       - generated/*
+      - master
 
 permissions:
   contents: read
