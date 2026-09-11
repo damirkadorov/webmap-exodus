@@ -129,14 +129,14 @@ function isGenericName(str) {
 const KNOWN_POI_INFO = {
 	'ads_big_ancient_storage.yml': {
 		name: 'Правительственная Цитадель',
-		desc: 'Укреплённая цитадель сил обороны Асаким.',
-		classes: ['capital'],
+		desc: 'Древняя укреплённая цитадель сил обороны АСЗ.',
+		classes: [],
 		engines: ['ame']
 	},
 	'ads_small_ancient_storage.yml': {
 		name: "Древнее Хранилище Кхси'Ра",
-		desc: "Древний складской комплекс цивилизации Кхси'Ра.",
-		classes: ['cargo', 'salvage'],
+		desc: "Древнее хранилище цивилизации Кхси'Ра.",
+		classes: [],
 		engines: ['ame']
 	},
 	'anomalouslab.yml': {
@@ -154,7 +154,7 @@ const KNOWN_POI_INFO = {
 	'azimuth_lobby.yml': {
 		name: 'АСЗ Азимут',
 		desc: 'Орбитальная станция АСЗ Азимут.',
-		classes: ['civilian'],
+		classes: [],
 		engines: ['solar']
 	},
 	'bahama.yml': {
@@ -184,7 +184,7 @@ const KNOWN_POI_INFO = {
 	'camelot.yml': {
 		name: 'Форт Камелот',
 		desc: 'Военный опорный пункт СССП.',
-		classes: ['security'],
+		classes: [],
 		engines: ['ame']
 	},
 	'cargodepot.yml': {
@@ -208,7 +208,7 @@ const KNOWN_POI_INFO = {
 	'cruiseship.yml': {
 		name: 'Покинутый круизный корабль',
 		desc: 'Роскошный пассажирский лайнер, дрейфующий в космосе.',
-		classes: ['civilian'],
+		classes: ['scrapyard'],
 		engines: ['ame']
 	},
 	'derelictdrillsite.yml': {
@@ -232,13 +232,13 @@ const KNOWN_POI_INFO = {
 	'lpbravo.yml': {
 		name: 'Прослушивающий Пункт Браво',
 		desc: 'Секретный разведывательный пункт прослушивания.',
-		classes: ['security'],
+		classes: [],
 		engines: ['ame']
 	},
 	'pdvhelios.yml': {
 		name: 'ДФ | Крепость Гелиос',
 		desc: 'Оборонительный форпост Династии Фаэтон.',
-		classes: ['capital', 'security'],
+		classes: ['pirate'],
 		engines: ['ame']
 	},
 	'sevastopol.yml': {
@@ -262,7 +262,7 @@ const KNOWN_POI_INFO = {
 	'tsfmchalcyon.yml': {
 		name: 'КВП | Флагман Фалкон',
 		desc: 'Тяжелый флагманский крейсер сил правопорядка КВП.',
-		classes: ['capital', 'security'],
+		classes: [],
 		engines: ['ame']
 	},
 	'tsfmcoutpost.yml': {
@@ -273,8 +273,8 @@ const KNOWN_POI_INFO = {
 	},
 	'whale.yml': {
 		name: 'ВЭФ | Кашалот',
-		desc: 'Сверхтяжелое судно Восьмого Экспедиционного флота.',
-		classes: ['capital'],
+		desc: 'Тяжелый корабль-осколок АСЗ под управлением воинов Асаким.',
+		classes: [],
 		engines: ['supermatter']
 	}
 };

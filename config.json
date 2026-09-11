@@ -38,9 +38,6 @@
 			"station": "Станция"
 		},
 		"classes": {
-			"battleship": "Линкор",
-			"carrier": "Авианосец",
-			"capital": "Флагман",
 			"detainment": "Конвойный",
 			"detective": "Следственный",
 			"fighter": "Боевой",
@@ -60,11 +57,7 @@
 			"civilian": "Гражданский",
 			"kitchen": "ОбщеПит",
 			"syndicate": "Синдикат",
-			"pirate": "Династия Фаэтон",
-			"corvette": "Корвет",
-			"frigate": "Фрегат",
-			"destroyer": "Эсминец",
-			"cruiser": "Крейсер"
+			"pirate": "Династия Фаэтон"
 		},
 		"engines": {
 			"ame": "ДАМ",

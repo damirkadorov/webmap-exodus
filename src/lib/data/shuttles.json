@@ -54,7 +54,7 @@
 		"price": 1540950,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "capital", "destroyer", "medical", "chemistry", "pursuit", "patrol"],
+		"classes": ["pirate", "medical", "chemistry", "pursuit", "patrol"],
 		"engines": ["ame"],
 		"image": "/saturn-0.png",
 		"hullClass": "battleship"
@@ -102,7 +102,7 @@
 		"price": 334700,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "frigate"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/kortik-0.png",
 		"hullClass": "frigate"
@@ -126,7 +126,7 @@
 		"price": 139700,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "corvette"],
+		"classes": ["pirate"],
 		"engines": ["bananium"],
 		"image": "/kalisto-0.png",
 		"hullClass": "corvette"
@@ -186,7 +186,7 @@
 		"price": 210200,
 		"group": "security",
 		"size": "medium",
-		"classes": ["patrol", "corvette"],
+		"classes": ["patrol"],
 		"engines": ["ame"],
 		"image": "/sentinel_f-0.png",
 		"hullClass": "corvette"
@@ -198,7 +198,7 @@
 		"price": 138300,
 		"group": "viper",
 		"size": "medium",
-		"classes": ["destroyer", "detainment"],
+		"classes": ["detainment"],
 		"engines": ["ame"],
 		"image": "/venom-0.png",
 		"hullClass": "destroyer"
@@ -222,7 +222,7 @@
 		"price": 74200,
 		"group": "ussp",
 		"size": "medium",
-		"classes": ["pursuit", "patrol", "corvette"],
+		"classes": ["pursuit", "patrol"],
 		"engines": ["ame"],
 		"image": "/tayfun-0.png",
 		"hullClass": "corvette"
@@ -234,7 +234,7 @@
 		"price": 188000,
 		"group": "shipyard",
 		"size": "large",
-		"classes": ["patrol", "capital"],
+		"classes": ["patrol"],
 		"engines": ["plasma"],
 		"image": "/balor-0.png",
 		"hullClass": "cruiser"
@@ -366,7 +366,7 @@
 		"price": 160200,
 		"group": "security",
 		"size": "medium",
-		"classes": ["patrol", "corvette"],
+		"classes": ["patrol"],
 		"engines": ["plasma"],
 		"image": "/aldebaran-0.png",
 		"hullClass": "corvette"
@@ -390,7 +390,7 @@
 		"price": 300000,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "pursuit", "corvette"],
+		"classes": ["pirate", "pursuit"],
 		"engines": ["uranium"],
 		"image": "/scarab-0.png",
 		"hullClass": "corvette"
@@ -462,7 +462,7 @@
 		"price": 165000,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "pursuit", "corvette"],
+		"classes": ["pirate", "pursuit"],
 		"engines": ["plasma"],
 		"image": "/enceladus-0.png",
 		"hullClass": "corvette"
@@ -558,7 +558,7 @@
 		"price": 206100,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "corvette"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/fenrir-0.png",
 		"hullClass": "corvette"
@@ -582,7 +582,7 @@
 		"price": 121400,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "pursuit", "corvette"],
+		"classes": ["pirate", "pursuit"],
 		"engines": ["uranium"],
 		"image": "/scorpion-0.png",
 		"hullClass": "corvette"
@@ -606,7 +606,7 @@
 		"price": 228621,
 		"group": "security",
 		"size": "medium",
-		"classes": ["patrol", "corvette"],
+		"classes": ["patrol"],
 		"engines": ["ame"],
 		"image": "/mercury-0.png",
 		"hullClass": "corvette"
@@ -618,7 +618,7 @@
 		"price": 243800,
 		"group": "security",
 		"size": "medium",
-		"classes": ["pursuit", "corvette"],
+		"classes": ["pursuit"],
 		"engines": ["nfr"],
 		"image": "/spekter-0.png",
 		"hullClass": "corvette"
@@ -642,7 +642,7 @@
 		"price": 1225950,
 		"group": "security",
 		"size": "large",
-		"classes": ["capital", "destroyer", "medical", "chemistry", "pursuit", "patrol"],
+		"classes": ["medical", "chemistry", "pursuit", "patrol"],
 		"engines": ["ame"],
 		"image": "/flyssa-0.png",
 		"hullClass": "battleship"
@@ -702,7 +702,7 @@
 		"price": 1311300,
 		"group": "security",
 		"size": "large",
-		"classes": ["capital", "destroyer", "medical", "chemistry", "pursuit", "patrol"],
+		"classes": ["medical", "chemistry", "pursuit", "patrol"],
 		"engines": ["ame"],
 		"image": "/antares-0.png",
 		"hullClass": "destroyer"
@@ -738,7 +738,7 @@
 		"price": 230300,
 		"group": "medical",
 		"size": "medium",
-		"classes": ["corvette", "medical", "chemistry"],
+		"classes": ["medical", "chemistry"],
 		"engines": ["plasma"],
 		"image": "/epione-0.png",
 		"hullClass": "corvette"
@@ -762,7 +762,7 @@
 		"price": 224000,
 		"group": "scrapyard",
 		"size": "medium",
-		"classes": ["destroyer", "scrapyard"],
+		"classes": ["scrapyard"],
 		"engines": ["plasma"],
 		"image": "/vrikaash-0.png",
 		"hullClass": "destroyer"
@@ -786,7 +786,7 @@
 		"price": 875800,
 		"group": "sr",
 		"size": "large",
-		"classes": ["science", "capital"],
+		"classes": ["science"],
 		"engines": ["ame"],
 		"image": "/ravager-0.png",
 		"hullClass": "battleship"
@@ -906,7 +906,7 @@
 		"price": 360000,
 		"group": "shipyard",
 		"size": "large",
-		"classes": ["frigate"],
+		"classes": ["cargo", "civilian"],
 		"engines": ["ame"],
 		"image": "/merchant-0.png",
 		"hullClass": "frigate"
@@ -930,7 +930,7 @@
 		"price": 385000,
 		"group": "citadel",
 		"size": "large",
-		"classes": ["civilian", "frigate"],
+		"classes": ["civilian"],
 		"engines": ["rtg"],
 		"image": "/luxury-0.png",
 		"hullClass": "frigate"
@@ -1062,7 +1062,7 @@
 		"price": 210200,
 		"group": "security",
 		"size": "medium",
-		"classes": ["patrol", "corvette"],
+		"classes": ["patrol"],
 		"engines": ["ame"],
 		"image": "/sentinel-0.png",
 		"hullClass": "corvette"
@@ -1194,7 +1194,7 @@
 		"price": 420000,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "pursuit", "destroyer"],
+		"classes": ["pirate", "pursuit"],
 		"engines": ["plasma"],
 		"image": "/enceladus_prime-0.png",
 		"hullClass": "destroyer"
@@ -1266,7 +1266,7 @@
 		"price": 435400,
 		"group": "security",
 		"size": "large",
-		"classes": ["patrol", "frigate"],
+		"classes": ["patrol"],
 		"engines": ["nfr"],
 		"image": "/fujian-0.png",
 		"hullClass": "carrier"
@@ -1290,7 +1290,7 @@
 		"price": 134000,
 		"group": "security",
 		"size": "medium",
-		"classes": ["patrol", "corvette"],
+		"classes": ["patrol"],
 		"engines": ["ame"],
 		"image": "/calypso-0.png",
 		"hullClass": "corvette"
@@ -1326,7 +1326,7 @@
 		"price": 84300,
 		"group": "shipyard",
 		"size": "medium",
-		"classes": ["salvage", "frigate"],
+		"classes": ["salvage"],
 		"engines": ["plasma"],
 		"image": "/caracara-0.png",
 		"hullClass": "frigate"
@@ -1398,7 +1398,7 @@
 		"price": 320650,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "frigate"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/ganymede-0.png",
 		"hullClass": "frigate"
@@ -1446,7 +1446,7 @@
 		"price": 189100,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "pursuit", "corvette"],
+		"classes": ["pirate", "pursuit"],
 		"engines": ["uranium"],
 		"image": "/neptune-0.png",
 		"hullClass": "corvette"
@@ -1482,7 +1482,7 @@
 		"price": 425000,
 		"group": "security",
 		"size": "large",
-		"classes": ["frigate", "pursuit", "patrol"],
+		"classes": ["pursuit", "patrol"],
 		"engines": ["plasma"],
 		"image": "/altair-0.png",
 		"hullClass": "frigate"
@@ -1518,7 +1518,7 @@
 		"price": 280650,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "frigate"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/europa-0.png",
 		"hullClass": "frigate"
@@ -1590,7 +1590,7 @@
 		"price": 85290,
 		"group": "ussp",
 		"size": "medium",
-		"classes": ["pursuit", "corvette"],
+		"classes": ["pursuit"],
 		"engines": ["ame"],
 		"image": "/drakon-0.png",
 		"hullClass": "corvette"
@@ -1614,7 +1614,7 @@
 		"price": 303200,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "frigate"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/kortik_t2-0.png",
 		"hullClass": "frigate"
@@ -1638,7 +1638,7 @@
 		"price": 174800,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "pursuit", "corvette"],
+		"classes": ["pirate", "pursuit"],
 		"engines": ["ame"],
 		"image": "/layak-0.png",
 		"hullClass": "corvette"
@@ -1770,7 +1770,7 @@
 		"price": 142500,
 		"group": "ussp",
 		"size": "medium",
-		"classes": ["pursuit", "corvette"],
+		"classes": ["pursuit"],
 		"engines": ["ame"],
 		"image": "/sulak-0.png",
 		"hullClass": "destroyer"
@@ -1806,7 +1806,7 @@
 		"price": 322000,
 		"group": "shipyard",
 		"size": "large",
-		"classes": ["patrol", "corvette", "science", "salvage", "medical", "chemistry"],
+		"classes": ["patrol", "science", "salvage", "medical", "chemistry"],
 		"engines": ["ame"],
 		"image": "/hammerhead-0.png",
 		"hullClass": "corvette"
@@ -1830,7 +1830,7 @@
 		"price": 320000,
 		"group": "ussp",
 		"size": "large",
-		"classes": ["frigate"],
+		"classes": ["fighter"],
 		"engines": ["nfr"],
 		"image": "/buran-0.png",
 		"hullClass": "frigate"
@@ -1854,7 +1854,7 @@
 		"price": 381900,
 		"group": "security",
 		"size": "large",
-		"classes": ["frigate", "capital"],
+		"classes": ["patrol"],
 		"engines": ["ame"],
 		"image": "/polaris-0.png",
 		"hullClass": "cruiser"
@@ -1938,7 +1938,7 @@
 		"price": 345000,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "frigate"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/saintie-0.png",
 		"hullClass": "frigate"
@@ -1950,7 +1950,7 @@
 		"price": 285580,
 		"group": "blackmarket",
 		"size": "large",
-		"classes": ["pirate", "frigate"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/vulture-0.png",
 		"hullClass": "frigate"
@@ -2202,7 +2202,7 @@
 		"price": 366200,
 		"group": "security",
 		"size": "large",
-		"classes": ["frigate"],
+		"classes": ["patrol", "fighter"],
 		"engines": ["plasma"],
 		"image": "/andromeda-0.png",
 		"hullClass": "frigate"
@@ -2250,7 +2250,7 @@
 		"price": 425000,
 		"group": "ussp",
 		"size": "large",
-		"classes": ["capital", "frigate", "medical", "chemistry"],
+		"classes": ["medical", "chemistry"],
 		"engines": ["ame"],
 		"image": "/ledokol-0.png",
 		"hullClass": "battleship"
@@ -2274,7 +2274,7 @@
 		"price": 418000,
 		"group": "security",
 		"size": "medium",
-		"classes": ["patrol", "corvette"],
+		"classes": ["patrol"],
 		"engines": ["plasma"],
 		"image": "/termite-0.png",
 		"hullClass": "corvette"
@@ -2322,7 +2322,7 @@
 		"price": 98100,
 		"group": "blackmarket",
 		"size": "medium",
-		"classes": ["pirate", "corvette"],
+		"classes": ["pirate"],
 		"engines": ["bananium"],
 		"image": "/metis-0.png",
 		"hullClass": "corvette"
@@ -2406,7 +2406,7 @@
 		"price": 399500,
 		"group": "scrapyard",
 		"size": "large",
-		"classes": ["frigate", "scrapyard"],
+		"classes": ["scrapyard"],
 		"engines": ["ame"],
 		"image": "/skelraak-0.png",
 		"hullClass": "battleship"
@@ -2606,11 +2606,11 @@
 	{
 		"id": "station-ads-big-ancient-storage",
 		"name": "Правительственная Цитадель",
-		"description": "Укреплённая цитадель сил обороны Асаким.",
+		"description": "Древняя укреплённая цитадель сил обороны АСЗ.",
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["capital"],
+		"classes": [],
 		"engines": ["ame"],
 		"image": "/ads_big_ancient_storage-0.png",
 		"hullClass": "station"
@@ -2618,11 +2618,11 @@
 	{
 		"id": "station-ads-small-ancient-storage",
 		"name": "Древнее Хранилище Кхси'Ра",
-		"description": "Древний складской комплекс цивилизации Кхси'Ра.",
+		"description": "Древнее хранилище цивилизации Кхси'Ра.",
 		"price": 0,
 		"group": "station",
 		"size": "medium",
-		"classes": ["cargo", "salvage"],
+		"classes": [],
 		"engines": ["ame"],
 		"image": "/ads_small_ancient_storage-0.png",
 		"hullClass": "station"
@@ -2658,7 +2658,7 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["civilian"],
+		"classes": [],
 		"engines": ["solar"],
 		"image": "/azimuth_lobby-0.png",
 		"hullClass": "station"
@@ -2718,7 +2718,7 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["security"],
+		"classes": [],
 		"engines": ["ame"],
 		"image": "/camelot-0.png",
 		"hullClass": "station"
@@ -2766,7 +2766,7 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["civilian"],
+		"classes": ["scrapyard"],
 		"engines": ["ame"],
 		"image": "/cruiseship-0.png",
 		"hullClass": "station"
@@ -2814,7 +2814,7 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["security"],
+		"classes": [],
 		"engines": ["ame"],
 		"image": "/lpbravo-0.png",
 		"hullClass": "station"
@@ -2826,7 +2826,7 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["capital", "security"],
+		"classes": ["pirate"],
 		"engines": ["ame"],
 		"image": "/pdvhelios-0.png",
 		"hullClass": "station"
@@ -2874,7 +2874,7 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["capital"],
+		"classes": [],
 		"engines": ["ame"],
 		"image": "/tsfmchalcyon-0.png",
 		"hullClass": "station"
@@ -2894,11 +2894,11 @@
 	{
 		"id": "station-whale",
 		"name": "ВЭФ | Кашалот",
-		"description": "Сверхтяжелое судно Восьмого Экспедиционного флота.",
+		"description": "Тяжелый корабль-осколок АСЗ под управлением воинов Асаким.",
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["capital", "expedition"],
+		"classes": [],
 		"engines": ["supermatter"],
 		"image": "/whale-0.png",
 		"hullClass": "station"

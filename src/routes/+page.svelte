@@ -25,20 +25,7 @@
 		...defaultShuttleFilters
 	});
 
-	const roleOptions = Object.fromEntries(
-		Object.entries(shuttleConfig.classes).filter(
-			([key]) =>
-				![
-					'battleship',
-					'carrier',
-					'cruiser',
-					'destroyer',
-					'frigate',
-					'corvette',
-					'capital'
-				].includes(key)
-		)
-	) as Record<ShuttleClass, string>;
+	const roleOptions = shuttleConfig.classes;
 
 	const hullOrder: ShuttleHullClass[] = [
 		'battleship',
