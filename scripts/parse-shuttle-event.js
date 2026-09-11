@@ -20,9 +20,10 @@ function isLocalizationKey(str) {
  * Convert a filename like "blackhawk_kortic.yml" → "Blackhawk Kortic"
  */
 function nameFromFilename(filename) {
-	return path.basename(filename, '.yml')
+	return path
+		.basename(filename, '.yml')
 		.split(/[_\-\s]+/)
-		.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
 		.join(' ');
 }
 
@@ -53,7 +54,7 @@ function resolveImagePath(id) {
 		`${id}.png`,
 		`${id}-0.png`,
 		`${idWithUnderscores}.png`,
-		`${idWithUnderscores}-0.png`,
+		`${idWithUnderscores}-0.png`
 	];
 
 	for (const candidate of candidates) {
@@ -83,9 +84,7 @@ function createEighthFleetShuttleFromFile(filename, shuttleEventDir) {
 
 	// If the name is a localization key (e.g. "company-vessel-blackhawk-kortic-name")
 	// or missing, fall back to a human-readable name derived from the filename.
-	const name = (!rawName || isLocalizationKey(rawName))
-		? nameFromFilename(filename)
-		: rawName;
+	const name = !rawName || isLocalizationKey(rawName) ? nameFromFilename(filename) : rawName;
 
 	if (rawName && isLocalizationKey(rawName)) {
 		console.warn(`  ⚠ Unresolved localization key "${rawName}" in ${filename} → using "${name}"`);
@@ -105,7 +104,7 @@ function createEighthFleetShuttleFromFile(filename, shuttleEventDir) {
 		size,
 		classes: ['expedition'],
 		engines: ['apu'],
-		image: imagePath,
+		image: imagePath
 	};
 }
 
@@ -125,9 +124,7 @@ function createPoiStationFromFile(filename, poiDir) {
 		console.warn(`Warning: Could not parse ${filename}: ${error.message}`);
 	}
 
-	const name = (!rawName || isLocalizationKey(rawName))
-		? nameFromFilename(filename)
-		: rawName;
+	const name = !rawName || isLocalizationKey(rawName) ? nameFromFilename(filename) : rawName;
 
 	if (rawName && isLocalizationKey(rawName)) {
 		console.warn(`  ⚠ Unresolved localization key "${rawName}" in ${filename} → using "${name}"`);
@@ -155,10 +152,10 @@ function main() {
 	const outputPath = path.join(__dirname, '..', 'src', 'lib', 'data', 'shuttles.json');
 
 	const shuttleEventYmlFiles = fs.existsSync(shuttleEventDir)
-		? fs.readdirSync(shuttleEventDir).filter(f => f.endsWith('.yml'))
+		? fs.readdirSync(shuttleEventDir).filter((f) => f.endsWith('.yml'))
 		: [];
 	const poiYmlFiles = fs.existsSync(poiDir)
-		? fs.readdirSync(poiDir).filter(f => f.endsWith('.yml'))
+		? fs.readdirSync(poiDir).filter((f) => f.endsWith('.yml'))
 		: [];
 
 	if (shuttleEventYmlFiles.length === 0 && poiYmlFiles.length === 0) {
@@ -169,10 +166,14 @@ function main() {
 	const existingShuttles = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
 
 	// Keep all non-generated groups (including manually-managed groups)
-	const otherShuttles = existingShuttles.filter(s => s.group !== 'eighth_fleet' && s.group !== 'station');
+	const otherShuttles = existingShuttles.filter(
+		(s) => s.group !== 'eighth_fleet' && s.group !== 'station'
+	);
 
-	const newEighthFleetShuttles = shuttleEventYmlFiles.map(f => createEighthFleetShuttleFromFile(f, shuttleEventDir));
-	const newPoiStations = poiYmlFiles.map(f => createPoiStationFromFile(f, poiDir));
+	const newEighthFleetShuttles = shuttleEventYmlFiles.map((f) =>
+		createEighthFleetShuttleFromFile(f, shuttleEventDir)
+	);
+	const newPoiStations = poiYmlFiles.map((f) => createPoiStationFromFile(f, poiDir));
 
 	const allShuttles = [...otherShuttles, ...newEighthFleetShuttles, ...newPoiStations];
 

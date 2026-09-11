@@ -1,261 +1,189 @@
 [
-  {
-    "id": "bt-y-atom",
-    "name": "BT-Y Atom",
-    "description": "Небольшой боевой шаттл с упором на броню и автономность.",
-    "price": 148000,
-    "group": "blackmarket",
-    "size": "small",
-    "classes": [
-      "fighter",
-      "mercenary"
-    ],
-    "engines": [
-      "apu",
-      "welding"
-    ],
-    "image": "/atom.png"
-  },
-  {
-    "id": "msc-lyra",
-    "name": "MSC Lyra",
-    "description": "Медицинский шаттл для выездных операций и стабилизации экипажа.",
-    "price": 112000,
-    "group": "medical",
-    "size": "small",
-    "classes": [
-      "medical"
-    ],
-    "engines": [
-      "ame"
-    ],
-    "image": "/atom.png"
-  },
-  {
-    "id": "ex-vanguard",
-    "name": "EX Vanguard",
-    "description": "Экспедиционный универсал с усиленной дальностью и складом.",
-    "price": 176000,
-    "group": "expedition",
-    "size": "medium",
-    "classes": [
-      "expedition",
-      "cargo"
-    ],
-    "engines": [
-      "teg"
-    ],
-    "image": "/atom.png"
-  },
-  {
-    "id": "nfsd-warden",
-    "name": "NFSD Warden",
-    "description": "Патрульный корабль для задержаний и сопровождения конвоев.",
-    "price": 189000,
-    "group": "security",
-    "size": "medium",
-    "classes": [
-      "patrol",
-      "detainment"
-    ],
-    "engines": [
-      "rtg"
-    ],
-    "image": "/atom.png"
-  },
-  {
-    "id": "eighth-azimuth",
-    "name": "АСЗ Азимут",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "large",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/azimuth-0.png"
-  },
-  {
-    "id": "eighth-concord-x",
-    "name": "АСЗ Конкорд-Х",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "medium",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/concord_x-0.png"
-  },
-  {
-    "id": "eighth-crow",
-    "name": "АСЗ Кроу",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "medium",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/crow-0.png"
-  },
-  {
-    "id": "eighth-mantaray",
-    "name": "АСЗ Мантарэй",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "large",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/mantaray-0.png"
-  },
-  {
-    "id": "eighth-nebula",
-    "name": "АСЗ Небула",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "small",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/nebula-0.png"
-  },
-  {
-    "id": "eighth-omen",
-    "name": "АСЗ Омен",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "small",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/omen-0.png"
-  },
-  {
-    "id": "eighth-razorn",
-    "name": "АСЗ Разор",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "small",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/razorn-0.png"
-  },
-  {
-    "id": "eighth-stratostar",
-    "name": "ВЭФ Стратостар",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "large",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/stratostar-0.png"
-  },
-  {
-    "id": "eighth-wyrm",
-    "name": "АСЗ Вирм",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "medium",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/wyrm-0.png"
-  },
-  {
-    "id": "eighth-wyvern",
-    "name": "АСЗ Виверна",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "large",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/wyvern-0.png"
-  },
-  {
-    "id": "eighth-zenith",
-    "name": "АСЗ Зенит",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "medium",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/zenith-0.png"
-  },
-  {
-    "id": "eighth-zenith-a",
-    "name": "АСЗ Зенит-А",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "medium",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/zenith_a-0.png"
-  },
-  {
-    "id": "eighth-zenith-e",
-    "name": "АСЗ Зенит-Е",
-    "description": "Шаттл Восьмого Экспедиционного флота.",
-    "price": 0,
-    "group": "eighth_fleet",
-    "size": "medium",
-    "classes": [
-      "expedition"
-    ],
-    "engines": [
-      "apu"
-    ],
-    "image": "/zenith_e-0.png"
-  }
+	{
+		"id": "bt-y-atom",
+		"name": "BT-Y Atom",
+		"description": "Небольшой боевой шаттл с упором на броню и автономность.",
+		"price": 148000,
+		"group": "blackmarket",
+		"size": "small",
+		"classes": ["fighter", "mercenary"],
+		"engines": ["apu", "welding"],
+		"image": "/atom.png"
+	},
+	{
+		"id": "msc-lyra",
+		"name": "MSC Lyra",
+		"description": "Медицинский шаттл для выездных операций и стабилизации экипажа.",
+		"price": 112000,
+		"group": "medical",
+		"size": "small",
+		"classes": ["medical"],
+		"engines": ["ame"],
+		"image": "/atom.png"
+	},
+	{
+		"id": "ex-vanguard",
+		"name": "EX Vanguard",
+		"description": "Экспедиционный универсал с усиленной дальностью и складом.",
+		"price": 176000,
+		"group": "expedition",
+		"size": "medium",
+		"classes": ["expedition", "cargo"],
+		"engines": ["teg"],
+		"image": "/atom.png"
+	},
+	{
+		"id": "nfsd-warden",
+		"name": "NFSD Warden",
+		"description": "Патрульный корабль для задержаний и сопровождения конвоев.",
+		"price": 189000,
+		"group": "security",
+		"size": "medium",
+		"classes": ["patrol", "detainment"],
+		"engines": ["rtg"],
+		"image": "/atom.png"
+	},
+	{
+		"id": "eighth-azimuth",
+		"name": "АСЗ Азимут",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "large",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/azimuth-0.png"
+	},
+	{
+		"id": "eighth-concord-x",
+		"name": "АСЗ Конкорд-Х",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "medium",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/concord_x-0.png"
+	},
+	{
+		"id": "eighth-crow",
+		"name": "АСЗ Кроу",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "medium",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/crow-0.png"
+	},
+	{
+		"id": "eighth-mantaray",
+		"name": "АСЗ Мантарэй",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "large",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/mantaray-0.png"
+	},
+	{
+		"id": "eighth-nebula",
+		"name": "АСЗ Небула",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "small",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/nebula-0.png"
+	},
+	{
+		"id": "eighth-omen",
+		"name": "АСЗ Омен",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "small",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/omen-0.png"
+	},
+	{
+		"id": "eighth-razorn",
+		"name": "АСЗ Разор",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "small",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/razorn-0.png"
+	},
+	{
+		"id": "eighth-stratostar",
+		"name": "ВЭФ Стратостар",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "large",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/stratostar-0.png"
+	},
+	{
+		"id": "eighth-wyrm",
+		"name": "АСЗ Вирм",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "medium",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/wyrm-0.png"
+	},
+	{
+		"id": "eighth-wyvern",
+		"name": "АСЗ Виверна",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "large",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/wyvern-0.png"
+	},
+	{
+		"id": "eighth-zenith",
+		"name": "АСЗ Зенит",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "medium",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/zenith-0.png"
+	},
+	{
+		"id": "eighth-zenith-a",
+		"name": "АСЗ Зенит-А",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "medium",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/zenith_a-0.png"
+	},
+	{
+		"id": "eighth-zenith-e",
+		"name": "АСЗ Зенит-Е",
+		"description": "Шаттл Восьмого Экспедиционного флота.",
+		"price": 0,
+		"group": "eighth_fleet",
+		"size": "medium",
+		"classes": ["expedition"],
+		"engines": ["apu"],
+		"image": "/zenith_e-0.png"
+	}
 ]

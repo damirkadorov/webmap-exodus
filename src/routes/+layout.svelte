@@ -9,14 +9,14 @@
 </script>
 
 <svelte:head>
-    <link rel="icon" href={favicon} />
+	<link rel="icon" href={favicon} />
 	<title>{configJson.name}</title>
 </svelte:head>
 
-<div class="w-full flex flex-col h-full min-h-fit flex-1">
-    <Header />
-    <main class="flex-1 flex flex-col">
-        {@render children()}
-    </main>
-    <Footer />
+<div class="flex h-full min-h-fit w-full flex-1 flex-col">
+	<Header />
+	<main class="flex flex-1 flex-col">
+		{@render children()}
+	</main>
+	<Footer />
 </div>

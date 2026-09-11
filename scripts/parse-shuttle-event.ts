@@ -28,9 +28,10 @@ function isLocalizationKey(str: string | null): boolean {
 }
 
 function nameFromFilename(filename: string): string {
-	return path.basename(filename, '.yml')
+	return path
+		.basename(filename, '.yml')
 		.split(/[_\-\s]+/)
-		.map(word => word.charAt(0).toUpperCase() + word.slice(1))
+		.map((word) => word.charAt(0).toUpperCase() + word.slice(1))
 		.join(' ');
 }
 
@@ -59,7 +60,7 @@ function resolveImagePath(id: string): string {
 		`${id}.png`,
 		`${id}-0.png`,
 		`${idWithUnderscores}.png`,
-		`${idWithUnderscores}-0.png`,
+		`${idWithUnderscores}-0.png`
 	];
 
 	for (const candidate of candidates) {
@@ -87,9 +88,7 @@ function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: str
 		console.warn(`Warning: Could not parse ${filename}: ${(error as Error).message}`);
 	}
 
-	const name = (!rawName || isLocalizationKey(rawName))
-		? nameFromFilename(filename)
-		: rawName;
+	const name = !rawName || isLocalizationKey(rawName) ? nameFromFilename(filename) : rawName;
 
 	const size = determineShuttleSize(entityCount);
 	const imagePath = resolveImagePath(id);
@@ -123,9 +122,7 @@ function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {
 		console.warn(`Warning: Could not parse ${filename}: ${(error as Error).message}`);
 	}
 
-	const name = (!rawName || isLocalizationKey(rawName))
-		? nameFromFilename(filename)
-		: rawName;
+	const name = !rawName || isLocalizationKey(rawName) ? nameFromFilename(filename) : rawName;
 
 	const size = determineShuttleSize(entityCount);
 	const imagePath = resolveImagePath(id);
@@ -149,10 +146,10 @@ function main() {
 	const outputPath = path.join(__dirname, '..', 'src', 'lib', 'data', 'shuttles.json');
 
 	const shuttleEventYmlFiles = fs.existsSync(shuttleEventDir)
-		? fs.readdirSync(shuttleEventDir).filter(f => f.endsWith('.yml'))
+		? fs.readdirSync(shuttleEventDir).filter((f) => f.endsWith('.yml'))
 		: [];
 	const poiYmlFiles = fs.existsSync(poiDir)
-		? fs.readdirSync(poiDir).filter(f => f.endsWith('.yml'))
+		? fs.readdirSync(poiDir).filter((f) => f.endsWith('.yml'))
 		: [];
 
 	if (shuttleEventYmlFiles.length === 0 && poiYmlFiles.length === 0) {
@@ -161,10 +158,14 @@ function main() {
 	}
 
 	const existingShuttles: Shuttle[] = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
-	const otherShuttles = existingShuttles.filter(s => s.group !== 'eighth_fleet' && s.group !== 'station');
+	const otherShuttles = existingShuttles.filter(
+		(s) => s.group !== 'eighth_fleet' && s.group !== 'station'
+	);
 
-	const newEighthFleetShuttles = shuttleEventYmlFiles.map(f => createEighthFleetShuttleFromFile(f, shuttleEventDir));
-	const newPoiStations = poiYmlFiles.map(f => createPoiStationFromFile(f, poiDir));
+	const newEighthFleetShuttles = shuttleEventYmlFiles.map((f) =>
+		createEighthFleetShuttleFromFile(f, shuttleEventDir)
+	);
+	const newPoiStations = poiYmlFiles.map((f) => createPoiStationFromFile(f, poiDir));
 
 	const allShuttles = [...otherShuttles, ...newEighthFleetShuttles, ...newPoiStations];
 	fs.writeFileSync(outputPath, JSON.stringify(allShuttles, null, 2), 'utf-8');
