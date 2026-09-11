@@ -11,6 +11,7 @@ interface Shuttle {
 	description: string;
 	price: number;
 	group: string;
+	hullClass?: string;
 	size: string;
 	classes: string[];
 	engines: string[];
@@ -99,6 +100,7 @@ function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: str
 		description: 'Шаттл Восьмого Экспедиционного флота.',
 		price: 0,
 		group: 'eighth_fleet',
+		hullClass: 'shuttle',
 		size,
 		classes: ['expedition'],
 		engines: ['apu'],
@@ -188,7 +190,7 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 	'camelot.yml': {
 		name: 'Форт Камелот',
 		desc: 'Военный опорный пункт СССП.',
-		classes: ['patrol', 'security'],
+		classes: ['security'],
 		engines: ['ame']
 	},
 	'cargodepot.yml': {
@@ -224,7 +226,7 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 	'fragmentofprison.yml': {
 		name: 'Обломок тюремного корабля',
 		desc: 'Разрушенный тюремный блок строгого режима.',
-		classes: ['detainment', 'scrapyard'],
+		classes: ['scrapyard'],
 		engines: ['apu']
 	},
 	'hospital.yml': {
@@ -236,7 +238,7 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 	'lpbravo.yml': {
 		name: 'Прослушивающий Пункт Браво',
 		desc: 'Секретный разведывательный пункт прослушивания.',
-		classes: ['detective', 'security'],
+		classes: ['security'],
 		engines: ['ame']
 	},
 	'pdvhelios.yml': {
@@ -266,7 +268,7 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 	'tsfmchalcyon.yml': {
 		name: 'КВП | Флагман Фалкон',
 		desc: 'Тяжелый флагманский крейсер сил правопорядка КВП.',
-		classes: ['capital', 'fighter'],
+		classes: ['capital', 'security'],
 		engines: ['ame']
 	},
 	'tsfmcoutpost.yml': {
@@ -278,7 +280,7 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 	'whale.yml': {
 		name: 'ВЭФ | Кашалот',
 		desc: 'Сверхтяжелое судно Восьмого Экспедиционного флота.',
-		classes: ['capital', 'expedition'],
+		classes: ['capital'],
 		engines: ['supermatter']
 	}
 };
@@ -319,6 +321,7 @@ function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {
 		description: known?.desc ?? 'Станция (POI).',
 		price: 0,
 		group: 'station',
+		hullClass: 'station',
 		size,
 		classes: known?.classes ?? ['science'],
 		engines: known?.engines ?? ['apu'],

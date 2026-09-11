@@ -9,6 +9,7 @@
 		type ShuttleClass,
 		type ShuttleEngine,
 		type ShuttleGroup,
+		type ShuttleHullClass,
 		type ShuttleSize,
 		type ShuttleSort
 	} from '$lib';
@@ -24,10 +25,46 @@
 		...defaultShuttleFilters
 	});
 
+	const roleOptions = Object.fromEntries(
+		Object.entries(shuttleConfig.classes).filter(
+			([key]) =>
+				![
+					'battleship',
+					'carrier',
+					'cruiser',
+					'destroyer',
+					'frigate',
+					'corvette',
+					'capital'
+				].includes(key)
+		)
+	) as Record<ShuttleClass, string>;
+
+	const hullOrder: ShuttleHullClass[] = [
+		'battleship',
+		'carrier',
+		'cruiser',
+		'destroyer',
+		'frigate',
+		'corvette',
+		'fighter',
+		'shuttle',
+		'station'
+	];
+
+	const hullCounts = $derived.by(() => {
+		const counts: Partial<Record<ShuttleHullClass, number>> = {};
+		for (const s of shuttles) {
+			counts[s.hullClass] = (counts[s.hullClass] || 0) + 1;
+		}
+		return counts;
+	});
+
 	onMount(() => {
 		const params = page.url.searchParams;
 		if (params.has('q')) filters.name = params.get('q') ?? '';
 		if (params.has('group')) filters.group = (params.get('group') as ShuttleGroup) ?? '';
+		if (params.has('hull')) filters.hullClass = (params.get('hull') as ShuttleHullClass) ?? '';
 		if (params.has('size')) filters.size = (params.get('size') as ShuttleSize) ?? '';
 		if (params.has('engine')) filters.engine = (params.get('engine') as ShuttleEngine) ?? '';
 		if (params.has('class')) {
@@ -43,6 +80,7 @@
 		const params = new SvelteURLSearchParams();
 		if (filters.name) params.set('q', filters.name);
 		if (filters.group) params.set('group', filters.group);
+		if (filters.hullClass) params.set('hull', filters.hullClass);
 		if (filters.size) params.set('size', filters.size);
 		if (filters.engine) params.set('engine', filters.engine);
 		if (filters.shuttleClass.length > 0) params.set('class', filters.shuttleClass.join(','));
@@ -63,6 +101,7 @@
 	function resetFilters() {
 		filters.name = defaultShuttleFilters.name;
 		filters.group = defaultShuttleFilters.group;
+		filters.hullClass = defaultShuttleFilters.hullClass;
 		filters.size = defaultShuttleFilters.size;
 		filters.shuttleClass = [...defaultShuttleFilters.shuttleClass];
 		filters.engine = defaultShuttleFilters.engine;
@@ -78,7 +117,8 @@
 			className="md:sticky md:top-[80px]"
 			{filters}
 			shipyardOptions={shuttleConfig.shipyard}
-			classOptions={shuttleConfig.classes}
+			hullOptions={shuttleConfig.hullClasses}
+			classOptions={roleOptions}
 			engineOptions={shuttleConfig.engines}
 			sizeOptions={shuttleConfig.sizes}
 			onReset={resetFilters}
@@ -87,6 +127,32 @@
 
 	<!-- Main content -->
 	<main class="catalog-main">
+		<!-- Hull class quick filter tabs -->
+		<div class="hull-chips-bar" role="tablist" aria-label="Классы кораблей">
+			<button
+				type="button"
+				class="hull-chip"
+				class:active={filters.hullClass === ''}
+				onclick={() => (filters.hullClass = '')}
+			>
+				<span class="chip-name">Все корабли</span>
+				<span class="chip-count">{shuttles.length}</span>
+			</button>
+			{#each hullOrder as hullKey (hullKey)}
+				{#if hullCounts[hullKey]}
+					<button
+						type="button"
+						class="hull-chip"
+						class:active={filters.hullClass === hullKey}
+						onclick={() => (filters.hullClass = filters.hullClass === hullKey ? '' : hullKey)}
+					>
+						<span class="chip-name">{shuttleConfig.hullClasses[hullKey]}</span>
+						<span class="chip-count">{hullCounts[hullKey]}</span>
+					</button>
+				{/if}
+			{/each}
+		</div>
+
 		<!-- Results header bar -->
 		<div class="results-bar" role="status" aria-live="polite">
 			<div class="results-info">
@@ -184,6 +250,75 @@
 		gap: 16px;
 		flex: 1;
 		min-width: 0;
+	}
+
+	/* Hull chips quick filter */
+	.hull-chips-bar {
+		display: flex;
+		align-items: center;
+		gap: 6px;
+		overflow-x: auto;
+		padding: 2px 2px 6px 2px;
+		scrollbar-width: thin;
+		scrollbar-color: var(--border) transparent;
+	}
+
+	.hull-chips-bar::-webkit-scrollbar {
+		height: 4px;
+	}
+
+	.hull-chips-bar::-webkit-scrollbar-thumb {
+		background: var(--border);
+		border-radius: 4px;
+	}
+
+	.hull-chip {
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+		padding: 6px 12px;
+		border-radius: var(--radius-pill);
+		background: var(--bg-panel);
+		border: 1px solid var(--border-dim);
+		color: var(--text-muted);
+		font-family: var(--font-body);
+		font-size: 0.8rem;
+		white-space: nowrap;
+		cursor: pointer;
+		transition: all 0.2s ease;
+		user-select: none;
+	}
+
+	.hull-chip:hover {
+		border-color: var(--accent);
+		color: var(--text);
+		background: rgba(0, 229, 255, 0.05);
+	}
+
+	.hull-chip.active {
+		border-color: var(--accent);
+		background: rgba(0, 229, 255, 0.12);
+		color: var(--accent);
+		box-shadow: 0 0 12px rgba(0, 229, 255, 0.15);
+	}
+
+	.chip-name {
+		font-weight: 500;
+	}
+
+	.chip-count {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		padding: 1px 6px;
+		border-radius: var(--radius-pill);
+		background: rgba(255, 255, 255, 0.06);
+		color: var(--text-dim);
+	}
+
+	.hull-chip.active .chip-count {
+		background: rgba(0, 229, 255, 0.2);
+		color: var(--accent);
+		font-weight: 600;
 	}
 
 	/* Results bar */

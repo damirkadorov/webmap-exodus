@@ -2,6 +2,7 @@ import configJson from '$root/config.json' with { type: 'json' };
 import shuttlesJson from '$lib/data/shuttles.json' with { type: 'json' };
 
 export type ShuttleGroup = keyof typeof configJson.shuttles.shipyard;
+export type ShuttleHullClass = keyof typeof configJson.shuttles.hullClasses;
 export type ShuttleClass = keyof typeof configJson.shuttles.classes;
 export type ShuttleEngine = keyof typeof configJson.shuttles.engines;
 export type ShuttleSize = keyof typeof configJson.shuttles.sizes;
@@ -12,6 +13,7 @@ export interface Shuttle {
 	description: string;
 	price: number;
 	group: ShuttleGroup;
+	hullClass: ShuttleHullClass;
 	size: ShuttleSize;
 	classes: ShuttleClass[];
 	engines: ShuttleEngine[];
@@ -26,16 +28,20 @@ export function normalizeGroup(group: string): ShuttleGroup {
 	return group as ShuttleGroup;
 }
 
-const rawShuttleData = shuttlesJson as Array<Omit<Shuttle, 'group'> & { group: string }>;
+const rawShuttleData = shuttlesJson as Array<
+	Omit<Shuttle, 'group' | 'hullClass'> & { group: string; hullClass?: string }
+>;
 
 const shuttleData: Shuttle[] = rawShuttleData.map((shuttle) => ({
 	...shuttle,
-	group: normalizeGroup(shuttle.group)
+	group: normalizeGroup(shuttle.group),
+	hullClass: (shuttle.hullClass as ShuttleHullClass) || 'shuttle'
 }));
 
 export interface ShuttleFilters {
 	name: string;
 	group: ShuttleGroup | '';
+	hullClass: ShuttleHullClass | '';
 	shuttleClass: ShuttleClass[];
 	engine: ShuttleEngine | '';
 	size: ShuttleSize | '';
@@ -46,6 +52,7 @@ export interface ShuttleFilters {
 export const defaultShuttleFilters: ShuttleFilters = {
 	name: '',
 	group: '',
+	hullClass: '',
 	shuttleClass: [],
 	engine: '',
 	size: '',
@@ -70,6 +77,9 @@ function matchesSearch(shuttle: Shuttle, query: string): boolean {
 
 	const groupLabel = (configJson.shuttles.shipyard as Record<string, string>)[shuttle.group];
 	if (groupLabel && groupLabel.toLowerCase().includes(clean)) return true;
+
+	const hullLabel = (configJson.shuttles.hullClasses as Record<string, string>)[shuttle.hullClass];
+	if (hullLabel && hullLabel.toLowerCase().includes(clean)) return true;
 
 	for (const cls of shuttle.classes) {
 		const classLabel = (configJson.shuttles.classes as Record<string, string>)[cls];
@@ -96,6 +106,10 @@ export function filterShuttles(shuttles: Shuttle[], filters: ShuttleFilters): Sh
 			if (shuttleGroup !== filterGroup) {
 				return false;
 			}
+		}
+
+		if (filters.hullClass && shuttle.hullClass !== filters.hullClass) {
+			return false;
 		}
 
 		if (filters.size && shuttle.size !== filters.size) {

@@ -8,7 +8,8 @@
 		"size": "large",
 		"classes": ["expedition", "science", "salvage"],
 		"engines": ["plasma"],
-		"image": "/comet-0.png"
+		"image": "/comet-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Parabellum",
@@ -19,7 +20,8 @@
 		"size": "medium",
 		"classes": ["civilian"],
 		"engines": ["uranium"],
-		"image": "/parabellum-0.png"
+		"image": "/parabellum-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "McChicken",
@@ -30,7 +32,8 @@
 		"size": "medium",
 		"classes": ["civilian", "kitchen"],
 		"engines": ["uranium"],
-		"image": "/mcchicken-0.png"
+		"image": "/mcchicken-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Jitterbug",
@@ -41,7 +44,8 @@
 		"size": "small",
 		"classes": ["civilian", "botany"],
 		"engines": ["uranium"],
-		"image": "/jitterbug-0.png"
+		"image": "/jitterbug-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Saturn",
@@ -52,7 +56,8 @@
 		"size": "large",
 		"classes": ["pirate", "capital", "destroyer", "medical", "chemistry", "pursuit", "patrol"],
 		"engines": ["ame"],
-		"image": "/saturn-0.png"
+		"image": "/saturn-0.png",
+		"hullClass": "battleship"
 	},
 	{
 		"id": "Reaver",
@@ -63,7 +68,8 @@
 		"size": "small",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["uranium"],
-		"image": "/reaver-0.png"
+		"image": "/reaver-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Spitfire",
@@ -74,7 +80,8 @@
 		"size": "small",
 		"classes": ["civilian"],
 		"engines": ["apu"],
-		"image": "/spitfire-0.png"
+		"image": "/spitfire-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Siebel",
@@ -85,7 +92,8 @@
 		"size": "medium",
 		"classes": ["expedition", "pursuit"],
 		"engines": ["ame"],
-		"image": "/siebel-0.png"
+		"image": "/siebel-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Kortik",
@@ -96,7 +104,8 @@
 		"size": "large",
 		"classes": ["pirate", "frigate"],
 		"engines": ["ame"],
-		"image": "/kortik-0.png"
+		"image": "/kortik-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Fracture",
@@ -107,7 +116,8 @@
 		"size": "medium",
 		"classes": ["patrol", "pursuit"],
 		"engines": ["uranium"],
-		"image": "/fracture-0.png"
+		"image": "/fracture-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Kalisto",
@@ -118,7 +128,8 @@
 		"size": "medium",
 		"classes": ["pirate", "corvette"],
 		"engines": ["bananium"],
-		"image": "/kalisto-0.png"
+		"image": "/kalisto-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Autumn",
@@ -129,7 +140,8 @@
 		"size": "large",
 		"classes": ["cargo"],
 		"engines": ["ame"],
-		"image": "/autumn-0.png"
+		"image": "/autumn-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Tarantula",
@@ -140,7 +152,8 @@
 		"size": "medium",
 		"classes": ["patrol", "pursuit"],
 		"engines": ["ame"],
-		"image": "/tarantula-0.png"
+		"image": "/tarantula-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Rosetta",
@@ -151,7 +164,8 @@
 		"size": "medium",
 		"classes": ["science"],
 		"engines": ["uranium"],
-		"image": "/Rosetta-0.png"
+		"image": "/Rosetta-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Medicus",
@@ -162,7 +176,8 @@
 		"size": "medium",
 		"classes": ["medical", "chemistry", "botany"],
 		"engines": ["uranium"],
-		"image": "/medicus-0.png"
+		"image": "/medicus-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "SentinelF",
@@ -173,7 +188,8 @@
 		"size": "medium",
 		"classes": ["patrol", "corvette"],
 		"engines": ["ame"],
-		"image": "/sentinel_f-0.png"
+		"image": "/sentinel_f-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Venom",
@@ -184,7 +200,8 @@
 		"size": "medium",
 		"classes": ["destroyer", "detainment"],
 		"engines": ["ame"],
-		"image": "/venom-0.png"
+		"image": "/venom-0.png",
+		"hullClass": "destroyer"
 	},
 	{
 		"id": "Eris",
@@ -195,7 +212,8 @@
 		"size": "small",
 		"classes": ["pirate"],
 		"engines": ["bananium"],
-		"image": "/eris-0.png"
+		"image": "/eris-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Tayfun",
@@ -206,7 +224,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "patrol", "corvette"],
 		"engines": ["ame"],
-		"image": "/tayfun-0.png"
+		"image": "/tayfun-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Balor",
@@ -217,7 +236,8 @@
 		"size": "large",
 		"classes": ["patrol", "capital"],
 		"engines": ["plasma"],
-		"image": "/balor-0.png"
+		"image": "/balor-0.png",
+		"hullClass": "cruiser"
 	},
 	{
 		"id": "QJ490",
@@ -228,7 +248,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/qj490-0.png"
+		"image": "/qj490-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Hermes",
@@ -239,7 +260,8 @@
 		"size": "small",
 		"classes": ["cargo"],
 		"engines": ["plasma"],
-		"image": "/hermes-0.png"
+		"image": "/hermes-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Sirius",
@@ -250,7 +272,8 @@
 		"size": "medium",
 		"classes": ["expedition", "chemistry"],
 		"engines": ["ame"],
-		"image": "/sirius-0.png"
+		"image": "/sirius-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Magus",
@@ -261,7 +284,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["ame"],
-		"image": "/magus-0.png"
+		"image": "/magus-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Manus",
@@ -272,7 +296,8 @@
 		"size": "medium",
 		"classes": ["civilian"],
 		"engines": ["uranium"],
-		"image": "/manus-0.png"
+		"image": "/manus-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Victoria",
@@ -283,7 +308,8 @@
 		"size": "medium",
 		"classes": ["science", "salvage"],
 		"engines": ["uranium"],
-		"image": "/victoria-0.png"
+		"image": "/victoria-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "ZephyrEC",
@@ -294,7 +320,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/zephyr_ec-0.png"
+		"image": "/zephyr_ec-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Jaguar",
@@ -305,7 +332,8 @@
 		"size": "small",
 		"classes": ["patrol"],
 		"engines": ["uranium"],
-		"image": "/jaguar-0.png"
+		"image": "/jaguar-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Pillbox",
@@ -316,7 +344,8 @@
 		"size": "medium",
 		"classes": ["civilian"],
 		"engines": ["uranium"],
-		"image": "/pillbox-0.png"
+		"image": "/pillbox-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Mock",
@@ -327,7 +356,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/mock-0.png"
+		"image": "/mock-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Aldebaran",
@@ -338,7 +368,8 @@
 		"size": "medium",
 		"classes": ["patrol", "corvette"],
 		"engines": ["plasma"],
-		"image": "/aldebaran-0.png"
+		"image": "/aldebaran-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Odenta",
@@ -349,7 +380,8 @@
 		"size": "medium",
 		"classes": ["medical", "chemistry", "pursuit"],
 		"engines": ["uranium"],
-		"image": "/odenta-0.png"
+		"image": "/odenta-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Scarab",
@@ -360,7 +392,8 @@
 		"size": "medium",
 		"classes": ["pirate", "pursuit", "corvette"],
 		"engines": ["uranium"],
-		"image": "/scarab-0.png"
+		"image": "/scarab-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Sellsword",
@@ -371,7 +404,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["uranium"],
-		"image": "/sellsword-0.png"
+		"image": "/sellsword-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Gruznyk",
@@ -382,7 +416,8 @@
 		"size": "medium",
 		"classes": ["cargo", "patrol"],
 		"engines": ["uranium"],
-		"image": "/gruznyk-0.png"
+		"image": "/gruznyk-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Notch",
@@ -393,7 +428,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/notch-0.png"
+		"image": "/notch-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Ample",
@@ -404,7 +440,8 @@
 		"size": "micro",
 		"classes": ["salvage"],
 		"engines": ["apu"],
-		"image": "/ample-0.png"
+		"image": "/ample-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Littora",
@@ -415,7 +452,8 @@
 		"size": "large",
 		"classes": ["expedition"],
 		"engines": ["ame"],
-		"image": "/littora-0.png"
+		"image": "/littora-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Enceladus",
@@ -426,7 +464,8 @@
 		"size": "medium",
 		"classes": ["pirate", "pursuit", "corvette"],
 		"engines": ["plasma"],
-		"image": "/enceladus-0.png"
+		"image": "/enceladus-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Trilobit",
@@ -437,7 +476,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "expedition"],
 		"engines": ["plasma"],
-		"image": "/trilobit-0.png"
+		"image": "/trilobit-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Kunai",
@@ -448,7 +488,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["ame"],
-		"image": "/kunai-0.png"
+		"image": "/kunai-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Twilight",
@@ -459,7 +500,8 @@
 		"size": "small",
 		"classes": ["cargo"],
 		"engines": ["uranium"],
-		"image": "/twilight-0.png"
+		"image": "/twilight-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Tokarev",
@@ -470,7 +512,8 @@
 		"size": "large",
 		"classes": ["science", "medical"],
 		"engines": ["ame"],
-		"image": "/tokarev-0.png"
+		"image": "/tokarev-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "BlackhawkKortic",
@@ -481,7 +524,8 @@
 		"size": "small",
 		"classes": ["mercenary"],
 		"engines": ["ame"],
-		"image": "/kortic-0.png"
+		"image": "/kortic-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Dervi",
@@ -492,7 +536,8 @@
 		"size": "small",
 		"classes": ["medical"],
 		"engines": ["plasma"],
-		"image": "/dervi-0.png"
+		"image": "/dervi-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Argent",
@@ -503,7 +548,8 @@
 		"size": "medium",
 		"classes": ["cargo"],
 		"engines": ["uranium"],
-		"image": "/argent-0.png"
+		"image": "/argent-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Fenrir",
@@ -514,7 +560,8 @@
 		"size": "medium",
 		"classes": ["pirate", "corvette"],
 		"engines": ["ame"],
-		"image": "/fenrir-0.png"
+		"image": "/fenrir-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Tanuki",
@@ -525,7 +572,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["plasma"],
-		"image": "/tanuki-0.png"
+		"image": "/tanuki-0.png",
+		"hullClass": "carrier"
 	},
 	{
 		"id": "Scorpion",
@@ -536,7 +584,8 @@
 		"size": "medium",
 		"classes": ["pirate", "pursuit", "corvette"],
 		"engines": ["uranium"],
-		"image": "/scorpion-0.png"
+		"image": "/scorpion-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Bratan",
@@ -547,7 +596,8 @@
 		"size": "large",
 		"classes": ["civilian", "kitchen", "botany"],
 		"engines": ["ame", "solar"],
-		"image": "/bratan-0.png"
+		"image": "/bratan-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Mercury",
@@ -558,7 +608,8 @@
 		"size": "medium",
 		"classes": ["patrol", "corvette"],
 		"engines": ["ame"],
-		"image": "/mercury-0.png"
+		"image": "/mercury-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Spekter",
@@ -569,7 +620,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "corvette"],
 		"engines": ["nfr"],
-		"image": "/spekter-0.png"
+		"image": "/spekter-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Intermission",
@@ -580,7 +632,8 @@
 		"size": "large",
 		"classes": ["medical", "chemistry", "kitchen", "botany"],
 		"engines": ["ame"],
-		"image": "/intermission-0.png"
+		"image": "/intermission-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Flyssa",
@@ -591,7 +644,8 @@
 		"size": "large",
 		"classes": ["capital", "destroyer", "medical", "chemistry", "pursuit", "patrol"],
 		"engines": ["ame"],
-		"image": "/flyssa-0.png"
+		"image": "/flyssa-0.png",
+		"hullClass": "battleship"
 	},
 	{
 		"id": "Horsefly",
@@ -602,7 +656,8 @@
 		"size": "small",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["plasma"],
-		"image": "/horsefly-0.png"
+		"image": "/horsefly-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Hound",
@@ -613,7 +668,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["apu"],
-		"image": "/hound-0.png"
+		"image": "/hound-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Zephyr",
@@ -624,7 +680,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/zephyr-0.png"
+		"image": "/zephyr-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Windreign",
@@ -635,7 +692,8 @@
 		"size": "large",
 		"classes": ["science", "atmospherics", "salvage"],
 		"engines": ["ame"],
-		"image": "/windreign-0.png"
+		"image": "/windreign-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Antares",
@@ -646,7 +704,8 @@
 		"size": "large",
 		"classes": ["capital", "destroyer", "medical", "chemistry", "pursuit", "patrol"],
 		"engines": ["ame"],
-		"image": "/antares-0.png"
+		"image": "/antares-0.png",
+		"hullClass": "destroyer"
 	},
 	{
 		"id": "Triage",
@@ -657,7 +716,8 @@
 		"size": "small",
 		"classes": ["medical"],
 		"engines": ["uranium"],
-		"image": "/triage-0.png"
+		"image": "/triage-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Noble",
@@ -668,7 +728,8 @@
 		"size": "medium",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/noble-0.png"
+		"image": "/noble-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Epione",
@@ -679,7 +740,8 @@
 		"size": "medium",
 		"classes": ["corvette", "medical", "chemistry"],
 		"engines": ["plasma"],
-		"image": "/epione-0.png"
+		"image": "/epione-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Sakuratsu",
@@ -690,7 +752,8 @@
 		"size": "medium",
 		"classes": ["science", "salvage"],
 		"engines": ["uranium"],
-		"image": "/sakuratsu-0.png"
+		"image": "/sakuratsu-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Vrikaash",
@@ -701,7 +764,8 @@
 		"size": "medium",
 		"classes": ["destroyer", "scrapyard"],
 		"engines": ["plasma"],
-		"image": "/vrikaash-0.png"
+		"image": "/vrikaash-0.png",
+		"hullClass": "destroyer"
 	},
 	{
 		"id": "MClass",
@@ -712,7 +776,8 @@
 		"size": "large",
 		"classes": ["salvage"],
 		"engines": ["ame"],
-		"image": "/mclass-0.png"
+		"image": "/mclass-0.png",
+		"hullClass": "carrier"
 	},
 	{
 		"id": "Ravager",
@@ -723,7 +788,8 @@
 		"size": "large",
 		"classes": ["science", "capital"],
 		"engines": ["ame"],
-		"image": "/ravager-0.png"
+		"image": "/ravager-0.png",
+		"hullClass": "battleship"
 	},
 	{
 		"id": "Kestrel",
@@ -734,7 +800,8 @@
 		"size": "small",
 		"classes": ["science"],
 		"engines": ["uranium"],
-		"image": "/kestrel-0.png"
+		"image": "/kestrel-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Ethereal",
@@ -745,7 +812,8 @@
 		"size": "large",
 		"classes": ["science"],
 		"engines": ["ame", "solar"],
-		"image": "/ethereal-0.png"
+		"image": "/ethereal-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Hunter",
@@ -756,7 +824,8 @@
 		"size": "small",
 		"classes": ["syndicate"],
 		"engines": ["uranium"],
-		"image": "/hunter-0.png"
+		"image": "/hunter-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Hazel",
@@ -767,7 +836,8 @@
 		"size": "small",
 		"classes": ["pirate", "pursuit"],
 		"engines": ["ame"],
-		"image": "/hazel-0.png"
+		"image": "/hazel-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Carrion",
@@ -778,7 +848,8 @@
 		"size": "small",
 		"classes": ["pirate", "fighter"],
 		"engines": ["plasma"],
-		"image": "/carrion-0.png"
+		"image": "/carrion-0.png",
+		"hullClass": "carrier"
 	},
 	{
 		"id": "Molotok",
@@ -789,7 +860,8 @@
 		"size": "large",
 		"classes": [],
 		"engines": [],
-		"image": "/molotok-0.png"
+		"image": "/molotok-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Serkesh",
@@ -800,7 +872,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "scrapyard"],
 		"engines": ["ame"],
-		"image": "/serkesh-0.png"
+		"image": "/serkesh-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Shareholder",
@@ -811,7 +884,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/shareholder-0.png"
+		"image": "/shareholder-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "twilightmk2",
@@ -822,7 +896,8 @@
 		"size": "medium",
 		"classes": ["expedition", "pursuit"],
 		"engines": ["bananium"],
-		"image": "/twilightmk2-0.png"
+		"image": "/twilightmk2-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Merchant",
@@ -833,7 +908,8 @@
 		"size": "large",
 		"classes": ["frigate"],
 		"engines": ["ame"],
-		"image": "/merchant-0.png"
+		"image": "/merchant-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Olympus",
@@ -844,7 +920,8 @@
 		"size": "large",
 		"classes": ["cargo"],
 		"engines": ["ame"],
-		"image": "/olympus-0.png"
+		"image": "/olympus-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Luxury",
@@ -855,7 +932,8 @@
 		"size": "large",
 		"classes": ["civilian", "frigate"],
 		"engines": ["rtg"],
-		"image": "/luxury-0.png"
+		"image": "/luxury-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Sabinemk2",
@@ -866,7 +944,8 @@
 		"size": "large",
 		"classes": ["expedition", "pursuit"],
 		"engines": ["uranium"],
-		"image": "/sabinemk2-0.png"
+		"image": "/sabinemk2-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Akula",
@@ -877,7 +956,8 @@
 		"size": "medium",
 		"classes": ["patrol"],
 		"engines": ["uranium"],
-		"image": "/akula-0.png"
+		"image": "/akula-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Pebble",
@@ -888,7 +968,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["uranium"],
-		"image": "/pebble-0.png"
+		"image": "/pebble-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Infiltrator",
@@ -899,7 +980,8 @@
 		"size": "large",
 		"classes": ["syndicate"],
 		"engines": ["ame"],
-		"image": "/infiltrator-0.png"
+		"image": "/infiltrator-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Talon",
@@ -910,7 +992,8 @@
 		"size": "small",
 		"classes": ["syndicate"],
 		"engines": ["uranium"],
-		"image": "/talon-0.png"
+		"image": "/talon-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Brute",
@@ -921,7 +1004,8 @@
 		"size": "medium",
 		"classes": ["cargo"],
 		"engines": ["uranium"],
-		"image": "/brute-0.png"
+		"image": "/brute-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Hoplite",
@@ -932,7 +1016,8 @@
 		"size": "small",
 		"classes": ["patrol", "pursuit"],
 		"engines": ["bananium"],
-		"image": "/hoplite-0.png"
+		"image": "/hoplite-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "HeavensDrill",
@@ -943,7 +1028,8 @@
 		"size": "large",
 		"classes": ["salvage", "science", "medical"],
 		"engines": ["plasma"],
-		"image": "/heavensdrill-0.png"
+		"image": "/heavensdrill-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "StratoRat",
@@ -954,7 +1040,8 @@
 		"size": "micro",
 		"classes": ["atmospherics"],
 		"engines": ["apu"],
-		"image": "/stratorat-0.png"
+		"image": "/stratorat-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Bow-Man",
@@ -965,7 +1052,8 @@
 		"size": "micro",
 		"classes": ["pursuit"],
 		"engines": ["apu"],
-		"image": "/bowman-0.png"
+		"image": "/bowman-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Sentinel",
@@ -976,7 +1064,8 @@
 		"size": "medium",
 		"classes": ["patrol", "corvette"],
 		"engines": ["ame"],
-		"image": "/sentinel-0.png"
+		"image": "/sentinel-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Tumour",
@@ -987,7 +1076,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "patrol"],
 		"engines": ["uranium"],
-		"image": "/tumour-0.png"
+		"image": "/tumour-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Kuldi",
@@ -998,7 +1088,8 @@
 		"size": "medium",
 		"classes": ["medical", "chemistry"],
 		"engines": ["ame"],
-		"image": "/kuldi-0.png"
+		"image": "/kuldi-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Artemis",
@@ -1009,7 +1100,8 @@
 		"size": "small",
 		"classes": ["medical"],
 		"engines": ["uranium"],
-		"image": "/artemis-0.png"
+		"image": "/artemis-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Stubby",
@@ -1020,7 +1112,8 @@
 		"size": "small",
 		"classes": ["medical"],
 		"engines": ["plasma"],
-		"image": "/stubby-0.png"
+		"image": "/stubby-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Praetorian",
@@ -1031,7 +1124,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["uranium"],
-		"image": "/praetorian-0.png"
+		"image": "/praetorian-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Arribane",
@@ -1042,7 +1136,8 @@
 		"size": "large",
 		"classes": ["atmospherics"],
 		"engines": ["ame"],
-		"image": "/arribane-0.png"
+		"image": "/arribane-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Inertia",
@@ -1053,7 +1148,8 @@
 		"size": "small",
 		"classes": ["fighter", "pursuit"],
 		"engines": ["apu"],
-		"image": "/inertia-0.png"
+		"image": "/inertia-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Tiger",
@@ -1064,7 +1160,8 @@
 		"size": "small",
 		"classes": ["cargo"],
 		"engines": ["uranium"],
-		"image": "/tiger-0.png"
+		"image": "/tiger-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Padval",
@@ -1075,7 +1172,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["ame"],
-		"image": "/padval-0.png"
+		"image": "/padval-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Talonuran",
@@ -1086,7 +1184,8 @@
 		"size": "small",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["uranium"],
-		"image": "/talonuran-0.png"
+		"image": "/talonuran-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "EnceladusPrime",
@@ -1097,7 +1196,8 @@
 		"size": "medium",
 		"classes": ["pirate", "pursuit", "destroyer"],
 		"engines": ["plasma"],
-		"image": "/enceladus_prime-0.png"
+		"image": "/enceladus_prime-0.png",
+		"hullClass": "destroyer"
 	},
 	{
 		"id": "Spyglass",
@@ -1108,7 +1208,8 @@
 		"size": "small",
 		"classes": ["science"],
 		"engines": ["uranium"],
-		"image": "/spyglass-0.png"
+		"image": "/spyglass-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "MotleyAnne",
@@ -1119,7 +1220,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "patrol"],
 		"engines": ["ame"],
-		"image": "/motleyanne-0.png"
+		"image": "/motleyanne-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Wolfsnake",
@@ -1130,7 +1232,8 @@
 		"size": "large",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["bananium"],
-		"image": "/wolfsnake-0.png"
+		"image": "/wolfsnake-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Hydra",
@@ -1141,7 +1244,8 @@
 		"size": "medium",
 		"classes": ["syndicate"],
 		"engines": ["uranium"],
-		"image": "/hydra-0.png"
+		"image": "/hydra-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Prowler",
@@ -1152,7 +1256,8 @@
 		"size": "small",
 		"classes": ["pirate"],
 		"engines": ["plasma"],
-		"image": "/prowler-0.png"
+		"image": "/prowler-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Fujian",
@@ -1163,7 +1268,8 @@
 		"size": "large",
 		"classes": ["patrol", "frigate"],
 		"engines": ["nfr"],
-		"image": "/fujian-0.png"
+		"image": "/fujian-0.png",
+		"hullClass": "carrier"
 	},
 	{
 		"id": "Taser",
@@ -1174,7 +1280,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["apu"],
-		"image": "/taser-0.png"
+		"image": "/taser-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Calypso",
@@ -1185,7 +1292,8 @@
 		"size": "medium",
 		"classes": ["patrol", "corvette"],
 		"engines": ["ame"],
-		"image": "/calypso-0.png"
+		"image": "/calypso-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Spica",
@@ -1196,7 +1304,8 @@
 		"size": "small",
 		"classes": ["patrol", "pursuit"],
 		"engines": ["bananium"],
-		"image": "/spica-0.png"
+		"image": "/spica-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "MieyoAutumn",
@@ -1207,7 +1316,8 @@
 		"size": "large",
 		"classes": ["cargo"],
 		"engines": ["ame"],
-		"image": "/autumn_mieyo-0.png"
+		"image": "/autumn_mieyo-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "caracara",
@@ -1218,7 +1328,8 @@
 		"size": "medium",
 		"classes": ["salvage", "frigate"],
 		"engines": ["plasma"],
-		"image": "/caracara-0.png"
+		"image": "/caracara-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Klesh",
@@ -1229,7 +1340,8 @@
 		"size": "small",
 		"classes": ["syndicate"],
 		"engines": ["uranium"],
-		"image": "/klesh-0.png"
+		"image": "/klesh-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Kupol",
@@ -1240,7 +1352,8 @@
 		"size": "small",
 		"classes": [],
 		"engines": [],
-		"image": "/kupol-0.png"
+		"image": "/kupol-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Veska",
@@ -1251,7 +1364,8 @@
 		"size": "micro",
 		"classes": ["pirate", "fighter"],
 		"engines": ["apu"],
-		"image": "/veska-0.png"
+		"image": "/veska-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Canister",
@@ -1262,7 +1376,8 @@
 		"size": "small",
 		"classes": ["atmospherics"],
 		"engines": ["uranium"],
-		"image": "/canister-0.png"
+		"image": "/canister-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "QJ340",
@@ -1273,7 +1388,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/qj340-0.png"
+		"image": "/qj340-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Ganymede",
@@ -1284,7 +1400,8 @@
 		"size": "large",
 		"classes": ["pirate", "frigate"],
 		"engines": ["ame"],
-		"image": "/ganymede-0.png"
+		"image": "/ganymede-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Svinya",
@@ -1295,7 +1412,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["plasma"],
-		"image": "/svinya-0.png"
+		"image": "/svinya-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Strayk",
@@ -1306,7 +1424,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["uranium"],
-		"image": "/strayk-0.png"
+		"image": "/strayk-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Antlion",
@@ -1317,7 +1436,8 @@
 		"size": "micro",
 		"classes": ["fighter", "salvage"],
 		"engines": ["apu"],
-		"image": "/antlion-0.png"
+		"image": "/antlion-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Neptune",
@@ -1328,7 +1448,8 @@
 		"size": "medium",
 		"classes": ["pirate", "pursuit", "corvette"],
 		"engines": ["uranium"],
-		"image": "/neptune-0.png"
+		"image": "/neptune-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Promise",
@@ -1339,7 +1460,8 @@
 		"size": "medium",
 		"classes": ["medical", "chemistry"],
 		"engines": ["ame"],
-		"image": "/promise-0.png"
+		"image": "/promise-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Takeaway",
@@ -1350,7 +1472,8 @@
 		"size": "medium",
 		"classes": ["civilian", "kitchen", "botany"],
 		"engines": ["uranium", "solar"],
-		"image": "/takeaway-0.png"
+		"image": "/takeaway-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Altair",
@@ -1361,7 +1484,8 @@
 		"size": "large",
 		"classes": ["frigate", "pursuit", "patrol"],
 		"engines": ["plasma"],
-		"image": "/altair-0.png"
+		"image": "/altair-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Mite",
@@ -1372,7 +1496,8 @@
 		"size": "small",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["plasma"],
-		"image": "/mite-0.png"
+		"image": "/mite-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Kite",
@@ -1383,7 +1508,8 @@
 		"size": "small",
 		"classes": ["patrol"],
 		"engines": ["ame"],
-		"image": "/kite-0.png"
+		"image": "/kite-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Europa",
@@ -1394,7 +1520,8 @@
 		"size": "large",
 		"classes": ["pirate", "frigate"],
 		"engines": ["ame"],
-		"image": "/europa-0.png"
+		"image": "/europa-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Garm",
@@ -1405,7 +1532,8 @@
 		"size": "medium",
 		"classes": ["pirate"],
 		"engines": ["uranium"],
-		"image": "/garm-0.png"
+		"image": "/garm-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Ocelot",
@@ -1416,7 +1544,8 @@
 		"size": "small",
 		"classes": ["patrol"],
 		"engines": ["uranium"],
-		"image": "/ocelot-0.png"
+		"image": "/ocelot-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "QJ270",
@@ -1427,7 +1556,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/qj270-0.png"
+		"image": "/qj270-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Razorback",
@@ -1438,7 +1568,8 @@
 		"size": "small",
 		"classes": ["patrol"],
 		"engines": ["plasma"],
-		"image": "/razorback-0.png"
+		"image": "/razorback-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Picses",
@@ -1449,7 +1580,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["ame"],
-		"image": "/picses-0.png"
+		"image": "/picses-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Drakon",
@@ -1460,7 +1592,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "corvette"],
 		"engines": ["ame"],
-		"image": "/drakon-0.png"
+		"image": "/drakon-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Atom",
@@ -1471,7 +1604,8 @@
 		"size": "small",
 		"classes": ["pirate", "pursuit"],
 		"engines": ["plasma"],
-		"image": "/atom-0.png"
+		"image": "/atom-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "KortikR",
@@ -1482,7 +1616,8 @@
 		"size": "large",
 		"classes": ["pirate", "frigate"],
 		"engines": ["ame"],
-		"image": "/kortik_t2-0.png"
+		"image": "/kortik_t2-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Judiciary",
@@ -1493,7 +1628,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["ame"],
-		"image": "/judiciary-0.png"
+		"image": "/judiciary-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Layak",
@@ -1504,7 +1640,8 @@
 		"size": "medium",
 		"classes": ["pirate", "pursuit", "corvette"],
 		"engines": ["ame"],
-		"image": "/layak-0.png"
+		"image": "/layak-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Mudskipper",
@@ -1515,7 +1652,8 @@
 		"size": "medium",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["plasma"],
-		"image": "/mudskipper-0.png"
+		"image": "/mudskipper-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Leaf",
@@ -1526,7 +1664,8 @@
 		"size": "medium",
 		"classes": ["botany", "chemistry"],
 		"engines": ["bananium"],
-		"image": "/leaf-0.png"
+		"image": "/leaf-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Claymore",
@@ -1537,7 +1676,8 @@
 		"size": "large",
 		"classes": ["pursuit"],
 		"engines": ["uranium", "rtg"],
-		"image": "/claymore-0.png"
+		"image": "/claymore-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Thorax",
@@ -1548,7 +1688,8 @@
 		"size": "medium",
 		"classes": ["civilian"],
 		"engines": ["uranium"],
-		"image": "/thorax-0.png"
+		"image": "/thorax-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Tethys",
@@ -1559,7 +1700,8 @@
 		"size": "medium",
 		"classes": ["pirate"],
 		"engines": ["uranium"],
-		"image": "/tethys-0.png"
+		"image": "/tethys-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Tick",
@@ -1570,7 +1712,8 @@
 		"size": "small",
 		"classes": ["scrapyard", "pursuit"],
 		"engines": ["apu"],
-		"image": "/tick-0.png"
+		"image": "/tick-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Piva",
@@ -1581,7 +1724,8 @@
 		"size": "small",
 		"classes": ["cargo"],
 		"engines": ["uranium"],
-		"image": "/piva-0.png"
+		"image": "/piva-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Fortunate",
@@ -1592,7 +1736,8 @@
 		"size": "medium",
 		"classes": ["expedition", "pursuit"],
 		"engines": ["uranium"],
-		"image": "/fortunate-0.png"
+		"image": "/fortunate-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Arkansaw",
@@ -1603,7 +1748,8 @@
 		"size": "large",
 		"classes": ["expedition", "science", "salvage"],
 		"engines": ["bananium"],
-		"image": "/arkansaw-0.png"
+		"image": "/arkansaw-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Natisk",
@@ -1614,7 +1760,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["ame"],
-		"image": "/natisk-0.png"
+		"image": "/natisk-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Sulak",
@@ -1625,7 +1772,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "corvette"],
 		"engines": ["ame"],
-		"image": "/sulak-0.png"
+		"image": "/sulak-0.png",
+		"hullClass": "destroyer"
 	},
 	{
 		"id": "Peregrine",
@@ -1636,7 +1784,8 @@
 		"size": "medium",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/peregrine-0.png"
+		"image": "/peregrine-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Welder",
@@ -1647,7 +1796,8 @@
 		"size": "small",
 		"classes": ["patrol", "salvage"],
 		"engines": ["uranium"],
-		"image": "/welder-0.png"
+		"image": "/welder-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Hammerhead",
@@ -1658,7 +1808,8 @@
 		"size": "large",
 		"classes": ["patrol", "corvette", "science", "salvage", "medical", "chemistry"],
 		"engines": ["ame"],
-		"image": "/hammerhead-0.png"
+		"image": "/hammerhead-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Duran",
@@ -1669,7 +1820,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["uranium"],
-		"image": "/duran-0.png"
+		"image": "/duran-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Buran",
@@ -1680,7 +1832,8 @@
 		"size": "large",
 		"classes": ["frigate"],
 		"engines": ["nfr"],
-		"image": "/buran-0.png"
+		"image": "/buran-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Phaeron",
@@ -1691,7 +1844,8 @@
 		"size": "medium",
 		"classes": ["atmospherics"],
 		"engines": ["uranium"],
-		"image": "/phaeron-0.png"
+		"image": "/phaeron-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "TSFNPolaris",
@@ -1702,7 +1856,8 @@
 		"size": "large",
 		"classes": ["frigate", "capital"],
 		"engines": ["ame"],
-		"image": "/polaris-0.png"
+		"image": "/polaris-0.png",
+		"hullClass": "cruiser"
 	},
 	{
 		"id": "Sunrise",
@@ -1713,7 +1868,8 @@
 		"size": "small",
 		"classes": ["civilian"],
 		"engines": ["uranium"],
-		"image": "/sunrise-0.png"
+		"image": "/sunrise-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "McChilly",
@@ -1724,7 +1880,8 @@
 		"size": "small",
 		"classes": ["civilian", "kitchen"],
 		"engines": ["apu"],
-		"image": "/mcchilly-0.png"
+		"image": "/mcchilly-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Yukikaze",
@@ -1735,7 +1892,8 @@
 		"size": "small",
 		"classes": ["patrol"],
 		"engines": ["ame"],
-		"image": "/yukikaze-0.png"
+		"image": "/yukikaze-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Bastion",
@@ -1746,7 +1904,8 @@
 		"size": "medium",
 		"classes": ["pirate"],
 		"engines": ["uranium"],
-		"image": "/bastion-0.png"
+		"image": "/bastion-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Valkyrie",
@@ -1757,7 +1916,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["ame"],
-		"image": "/valkyrie-0.png"
+		"image": "/valkyrie-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Ladya",
@@ -1768,7 +1928,8 @@
 		"size": "medium",
 		"classes": ["patrol", "pursuit"],
 		"engines": ["bananium"],
-		"image": "/ladya-0.png"
+		"image": "/ladya-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Saintie",
@@ -1779,7 +1940,8 @@
 		"size": "large",
 		"classes": ["pirate", "frigate"],
 		"engines": ["ame"],
-		"image": "/saintie-0.png"
+		"image": "/saintie-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Vulture",
@@ -1790,7 +1952,8 @@
 		"size": "large",
 		"classes": ["pirate", "frigate"],
 		"engines": ["ame"],
-		"image": "/vulture-0.png"
+		"image": "/vulture-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "Rook",
@@ -1801,7 +1964,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["apu"],
-		"image": "/rook-0.png"
+		"image": "/rook-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Pacem",
@@ -1812,7 +1976,8 @@
 		"size": "medium",
 		"classes": ["patrol"],
 		"engines": ["bananium"],
-		"image": "/pacem-0.png"
+		"image": "/pacem-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Archer",
@@ -1823,7 +1988,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["uranium"],
-		"image": "/archer-0.png"
+		"image": "/archer-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Phantom",
@@ -1834,7 +2000,8 @@
 		"size": "small",
 		"classes": ["medical"],
 		"engines": ["bananium"],
-		"image": "/phantom-0.png"
+		"image": "/phantom-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Vaquita",
@@ -1845,7 +2012,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["uranium"],
-		"image": "/vaquita-0.png"
+		"image": "/vaquita-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Solarsail",
@@ -1856,7 +2024,8 @@
 		"size": "small",
 		"classes": ["civilian"],
 		"engines": ["plasma"],
-		"image": "/solarsail-0.png"
+		"image": "/solarsail-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Sekunda",
@@ -1867,7 +2036,8 @@
 		"size": "medium",
 		"classes": ["patrol", "medical", "chemistry"],
 		"engines": ["uranium"],
-		"image": "/sekunda-0.png"
+		"image": "/sekunda-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Scallywag",
@@ -1878,7 +2048,8 @@
 		"size": "medium",
 		"classes": ["pursuit", "scrapyard"],
 		"engines": ["uranium"],
-		"image": "/scallywag-0.png"
+		"image": "/scallywag-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Borer",
@@ -1889,7 +2060,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/borer-0.png"
+		"image": "/borer-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Scout",
@@ -1900,7 +2072,8 @@
 		"size": "small",
 		"classes": ["pursuit"],
 		"engines": ["plasma"],
-		"image": "/scout-0.png"
+		"image": "/scout-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "MieyoSakuratsu",
@@ -1911,7 +2084,8 @@
 		"size": "medium",
 		"classes": ["science", "salvage"],
 		"engines": ["uranium"],
-		"image": "/sakuratsu_mieyo-0.png"
+		"image": "/sakuratsu_mieyo-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Syringe",
@@ -1922,7 +2096,8 @@
 		"size": "small",
 		"classes": ["patrol"],
 		"engines": ["uranium"],
-		"image": "/syringe-0.png"
+		"image": "/syringe-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Rig",
@@ -1933,7 +2108,8 @@
 		"size": "medium",
 		"classes": ["salvage"],
 		"engines": ["uranium"],
-		"image": "/rig-0.png"
+		"image": "/rig-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Ferz",
@@ -1944,7 +2120,8 @@
 		"size": "small",
 		"classes": ["pirate", "pursuit"],
 		"engines": ["ame"],
-		"image": "/ferz-0.png"
+		"image": "/ferz-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Femur",
@@ -1955,7 +2132,8 @@
 		"size": "medium",
 		"classes": ["pursuit"],
 		"engines": ["uranium"],
-		"image": "/femur-0.png"
+		"image": "/femur-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Dagger",
@@ -1966,7 +2144,8 @@
 		"size": "medium",
 		"classes": ["patrol", "pursuit"],
 		"engines": ["ame"],
-		"image": "/dagger-0.png"
+		"image": "/dagger-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "MieyoNoble",
@@ -1977,7 +2156,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/noble-0.png"
+		"image": "/noble-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Sagittarius",
@@ -1988,7 +2168,8 @@
 		"size": "large",
 		"classes": ["expedition", "chemistry", "salvage"],
 		"engines": ["ame"],
-		"image": "/sagittarius-0.png"
+		"image": "/sagittarius-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Remontnik",
@@ -1999,7 +2180,8 @@
 		"size": "medium",
 		"classes": ["engineering", "salvage"],
 		"engines": ["uranium"],
-		"image": "/remontnik-0.png"
+		"image": "/remontnik-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Kami",
@@ -2010,7 +2192,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["uranium"],
-		"image": "/kami-0.png"
+		"image": "/kami-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Andromeda",
@@ -2021,7 +2204,8 @@
 		"size": "large",
 		"classes": ["frigate"],
 		"engines": ["plasma"],
-		"image": "/andromeda-0.png"
+		"image": "/andromeda-0.png",
+		"hullClass": "frigate"
 	},
 	{
 		"id": "HorizonSiphon",
@@ -2032,7 +2216,8 @@
 		"size": "small",
 		"classes": ["mercenary"],
 		"engines": ["uranium"],
-		"image": "/siphon-0.png"
+		"image": "/siphon-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Baeg",
@@ -2043,7 +2228,8 @@
 		"size": "small",
 		"classes": ["civilian", "salvage"],
 		"engines": ["apu"],
-		"image": "/baeg-0.png"
+		"image": "/baeg-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Rac-Man",
@@ -2054,7 +2240,8 @@
 		"size": "micro",
 		"classes": ["pursuit"],
 		"engines": ["apu"],
-		"image": "/racman-0.png"
+		"image": "/racman-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Ledokol",
@@ -2065,7 +2252,8 @@
 		"size": "large",
 		"classes": ["capital", "frigate", "medical", "chemistry"],
 		"engines": ["ame"],
-		"image": "/ledokol-0.png"
+		"image": "/ledokol-0.png",
+		"hullClass": "battleship"
 	},
 	{
 		"id": "Kopye",
@@ -2076,7 +2264,8 @@
 		"size": "large",
 		"classes": [],
 		"engines": [],
-		"image": "/kopye-0.png"
+		"image": "/kopye-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Termite",
@@ -2087,7 +2276,8 @@
 		"size": "medium",
 		"classes": ["patrol", "corvette"],
 		"engines": ["plasma"],
-		"image": "/termite-0.png"
+		"image": "/termite-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Velios",
@@ -2098,7 +2288,8 @@
 		"size": "medium",
 		"classes": ["medical", "chemistry"],
 		"engines": ["ame"],
-		"image": "/velios-0.png"
+		"image": "/velios-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Betelgeuse",
@@ -2109,7 +2300,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["plasma"],
-		"image": "/betelgeuse-0.png"
+		"image": "/betelgeuse-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Shiv",
@@ -2120,7 +2312,8 @@
 		"size": "small",
 		"classes": ["salvage", "science"],
 		"engines": ["plasma"],
-		"image": "/shiv-0.png"
+		"image": "/shiv-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Metis",
@@ -2131,7 +2324,8 @@
 		"size": "medium",
 		"classes": ["pirate", "corvette"],
 		"engines": ["bananium"],
-		"image": "/metis-0.png"
+		"image": "/metis-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Spessbite",
@@ -2142,7 +2336,8 @@
 		"size": "small",
 		"classes": ["civilian", "kitchen", "botany"],
 		"engines": ["uranium"],
-		"image": "/spessbite-0.png"
+		"image": "/spessbite-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Snakelet",
@@ -2153,7 +2348,8 @@
 		"size": "small",
 		"classes": ["pursuit", "fighter"],
 		"engines": ["apu"],
-		"image": "/snakelet-0.png"
+		"image": "/snakelet-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Zeros",
@@ -2164,7 +2360,8 @@
 		"size": "large",
 		"classes": ["civilian", "kitchen", "botany"],
 		"engines": ["ame"],
-		"image": "/zeros-0.png"
+		"image": "/zeros-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Tzipora",
@@ -2175,7 +2372,8 @@
 		"size": "large",
 		"classes": ["medical", "chemistry"],
 		"engines": ["ame"],
-		"image": "/tzipora-0.png"
+		"image": "/tzipora-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Plutomkii",
@@ -2186,7 +2384,8 @@
 		"size": "small",
 		"classes": ["cargo"],
 		"engines": ["uranium"],
-		"image": "/plutomkii-0.png"
+		"image": "/plutomkii-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "Framework",
@@ -2197,7 +2396,8 @@
 		"size": "small",
 		"classes": ["civilian", "cargo"],
 		"engines": ["plasma"],
-		"image": "/framework-0.png"
+		"image": "/framework-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "skelraak",
@@ -2208,7 +2408,8 @@
 		"size": "large",
 		"classes": ["frigate", "scrapyard"],
 		"engines": ["ame"],
-		"image": "/skelraak-0.png"
+		"image": "/skelraak-0.png",
+		"hullClass": "battleship"
 	},
 	{
 		"id": "Bucket",
@@ -2219,7 +2420,8 @@
 		"size": "micro",
 		"classes": ["civilian"],
 		"engines": ["plasma"],
-		"image": "/bucket-0.png"
+		"image": "/bucket-0.png",
+		"hullClass": "fighter"
 	},
 	{
 		"id": "Iapetus",
@@ -2230,7 +2432,8 @@
 		"size": "small",
 		"classes": ["science"],
 		"engines": ["uranium"],
-		"image": "/iapetus-0.png"
+		"image": "/iapetus-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-azimuth",
@@ -2241,7 +2444,8 @@
 		"size": "large",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/azimuth-0.png"
+		"image": "/azimuth-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-concord-x",
@@ -2252,7 +2456,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/concord_x-0.png"
+		"image": "/concord_x-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-crow",
@@ -2263,7 +2468,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/crow-0.png"
+		"image": "/crow-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-horizont",
@@ -2274,7 +2480,8 @@
 		"size": "large",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/horizont-0.png"
+		"image": "/horizont-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-mantaray",
@@ -2285,7 +2492,8 @@
 		"size": "large",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/mantaray-0.png"
+		"image": "/mantaray-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-nebula",
@@ -2296,7 +2504,8 @@
 		"size": "small",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/nebula-0.png"
+		"image": "/nebula-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-omen",
@@ -2307,7 +2516,8 @@
 		"size": "small",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/omen-0.png"
+		"image": "/omen-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-razorn",
@@ -2318,7 +2528,8 @@
 		"size": "small",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/razorn-0.png"
+		"image": "/razorn-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-stratostar",
@@ -2329,7 +2540,8 @@
 		"size": "large",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/stratostar-0.png"
+		"image": "/stratostar-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-wyrm",
@@ -2340,7 +2552,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/wyrm-0.png"
+		"image": "/wyrm-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-wyvern",
@@ -2351,7 +2564,8 @@
 		"size": "large",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/wyvern-0.png"
+		"image": "/wyvern-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-zenith",
@@ -2362,7 +2576,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/zenith-0.png"
+		"image": "/zenith-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-zenith-a",
@@ -2373,7 +2588,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/zenith_a-0.png"
+		"image": "/zenith_a-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "eighth-zenith-e",
@@ -2384,7 +2600,8 @@
 		"size": "medium",
 		"classes": ["expedition"],
 		"engines": ["apu"],
-		"image": "/zenith_e-0.png"
+		"image": "/zenith_e-0.png",
+		"hullClass": "shuttle"
 	},
 	{
 		"id": "station-ads-big-ancient-storage",
@@ -2395,7 +2612,8 @@
 		"size": "large",
 		"classes": ["capital"],
 		"engines": ["ame"],
-		"image": "/ads_big_ancient_storage-0.png"
+		"image": "/ads_big_ancient_storage-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-ads-small-ancient-storage",
@@ -2406,7 +2624,8 @@
 		"size": "medium",
 		"classes": ["cargo", "salvage"],
 		"engines": ["ame"],
-		"image": "/ads_small_ancient_storage-0.png"
+		"image": "/ads_small_ancient_storage-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-anomalouslab",
@@ -2417,7 +2636,8 @@
 		"size": "large",
 		"classes": ["science"],
 		"engines": ["supermatter"],
-		"image": "/anomalouslab-0.png"
+		"image": "/anomalouslab-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-arena",
@@ -2428,7 +2648,8 @@
 		"size": "large",
 		"classes": ["mercenary"],
 		"engines": ["apu"],
-		"image": "/arena-0.png"
+		"image": "/arena-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-azimuth-lobby",
@@ -2439,7 +2660,8 @@
 		"size": "large",
 		"classes": ["civilian"],
 		"engines": ["solar"],
-		"image": "/azimuth_lobby-0.png"
+		"image": "/azimuth_lobby-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-bahama",
@@ -2450,7 +2672,8 @@
 		"size": "large",
 		"classes": ["kitchen", "civilian"],
 		"engines": ["apu"],
-		"image": "/bahama-0.png"
+		"image": "/bahama-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-beaconstation-a",
@@ -2461,7 +2684,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["solar"],
-		"image": "/beaconstation_a-0.png"
+		"image": "/beaconstation_a-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-beaconstation-wilds",
@@ -2472,7 +2696,8 @@
 		"size": "small",
 		"classes": ["salvage"],
 		"engines": ["solar"],
-		"image": "/beaconstation_wilds-0.png"
+		"image": "/beaconstation_wilds-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-burnedshuttle",
@@ -2483,7 +2708,8 @@
 		"size": "medium",
 		"classes": ["scrapyard"],
 		"engines": ["apu"],
-		"image": "/burnedshuttle-0.png"
+		"image": "/burnedshuttle-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-camelot",
@@ -2492,9 +2718,10 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["patrol", "security"],
+		"classes": ["security"],
 		"engines": ["ame"],
-		"image": "/camelot-0.png"
+		"image": "/camelot-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-cargodepot",
@@ -2505,7 +2732,8 @@
 		"size": "large",
 		"classes": ["cargo"],
 		"engines": ["solar"],
-		"image": "/cargodepot-0.png"
+		"image": "/cargodepot-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-cargodepotalt",
@@ -2516,7 +2744,8 @@
 		"size": "large",
 		"classes": ["cargo"],
 		"engines": ["solar"],
-		"image": "/cargodepotalt-0.png"
+		"image": "/cargodepotalt-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-caseyscasino",
@@ -2527,7 +2756,8 @@
 		"size": "large",
 		"classes": ["civilian"],
 		"engines": ["apu"],
-		"image": "/caseyscasino-0.png"
+		"image": "/caseyscasino-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-cruiseship",
@@ -2538,7 +2768,8 @@
 		"size": "large",
 		"classes": ["civilian"],
 		"engines": ["ame"],
-		"image": "/cruiseship-0.png"
+		"image": "/cruiseship-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-derelictdrillsite",
@@ -2549,7 +2780,8 @@
 		"size": "large",
 		"classes": ["salvage", "scrapyard"],
 		"engines": ["apu"],
-		"image": "/derelictdrillsite-0.png"
+		"image": "/derelictdrillsite-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-fragmentofprison",
@@ -2558,9 +2790,10 @@
 		"price": 0,
 		"group": "station",
 		"size": "medium",
-		"classes": ["detainment", "scrapyard"],
+		"classes": ["scrapyard"],
 		"engines": ["apu"],
-		"image": "/fragmentofprison-0.png"
+		"image": "/fragmentofprison-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-hospital",
@@ -2571,7 +2804,8 @@
 		"size": "large",
 		"classes": ["medical"],
 		"engines": ["solar"],
-		"image": "/hospital-0.png"
+		"image": "/hospital-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-lpbravo",
@@ -2580,9 +2814,10 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["detective", "security"],
+		"classes": ["security"],
 		"engines": ["ame"],
-		"image": "/lpbravo-0.png"
+		"image": "/lpbravo-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-pdvhelios",
@@ -2593,7 +2828,8 @@
 		"size": "large",
 		"classes": ["capital", "security"],
 		"engines": ["ame"],
-		"image": "/pdvhelios-0.png"
+		"image": "/pdvhelios-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-sevastopol",
@@ -2604,7 +2840,8 @@
 		"size": "large",
 		"classes": ["science"],
 		"engines": ["supermatter"],
-		"image": "/sevastopol-0.png"
+		"image": "/sevastopol-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-small-meteo-station",
@@ -2615,7 +2852,8 @@
 		"size": "large",
 		"classes": ["science", "atmospherics"],
 		"engines": ["solar"],
-		"image": "/small_meteo_station-0.png"
+		"image": "/small_meteo_station-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-trademall",
@@ -2626,7 +2864,8 @@
 		"size": "large",
 		"classes": ["civilian", "cargo"],
 		"engines": ["solar"],
-		"image": "/trademall-0.png"
+		"image": "/trademall-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-tsfmchalcyon",
@@ -2635,9 +2874,10 @@
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["capital", "fighter"],
+		"classes": ["capital"],
 		"engines": ["ame"],
-		"image": "/tsfmchalcyon-0.png"
+		"image": "/tsfmchalcyon-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-tsfmcoutpost",
@@ -2648,7 +2888,8 @@
 		"size": "large",
 		"classes": ["civilian"],
 		"engines": ["solar"],
-		"image": "/tsfmcoutpost-0.png"
+		"image": "/tsfmcoutpost-0.png",
+		"hullClass": "station"
 	},
 	{
 		"id": "station-whale",
@@ -2659,6 +2900,7 @@
 		"size": "large",
 		"classes": ["capital", "expedition"],
 		"engines": ["supermatter"],
-		"image": "/whale-0.png"
+		"image": "/whale-0.png",
+		"hullClass": "station"
 	}
 ]

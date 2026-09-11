@@ -29,6 +29,11 @@
 	<div class="card-info">
 		<div class="card-title-row">
 			<span class="card-name">{shuttle.name}</span>
+			{#if shuttle.hullClass}
+				<span class="hull-badge"
+					>{shuttleConfig.hullClasses[shuttle.hullClass] ?? shuttle.hullClass}</span
+				>
+			{/if}
 		</div>
 
 		{#if shuttle.classes.length > 0}

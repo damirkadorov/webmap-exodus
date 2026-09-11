@@ -26,7 +26,20 @@
 			"eighth_fleet": "Восьмой Экспедиционный флот",
 			"station": "Станции"
 		},
+		"hullClasses": {
+			"battleship": "Линкор",
+			"carrier": "Авианосец",
+			"cruiser": "Крейсер",
+			"destroyer": "Эсминец",
+			"frigate": "Фрегат",
+			"corvette": "Корвет",
+			"fighter": "Истребитель",
+			"shuttle": "Шаттл / Катер",
+			"station": "Станция"
+		},
 		"classes": {
+			"battleship": "Линкор",
+			"carrier": "Авианосец",
 			"capital": "Флагман",
 			"detainment": "Конвойный",
 			"detective": "Следственный",

@@ -300,6 +300,29 @@ img {
 	border-color: var(--border-bright);
 }
 
+/* Hull badge */
+.hull-badge {
+	font-family: var(--font-mono);
+	font-size: 0.65rem;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	color: var(--accent);
+	padding: 2px 7px;
+	border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+	border-radius: var(--radius-sm);
+	background: color-mix(in srgb, var(--accent) 12%, transparent);
+	white-space: nowrap;
+	flex-shrink: 0;
+	transition:
+		border-color 0.2s,
+		background-color 0.2s;
+}
+.hull-badge:hover {
+	border-color: var(--accent);
+	background: color-mix(in srgb, var(--accent) 22%, transparent);
+}
+
 /* Stat block used on detail page */
 .stat-block {
 	display: flex;

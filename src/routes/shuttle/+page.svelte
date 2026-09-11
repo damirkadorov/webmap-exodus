@@ -91,9 +91,16 @@
 				<div class="title-block">
 					<div class="title-row">
 						<h1 class="shuttle-name">{shuttle.name}</h1>
-						<span class="faction-tag" style="color: {factionColor}">
-							{shuttleConfig.shipyard[shuttle.group]}
-						</span>
+						<div class="title-tags">
+							{#if shuttle.hullClass}
+								<span class="hull-badge">
+									{shuttleConfig.hullClasses[shuttle.hullClass] ?? shuttle.hullClass}
+								</span>
+							{/if}
+							<span class="faction-tag" style="color: {factionColor}">
+								{shuttleConfig.shipyard[shuttle.group]}
+							</span>
+						</div>
 					</div>
 
 					{#if shuttle.description}
@@ -119,6 +126,16 @@
 								>
 							{/if}
 						</div>
+
+						<!-- Hull Class -->
+						{#if shuttle.hullClass}
+							<div class="stat-block">
+								<span class="stat-label">Класс</span>
+								<span class="stat-value"
+									>{shuttleConfig.hullClasses[shuttle.hullClass] ?? shuttle.hullClass}</span
+								>
+							</div>
+						{/if}
 
 						<!-- Size -->
 						<div class="stat-block">
@@ -158,9 +175,9 @@
 
 				<!-- Classes -->
 				<div class="classes-section">
-					<div class="section-divider">Классификация</div>
+					<div class="section-divider">Специализация и роль</div>
 					{#if shuttle.classes.length === 0}
-						<span style="font-size:0.8rem; color: var(--text-dim);">Нет классов</span>
+						<span style="font-size:0.8rem; color: var(--text-dim);">Универсальный</span>
 					{:else}
 						<div class="classes-list">
 							{#each shuttle.classes as cls (cls)}
@@ -383,6 +400,13 @@
 		align-items: flex-start;
 		justify-content: space-between;
 		gap: 12px;
+		flex-wrap: wrap;
+	}
+
+	.title-tags {
+		display: flex;
+		align-items: center;
+		gap: 6px;
 		flex-wrap: wrap;
 	}
 

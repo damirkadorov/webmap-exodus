@@ -6,6 +6,7 @@
 		ShuttleEngine,
 		ShuttleFilters,
 		ShuttleGroup,
+		ShuttleHullClass,
 		ShuttleSize
 	} from '$lib';
 
@@ -13,6 +14,7 @@
 		className?: string;
 		filters: ShuttleFilters;
 		shipyardOptions: Record<ShuttleGroup, string>;
+		hullOptions: Record<ShuttleHullClass, string>;
 		classOptions: Record<ShuttleClass, string>;
 		engineOptions: Record<ShuttleEngine, string>;
 		sizeOptions: Record<ShuttleSize, string>;
@@ -23,6 +25,7 @@
 		className = '',
 		filters,
 		shipyardOptions,
+		hullOptions,
 		classOptions,
 		engineOptions,
 		sizeOptions,
@@ -32,6 +35,7 @@
 	const hasActiveFilters = $derived(
 		filters.name !== '' ||
 			filters.group !== '' ||
+			filters.hullClass !== '' ||
 			filters.shuttleClass.length > 0 ||
 			filters.engine !== '' ||
 			filters.size !== '' ||
@@ -118,9 +122,20 @@
 			</select>
 		</div>
 
+		<!-- Hull Class -->
+		<div class="filter-group">
+			<label class="filter-label" for="filter-hull">Класс корабля</label>
+			<select id="filter-hull" name="hull" bind:value={filters.hullClass}>
+				<option value="">Все классы</option>
+				{#each Object.entries(hullOptions) as [value, label] (value)}
+					<option {value}>{label}</option>
+				{/each}
+			</select>
+		</div>
+
 		<!-- Class -->
 		<div class="filter-group">
-			<label class="filter-label" for="filter-class">Категория</label>
+			<label class="filter-label" for="filter-class">Специализация / Роль</label>
 			<MultiSelect
 				bind:selected={filters.shuttleClass}
 				options={classOptions}

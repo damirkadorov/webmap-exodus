@@ -101,6 +101,7 @@ function createEighthFleetShuttleFromFile(filename, shuttleEventDir) {
 		description: 'Шаттл Восьмого Экспедиционного флота.',
 		price: 0,
 		group: 'eighth_fleet',
+		hullClass: 'shuttle',
 		size,
 		classes: ['expedition'],
 		engines: ['apu'],
@@ -183,7 +184,7 @@ const KNOWN_POI_INFO = {
 	'camelot.yml': {
 		name: 'Форт Камелот',
 		desc: 'Военный опорный пункт СССП.',
-		classes: ['patrol', 'security'],
+		classes: ['security'],
 		engines: ['ame']
 	},
 	'cargodepot.yml': {
@@ -219,7 +220,7 @@ const KNOWN_POI_INFO = {
 	'fragmentofprison.yml': {
 		name: 'Обломок тюремного корабля',
 		desc: 'Разрушенный тюремный блок строгого режима.',
-		classes: ['detainment', 'scrapyard'],
+		classes: ['scrapyard'],
 		engines: ['apu']
 	},
 	'hospital.yml': {
@@ -231,7 +232,7 @@ const KNOWN_POI_INFO = {
 	'lpbravo.yml': {
 		name: 'Прослушивающий Пункт Браво',
 		desc: 'Секретный разведывательный пункт прослушивания.',
-		classes: ['detective', 'security'],
+		classes: ['security'],
 		engines: ['ame']
 	},
 	'pdvhelios.yml': {
@@ -261,7 +262,7 @@ const KNOWN_POI_INFO = {
 	'tsfmchalcyon.yml': {
 		name: 'КВП | Флагман Фалкон',
 		desc: 'Тяжелый флагманский крейсер сил правопорядка КВП.',
-		classes: ['capital', 'fighter'],
+		classes: ['capital', 'security'],
 		engines: ['ame']
 	},
 	'tsfmcoutpost.yml': {
@@ -273,7 +274,7 @@ const KNOWN_POI_INFO = {
 	'whale.yml': {
 		name: 'ВЭФ | Кашалот',
 		desc: 'Сверхтяжелое судно Восьмого Экспедиционного флота.',
-		classes: ['capital', 'expedition'],
+		classes: ['capital'],
 		engines: ['supermatter']
 	}
 };
@@ -314,6 +315,7 @@ function createPoiStationFromFile(filename, poiDir) {
 		description: known?.desc ?? 'Станция (POI).',
 		price: 0,
 		group: 'station',
+		hullClass: 'station',
 		size,
 		classes: known?.classes ?? ['science'],
 		engines: known?.engines ?? ['apu'],
