@@ -151,12 +151,6 @@ const KNOWN_POI_INFO = {
 		classes: ['mercenary'],
 		engines: ['apu']
 	},
-	'azimuth_lobby.yml': {
-		name: 'АСЗ Азимут',
-		desc: 'Орбитальная станция АСЗ Азимут.',
-		classes: [],
-		engines: ['solar']
-	},
 	'bahama.yml': {
 		name: 'Багамская Мама',
 		desc: 'Рекреационный и общественный комплекс.',

@@ -157,12 +157,6 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 		classes: ['mercenary'],
 		engines: ['apu']
 	},
-	'azimuth_lobby.yml': {
-		name: 'АСЗ Азимут',
-		desc: 'Орбитальная станция АСЗ Азимут.',
-		classes: [],
-		engines: ['solar']
-	},
 	'bahama.yml': {
 		name: 'Багамская Мама',
 		desc: 'Рекреационный и общественный комплекс.',

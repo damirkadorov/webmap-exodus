@@ -2652,18 +2652,6 @@
 		"hullClass": "station"
 	},
 	{
-		"id": "station-azimuth-lobby",
-		"name": "АСЗ Азимут",
-		"description": "Орбитальная станция АСЗ Азимут.",
-		"price": 0,
-		"group": "station",
-		"size": "large",
-		"classes": [],
-		"engines": ["solar"],
-		"image": "/azimuth_lobby-0.png",
-		"hullClass": "station"
-	},
-	{
 		"id": "station-bahama",
 		"name": "Багамская Мама",
 		"description": "Рекреационный и общественный комплекс.",
