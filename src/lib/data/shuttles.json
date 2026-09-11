@@ -2833,12 +2833,12 @@
 	},
 	{
 		"id": "station-small-meteo-station",
-		"name": "Маленькая Метеостанция",
-		"description": "Автоматическая станция метеорологических наблюдений.",
+		"name": "Метеостанция Синдиката",
+		"description": "Метеостанция Синдиката.",
 		"price": 0,
 		"group": "station",
 		"size": "large",
-		"classes": ["science", "atmospherics"],
+		"classes": ["syndicate"],
 		"engines": ["solar"],
 		"image": "/small_meteo_station-0.png",
 		"hullClass": "station"

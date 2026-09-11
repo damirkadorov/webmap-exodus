@@ -248,9 +248,9 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 		engines: ['supermatter']
 	},
 	'small_meteo_station.yml': {
-		name: 'Маленькая Метеостанция',
-		desc: 'Автоматическая станция метеорологических наблюдений.',
-		classes: ['science', 'atmospherics'],
+		name: 'Метеостанция Синдиката',
+		desc: 'Метеостанция Синдиката.',
+		classes: ['syndicate'],
 		engines: ['solar']
 	},
 	'trademall.yml': {
