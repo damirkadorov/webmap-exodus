@@ -20,6 +20,19 @@ export interface Shuttle {
 
 export type ShuttleSort = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
 
+export function normalizeGroup(group: string): ShuttleGroup {
+	if (group === 'scrap') return 'scrapyard' as ShuttleGroup;
+	if (group === 'mieyo') return 'mms' as ShuttleGroup;
+	return group as ShuttleGroup;
+}
+
+const rawShuttleData = shuttlesJson as Array<Omit<Shuttle, 'group'> & { group: string }>;
+
+const shuttleData: Shuttle[] = rawShuttleData.map((shuttle) => ({
+	...shuttle,
+	group: normalizeGroup(shuttle.group)
+}));
+
 export interface ShuttleFilters {
 	name: string;
 	group: ShuttleGroup | '';
@@ -29,8 +42,6 @@ export interface ShuttleFilters {
 	onlyForSale: boolean;
 	sortBy: ShuttleSort;
 }
-
-const shuttleData = shuttlesJson as Shuttle[];
 
 export const defaultShuttleFilters: ShuttleFilters = {
 	name: '',
@@ -79,8 +90,12 @@ export function filterShuttles(shuttles: Shuttle[], filters: ShuttleFilters): Sh
 			return false;
 		}
 
-		if (filters.group && shuttle.group !== filters.group) {
-			return false;
+		if (filters.group) {
+			const filterGroup = normalizeGroup(filters.group);
+			const shuttleGroup = normalizeGroup(shuttle.group);
+			if (shuttleGroup !== filterGroup) {
+				return false;
+			}
 		}
 
 		if (filters.size && shuttle.size !== filters.size) {
@@ -127,5 +142,17 @@ export function formatPrice(price: number): string {
 	return new Intl.NumberFormat('ru-RU').format(price);
 }
 
-export const shuttleConfig = configJson.shuttles;
-export const shuttleGroupColors = configJson.shipyard;
+export const shuttleConfig = {
+	...configJson.shuttles,
+	shipyard: {
+		...configJson.shuttles.shipyard,
+		scrap: configJson.shuttles.shipyard.scrapyard,
+		mieyo: configJson.shuttles.shipyard.mms
+	} as Record<string, string>
+};
+
+export const shuttleGroupColors: Record<string, string> = {
+	...configJson.shipyard,
+	scrap: configJson.shipyard.scrapyard,
+	mieyo: configJson.shipyard.mms
+};

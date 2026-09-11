@@ -121,14 +121,20 @@ jobs:
           const existing = JSON.parse(fs.readFileSync('current-repo/src/lib/data/shuttles.json', 'utf-8'));
           const generated = JSON.parse(fs.readFileSync('monolith/bin/Content.Server/data/vessels_data.json', 'utf-8'));
 
+          for (const s of generated) {
+            if (s.group === 'scrap') s.group = 'scrapyard';
+            if (s.group === 'mieyo') s.group = 'mms';
+          }
+
           // Groups managed manually in the repo — never overwritten by the game server output
-          const MANUAL_GROUPS = ['syndicate', 'viper', 'mms'];
+          const MANUAL_GROUPS = ['syndicate', 'viper', 'mms', 'scrapyard'];
 
           const manual = existing.filter(s => MANUAL_GROUPS.includes(s.group));
-          const merged = [...generated, ...manual];
+          const generatedNonManual = generated.filter(s => !MANUAL_GROUPS.includes(s.group));
+          const merged = [...generatedNonManual, ...manual];
 
           fs.writeFileSync('current-repo/src/lib/data/shuttles.json', JSON.stringify(merged, null, 2), 'utf-8');
-          console.log(`Merged: ${generated.length} from game + ${manual.length} manual = ${merged.length} total`);
+          console.log(`Merged: ${generatedNonManual.length} from game + ${manual.length} manual = ${merged.length} total`);
           EOF
           else
             echo "vessels_data.json not found, keeping existing shuttles.json"
