@@ -106,6 +106,183 @@ function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: str
 	};
 }
 
+function isGenericName(str: string | null): boolean {
+	if (!str) return true;
+	const lower = str.trim().toLowerCase();
+	return (
+		lower === 'grid' ||
+		lower === 'station' ||
+		lower === 'shuttle' ||
+		lower.startsWith('solution') ||
+		lower.includes('blast door') ||
+		lower.includes('control') ||
+		lower.includes('button') ||
+		lower.includes('air alarm') ||
+		lower.includes('plushie') ||
+		lower.includes('apc')
+	);
+}
+
+interface KnownPoi {
+	name: string;
+	desc: string;
+	classes: string[];
+	engines: string[];
+}
+
+const KNOWN_POI_INFO: Record<string, KnownPoi> = {
+	'ads_big_ancient_storage.yml': {
+		name: 'Правительственная Цитадель',
+		desc: 'Укреплённая цитадель сил обороны Асаким.',
+		classes: ['capital'],
+		engines: ['ame']
+	},
+	'ads_small_ancient_storage.yml': {
+		name: "Древнее Хранилище Кхси'Ра",
+		desc: "Древний складской комплекс цивилизации Кхси'Ра.",
+		classes: ['cargo', 'salvage'],
+		engines: ['ame']
+	},
+	'anomalouslab.yml': {
+		name: 'Лаборатория Аномалий',
+		desc: 'Научно-исследовательский аванпост по изучению аномалий.',
+		classes: ['science'],
+		engines: ['supermatter']
+	},
+	'arena.yml': {
+		name: 'Бойцовская Яма',
+		desc: 'Подпольная гладиаторская арена и боевой комплекс.',
+		classes: ['mercenary'],
+		engines: ['apu']
+	},
+	'azimuth_lobby.yml': {
+		name: 'АСЗ Азимут',
+		desc: 'Орбитальная станция АСЗ Азимут.',
+		classes: ['civilian'],
+		engines: ['solar']
+	},
+	'bahama.yml': {
+		name: 'Багамская Мама',
+		desc: 'Рекреационный и общественный комплекс.',
+		classes: ['kitchen', 'civilian'],
+		engines: ['apu']
+	},
+	'beaconstation_a.yml': {
+		name: 'INSO-357k Asteroid Cluster',
+		desc: 'Астероидный кластер и добывающая станция.',
+		classes: ['salvage'],
+		engines: ['solar']
+	},
+	'beaconstation_wilds.yml': {
+		name: 'LINEAR-21 Asteroid Cluster',
+		desc: 'Удаленный астероидный кластер.',
+		classes: ['salvage'],
+		engines: ['solar']
+	},
+	'burnedshuttle.yml': {
+		name: 'Погибшая спасательная капсула',
+		desc: 'Обгоревшие останки спасательного шаттла.',
+		classes: ['scrapyard'],
+		engines: ['apu']
+	},
+	'camelot.yml': {
+		name: 'Форт Камелот',
+		desc: 'Военный опорный пункт СССП.',
+		classes: ['patrol', 'security'],
+		engines: ['ame']
+	},
+	'cargodepot.yml': {
+		name: 'Грузовое Депо',
+		desc: 'Логистический склад и грузовой перевалочный пункт.',
+		classes: ['cargo'],
+		engines: ['solar']
+	},
+	'cargodepotalt.yml': {
+		name: 'Грузовое Депо (Альт)',
+		desc: 'Альтернативный перевалочный грузовой терминал.',
+		classes: ['cargo'],
+		engines: ['solar']
+	},
+	'caseyscasino.yml': {
+		name: 'Казино Ксено',
+		desc: 'Игорный дом и казино на фронтире.',
+		classes: ['civilian'],
+		engines: ['apu']
+	},
+	'cruiseship.yml': {
+		name: 'Покинутый круизный корабль',
+		desc: 'Роскошный пассажирский лайнер, дрейфующий в космосе.',
+		classes: ['civilian'],
+		engines: ['ame']
+	},
+	'derelictdrillsite.yml': {
+		name: 'Брошенный Буровой Комплекс',
+		desc: 'Заброшенный промышленный комплекс глубинного бурения.',
+		classes: ['salvage', 'scrapyard'],
+		engines: ['apu']
+	},
+	'fragmentofprison.yml': {
+		name: 'Обломок тюремного корабля',
+		desc: 'Разрушенный тюремный блок строгого режима.',
+		classes: ['detainment', 'scrapyard'],
+		engines: ['apu']
+	},
+	'hospital.yml': {
+		name: 'Госпиталь',
+		desc: 'Медицинский комплекс экстренной помощи и реанимации.',
+		classes: ['medical'],
+		engines: ['solar']
+	},
+	'lpbravo.yml': {
+		name: 'Прослушивающий Пункт Браво',
+		desc: 'Секретный разведывательный пункт прослушивания.',
+		classes: ['detective', 'security'],
+		engines: ['ame']
+	},
+	'pdvhelios.yml': {
+		name: 'ДФ | Крепость Гелиос',
+		desc: 'Оборонительный форпост Династии Фаэтон.',
+		classes: ['capital', 'security'],
+		engines: ['ame']
+	},
+	'sevastopol.yml': {
+		name: 'Дата-центр Севастополь',
+		desc: 'Высокотехнологичный серверный дата-центр.',
+		classes: ['science'],
+		engines: ['supermatter']
+	},
+	'small_meteo_station.yml': {
+		name: 'Маленькая Метеостанция',
+		desc: 'Автоматическая станция метеорологических наблюдений.',
+		classes: ['science', 'atmospherics'],
+		engines: ['solar']
+	},
+	'trademall.yml': {
+		name: 'Торговый Центр',
+		desc: 'Крупная космическая фактория и торговый молл.',
+		classes: ['civilian', 'cargo'],
+		engines: ['solar']
+	},
+	'tsfmchalcyon.yml': {
+		name: 'КВП | Флагман Фалкон',
+		desc: 'Тяжелый флагманский крейсер сил правопорядка КВП.',
+		classes: ['capital', 'fighter'],
+		engines: ['ame']
+	},
+	'tsfmcoutpost.yml': {
+		name: 'ДФ-ГРАЖД | Аванпост гражданских ДФ',
+		desc: 'Гражданский аванпост под защитой ДФ.',
+		classes: ['civilian'],
+		engines: ['solar']
+	},
+	'whale.yml': {
+		name: 'ВЭФ | Кашалот',
+		desc: 'Сверхтяжелое судно Восьмого Экспедиционного флота.',
+		classes: ['capital', 'expedition'],
+		engines: ['supermatter']
+	}
+};
+
 function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {
 	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
 	const ymlPath = path.join(poiDir, filename);
@@ -122,7 +299,16 @@ function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {
 		console.warn(`Warning: Could not parse ${filename}: ${(error as Error).message}`);
 	}
 
-	const name = !rawName || isLocalizationKey(rawName) ? nameFromFilename(filename) : rawName;
+	const known = KNOWN_POI_INFO[filename];
+	const name =
+		known?.name ??
+		(!rawName || isLocalizationKey(rawName) || isGenericName(rawName)
+			? nameFromFilename(filename)
+			: rawName);
+
+	if (rawName && (isLocalizationKey(rawName) || isGenericName(rawName))) {
+		console.warn(`  ⚠ Generic/unresolved name "${rawName}" in ${filename} → using "${name}"`);
+	}
 
 	const size = determineShuttleSize(entityCount);
 	const imagePath = resolveImagePath(id);
@@ -130,12 +316,12 @@ function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {
 	return {
 		id: `station-${id}`,
 		name,
-		description: 'Станция (POI).',
+		description: known?.desc ?? 'Станция (POI).',
 		price: 0,
 		group: 'station',
 		size,
-		classes: ['science'],
-		engines: ['apu'],
+		classes: known?.classes ?? ['science'],
+		engines: known?.engines ?? ['apu'],
 		image: imagePath
 	};
 }

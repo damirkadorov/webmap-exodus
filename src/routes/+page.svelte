@@ -195,7 +195,7 @@
 		background: var(--bg-panel);
 		border: 1px solid var(--border-dim);
 		border-radius: var(--radius-lg);
-		box-shadow: 0 1px 3px rgba(29, 28, 26, 0.04);
+		box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 	}
 
 	.results-info {
@@ -207,9 +207,9 @@
 	}
 
 	.results-count {
-		font-size: 1.2rem;
-		font-weight: 500;
-		color: var(--text);
+		font-size: 1.1rem;
+		font-weight: 700;
+		color: var(--accent);
 		font-family: var(--font-display);
 	}
 
@@ -244,7 +244,7 @@
 		font-family: var(--font-body);
 		font-size: 0.8rem;
 		color: var(--text);
-		background-color: var(--bg);
+		background-color: rgba(8, 13, 26, 0.8);
 		border: 1px solid var(--border);
 		border-radius: var(--radius);
 		padding: 4px 28px 4px 8px;

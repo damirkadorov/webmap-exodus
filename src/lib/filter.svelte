@@ -157,14 +157,29 @@
 <style>
 	.filter-panel {
 		background: var(--bg-panel);
-		border: 1px solid var(--border);
+		border: 1px solid var(--border-dim);
 		border-radius: var(--radius-xl);
 		padding: 18px;
 		display: flex;
 		flex-direction: column;
 		gap: 16px;
 		min-width: 240px;
-		box-shadow: 0 1px 3px rgba(29, 28, 26, 0.04);
+		box-shadow:
+			0 4px 28px rgba(0, 0, 0, 0.3),
+			0 0 0 1px rgba(65, 182, 251, 0.04) inset;
+		position: relative;
+		overflow: hidden;
+	}
+	/* subtle top glow line */
+	.filter-panel::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 20%;
+		right: 20%;
+		height: 1px;
+		background: linear-gradient(90deg, transparent, var(--accent), transparent);
+		opacity: 0.3;
 	}
 
 	/* Header */
@@ -181,9 +196,10 @@
 		align-items: center;
 		gap: 7px;
 		font-family: var(--font-display);
-		font-weight: 500;
-		font-size: 1.05rem;
-		letter-spacing: -0.01em;
+		font-weight: 700;
+		font-size: 0.95rem;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
 		color: var(--text);
 	}
 

@@ -159,7 +159,7 @@
 		justify-content: space-between;
 		width: 100%;
 		padding: 8px 12px;
-		background: var(--bg-panel);
+		background: rgba(8, 13, 26, 0.8);
 		border: 1px solid var(--border);
 		border-radius: var(--radius);
 		color: var(--text-muted);
@@ -245,8 +245,8 @@
 		border: 1px solid var(--border);
 		border-radius: var(--radius-lg);
 		box-shadow:
-			0 8px 24px rgba(29, 28, 26, 0.1),
-			0 0 0 1px rgba(29, 28, 26, 0.04);
+			0 12px 40px rgba(0, 0, 0, 0.55),
+			0 0 0 1px rgba(65, 182, 251, 0.06);
 		max-height: 220px;
 		overflow-y: auto;
 		padding: 6px;
@@ -298,7 +298,7 @@
 	.ms-option.selected .ms-checkbox {
 		border-color: var(--accent);
 		background: var(--accent);
-		color: #ffffff;
+		color: #050810;
 	}
 
 	.ms-label {

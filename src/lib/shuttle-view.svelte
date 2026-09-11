@@ -64,26 +64,31 @@
 		display: flex;
 		flex-direction: column;
 		background: var(--bg-card);
-		border: 1px solid var(--border);
+		border: 1px solid var(--border-dim);
 		border-radius: var(--radius-xl);
 		overflow: hidden;
 		text-decoration: none;
 		cursor: pointer;
 		transition:
-			border-color 0.2s ease,
-			box-shadow 0.2s ease,
-			transform 0.15s ease;
+			border-color 0.3s ease,
+			background 0.3s ease,
+			transform 0.2s ease,
+			box-shadow 0.3s ease;
 		position: relative;
 	}
 
 	.shuttle-card:hover {
-		border-color: var(--navy-bright);
-		transform: translateY(-2px);
-		box-shadow: 0 4px 16px rgba(29, 28, 26, 0.06);
+		border-color: color-mix(in srgb, var(--faction-color, var(--accent)) 50%, transparent);
+		background: var(--bg-card-hover);
+		transform: translateY(-3px);
+		box-shadow:
+			0 12px 40px rgba(0, 0, 0, 0.45),
+			0 0 0 1px color-mix(in srgb, var(--faction-color, var(--accent)) 20%, transparent),
+			0 0 30px color-mix(in srgb, var(--faction-color, var(--accent)) 8%, transparent);
 	}
 
 	.shuttle-card:active {
-		transform: translateY(0) scale(0.99);
+		transform: translateY(-1px) scale(0.99);
 	}
 
 	/* Image */
@@ -93,7 +98,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		background: rgba(31, 77, 158, 0.03);
+		background: rgba(0, 0, 0, 0.25);
 		overflow: hidden;
 		position: relative;
 		border-bottom: 1px solid var(--border-dim);
@@ -112,19 +117,21 @@
 		transform: scale(1.04);
 	}
 
-	/* Faction badge: pale pastel pill */
+	/* Faction badge */
 	.faction-badge {
 		position: absolute;
 		top: 10px;
 		right: 10px;
 		font-family: var(--font-mono);
-		font-size: 0.62rem;
-		letter-spacing: 0.03em;
-		color: color-mix(in srgb, var(--faction-color, var(--accent)) 65%, #1d1c1a);
-		background: color-mix(in srgb, var(--faction-color, var(--accent)) 10%, #ffffff);
-		border: none;
-		padding: 3px 10px;
+		font-size: 0.6rem;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		color: var(--faction-color, var(--accent));
+		background: color-mix(in srgb, var(--faction-color, var(--accent)) 10%, rgba(5, 8, 16, 0.82));
+		border: 1px solid color-mix(in srgb, var(--faction-color, var(--accent)) 30%, transparent);
+		padding: 4px 9px;
 		border-radius: var(--radius-pill);
+		backdrop-filter: blur(8px);
 	}
 
 	/* Info section */
@@ -145,12 +152,12 @@
 
 	.card-name {
 		font-family: var(--font-display);
-		font-weight: 500;
-		font-size: 1.15rem;
-		letter-spacing: -0.01em;
+		font-weight: 700;
+		font-size: 1.05rem;
+		letter-spacing: 0.02em;
 		color: var(--text);
 		line-height: 1.15;
-		transition: color 0.15s;
+		transition: color 0.2s;
 	}
 	.shuttle-card:hover .card-name {
 		color: var(--accent);
@@ -196,14 +203,18 @@
 		transform: translateX(3px);
 	}
 
-	/* Bottom ink line in faction color */
+	/* Bottom bar */
 	.card-faction-bar {
-		height: 2px;
-		background: var(--faction-color, var(--accent));
-		opacity: 0.12;
-		transition: opacity 0.2s;
+		height: 3px;
+		background: linear-gradient(
+			90deg,
+			var(--faction-color, var(--accent)) 0%,
+			color-mix(in srgb, var(--faction-color, var(--accent)) 40%, transparent) 100%
+		);
+		opacity: 0;
+		transition: opacity 0.3s;
 	}
 	.shuttle-card:hover .card-faction-bar {
-		opacity: 0.55;
+		opacity: 0.8;
 	}
 </style>

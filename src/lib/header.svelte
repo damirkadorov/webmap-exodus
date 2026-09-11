@@ -87,14 +87,22 @@
 		top: 0;
 		z-index: 100;
 		width: 100%;
-		background: rgba(247, 246, 243, 0.92);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
-		border-bottom: 1px solid var(--border);
+		background: rgba(5, 8, 16, 0.92);
+		backdrop-filter: blur(12px);
+		-webkit-backdrop-filter: blur(12px);
+		border-bottom: 1px solid var(--border-dim);
 	}
 
 	.accent-bar {
-		display: none;
+		width: 100%;
+		height: 2px;
+		background: linear-gradient(
+			90deg,
+			transparent 0%,
+			var(--accent) 30%,
+			rgba(65, 182, 251, 0.6) 70%,
+			transparent 100%
+		);
 	}
 
 	.header-inner {
@@ -123,12 +131,15 @@
 		justify-content: center;
 		border: 1px solid var(--border);
 		border-radius: var(--radius);
-		background: var(--bg-panel);
+		background: rgba(65, 182, 251, 0.06);
 		padding: 4px;
-		transition: border-color 0.15s;
+		transition:
+			border-color 0.2s,
+			background 0.2s;
 	}
 	.brand:hover .brand-icon {
 		border-color: var(--accent);
+		background: rgba(65, 182, 251, 0.14);
 	}
 
 	.brand-icon img {
@@ -146,11 +157,11 @@
 
 	.brand-name {
 		font-family: var(--font-display);
-		font-weight: 500;
-		font-size: 1.2rem;
-		letter-spacing: -0.01em;
+		font-weight: 700;
+		font-size: 1.05rem;
+		letter-spacing: 0.04em;
 		color: var(--text);
-		transition: color 0.15s;
+		transition: color 0.2s;
 	}
 	.brand:hover .brand-name {
 		color: var(--accent);
@@ -179,21 +190,24 @@
 		display: flex;
 		align-items: center;
 		gap: 6px;
-		padding: 7px 12px;
-		font-family: var(--font-body);
+		padding: 7px 16px;
+		font-family: var(--font-display);
 		font-size: 0.875rem;
 		font-weight: 600;
-		letter-spacing: 0.01em;
+		letter-spacing: 0.04em;
 		color: var(--text-muted);
 		text-decoration: none;
 		border-radius: var(--radius);
+		border: 1px solid transparent;
 		transition:
-			color 0.15s,
-			background 0.15s;
+			color 0.2s,
+			border-color 0.2s,
+			background 0.2s;
 	}
 	.nav-link:hover {
-		color: var(--text);
-		background: rgba(29, 28, 26, 0.05);
+		color: var(--accent);
+		border-color: var(--border);
+		background: var(--accent-muted);
 	}
 
 	.ext-icon {
