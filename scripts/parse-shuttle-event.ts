@@ -194,7 +194,7 @@ function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: str
 		name,
 		description: known?.desc ?? 'Боевой корабль Автоматической Системы Защиты.',
 		price: 0,
-		group: 'eighth_fleet',
+		group: 'hostile_ai',
 		hullClass: known?.hullClass ?? 'corvette',
 		size,
 		classes: known?.classes ?? ['fighter'],
@@ -437,7 +437,7 @@ function main() {
 
 	const existingShuttles: Shuttle[] = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
 	const otherShuttles = existingShuttles.filter(
-		(s) => s.group !== 'eighth_fleet' && s.group !== 'station'
+		(s) => s.group !== 'eighth_fleet' && s.group !== 'hostile_ai' && s.group !== 'station'
 	);
 
 	const newEighthFleetShuttles = shuttleEventYmlFiles.map((f) =>

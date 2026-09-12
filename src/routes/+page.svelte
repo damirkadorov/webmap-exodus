@@ -5,6 +5,7 @@
 		defaultShuttleFilters,
 		filterShuttles,
 		getShuttles,
+		normalizeGroup,
 		shuttleConfig,
 		type ShuttleClass,
 		type ShuttleEngine,
@@ -50,7 +51,8 @@
 	onMount(() => {
 		const params = page.url.searchParams;
 		if (params.has('q')) filters.name = params.get('q') ?? '';
-		if (params.has('group')) filters.group = (params.get('group') as ShuttleGroup) ?? '';
+		if (params.has('group'))
+			filters.group = normalizeGroup(params.get('group') ?? '') as ShuttleGroup;
 		if (params.has('hull')) filters.hullClass = (params.get('hull') as ShuttleHullClass) ?? '';
 		if (params.has('size')) filters.size = (params.get('size') as ShuttleSize) ?? '';
 		if (params.has('engine')) filters.engine = (params.get('engine') as ShuttleEngine) ?? '';

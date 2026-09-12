@@ -23,7 +23,7 @@
 			"mms": "ММС",
 			"citadel": "Цитадель",
 			"custom": "Особые",
-			"eighth_fleet": "Восьмой Экспедиционный флот",
+			"hostile_ai": "Враждебные ИИ",
 			"station": "Станции"
 		},
 		"hullClasses": {
@@ -89,7 +89,7 @@
 		"mms": "#0088cc",
 		"citadel": "#d4af37",
 		"custom": "#9c27b0",
-		"eighth_fleet": "#800080",
+		"hostile_ai": "#800080",
 		"station": "#5f9ea0"
 	}
 }

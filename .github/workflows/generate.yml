@@ -69,6 +69,7 @@ jobs:
             Resources/Maps/_Exodus/Shuttles \
             Resources/Maps/_Exodus/ShuttleEvent \
             Resources/Maps/_Exodus/POI \
+            Resources/Maps/_Exodus/Supercapitals \
             Resources/Maps/Shuttles
           do
             if [ -d "$dir" ]; then
@@ -127,7 +128,7 @@ jobs:
           }
 
           // Groups managed manually in the repo — never overwritten by the game server output
-          const MANUAL_GROUPS = ['syndicate', 'viper', 'mms', 'scrapyard'];
+          const MANUAL_GROUPS = ['syndicate', 'viper', 'mms', 'scrapyard', 'hostile_ai', 'eighth_fleet'];
 
           const manual = existing.filter(s => MANUAL_GROUPS.includes(s.group));
           const generatedNonManual = generated.filter(s => !MANUAL_GROUPS.includes(s.group));
