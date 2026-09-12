@@ -25,7 +25,6 @@ export type ShuttleSort = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 
 export function normalizeGroup(group: string): ShuttleGroup {
 	if (group === 'scrap') return 'scrapyard' as ShuttleGroup;
 	if (group === 'mieyo') return 'mms' as ShuttleGroup;
-	if (group === 'eighth_fleet') return 'hostile_ai' as ShuttleGroup;
 	return group as ShuttleGroup;
 }
 
@@ -162,14 +161,12 @@ export const shuttleConfig = {
 	shipyard: {
 		...configJson.shuttles.shipyard,
 		scrap: configJson.shuttles.shipyard.scrapyard,
-		mieyo: configJson.shuttles.shipyard.mms,
-		eighth_fleet: configJson.shuttles.shipyard.hostile_ai
+		mieyo: configJson.shuttles.shipyard.mms
 	} as Record<string, string>
 };
 
 export const shuttleGroupColors: Record<string, string> = {
 	...configJson.shipyard,
 	scrap: configJson.shipyard.scrapyard,
-	mieyo: configJson.shipyard.mms,
-	eighth_fleet: configJson.shipyard.hostile_ai
+	mieyo: configJson.shipyard.mms
 };

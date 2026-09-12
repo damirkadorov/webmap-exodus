@@ -188,7 +188,7 @@ function createEighthFleetShuttleFromFile(filename, shuttleEventDir) {
 		name,
 		description: known?.desc ?? 'Боевой корабль Автоматической Системы Защиты.',
 		price: 0,
-		group: 'hostile_ai',
+		group: 'eighth_fleet',
 		hullClass: known?.hullClass ?? 'corvette',
 		size,
 		classes: known?.classes ?? ['fighter'],
@@ -439,7 +439,7 @@ function main() {
 	fs.writeFileSync(outputPath, JSON.stringify(allShuttles, null, 2), 'utf-8');
 
 	console.log(`✓ Обработано ${shuttleEventYmlFiles.length} файлов из ShuttleEvent`);
-	console.log(`✓ Создано ${newEighthFleetShuttles.length} шаттлов группы hostile_ai`);
+	console.log(`✓ Создано ${newEighthFleetShuttles.length} шаттлов группы eighth_fleet`);
 	console.log(`✓ Обработано ${poiYmlFiles.length} файлов из POI`);
 	console.log(`✓ Создано ${newPoiStations.length} станций группы station`);
 	console.log(`✓ Сохранено ${otherShuttles.length} шаттлов из других групп`);

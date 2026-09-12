@@ -23,6 +23,7 @@
 			"mms": "ММС",
 			"citadel": "Цитадель",
 			"custom": "Особые",
+			"eighth_fleet": "Восьмой флот",
 			"hostile_ai": "Враждебные ИИ",
 			"station": "Станции"
 		},
@@ -89,7 +90,8 @@
 		"mms": "#0088cc",
 		"citadel": "#d4af37",
 		"custom": "#9c27b0",
-		"hostile_ai": "#800080",
+		"eighth_fleet": "#800080",
+		"hostile_ai": "#ff3366",
 		"station": "#5f9ea0"
 	}
 }

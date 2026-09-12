@@ -194,7 +194,7 @@ function createEighthFleetShuttleFromFile(filename: string, shuttleEventDir: str
 		name,
 		description: known?.desc ?? 'Боевой корабль Автоматической Системы Защиты.',
 		price: 0,
-		group: 'hostile_ai',
+		group: 'eighth_fleet',
 		hullClass: known?.hullClass ?? 'corvette',
 		size,
 		classes: known?.classes ?? ['fighter'],
