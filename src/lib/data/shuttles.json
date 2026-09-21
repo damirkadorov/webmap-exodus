@@ -520,7 +520,7 @@
 		"name": "Блэкхок «Кортик»",
 		"description": "Компактный корабль ЧВК «Блэкхок» для сопровождения и выполнения контрактных задач.",
 		"price": 92300,
-		"group": "shipyard",
+		"group": "companies",
 		"size": "small",
 		"classes": ["mercenary"],
 		"engines": ["ame"],
@@ -2212,12 +2212,24 @@
 		"name": "Горизонт «Сифон»",
 		"description": "Газовый баркас Horizon Energy, оптимизированный под сбор газа в туманностях.",
 		"price": 72000,
-		"group": "shipyard",
+		"group": "companies",
 		"size": "small",
 		"classes": ["atmospherics"],
 		"engines": ["uranium"],
 		"image": "/siphon-0.png",
 		"hullClass": "shuttle"
+	},
+	{
+		"id": "HmiIncorporation",
+		"name": "ХМИ «Инкорпорация»",
+		"description": "Тяжёлый шахтёрско-промышленный корабль корпорации ХМИ для глубинной добычи и транспортировки руды.",
+		"price": 145000,
+		"group": "companies",
+		"size": "large",
+		"classes": ["salvage", "cargo"],
+		"engines": ["uranium"],
+		"image": "/incorporation-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Baeg",
@@ -2254,6 +2266,18 @@
 		"engines": ["ame"],
 		"image": "/ledokol-0.png",
 		"hullClass": "battleship"
+	},
+	{
+		"id": "MolotSoyuza",
+		"name": "Молот Союза",
+		"description": "Тяжёлый корабль СССП, дрейфующий в глубоком космосе в полуразрушенном состоянии со старта раунда.",
+		"price": 0,
+		"group": "ussp",
+		"size": "large",
+		"classes": ["scrapyard"],
+		"engines": ["ame"],
+		"image": "/molotok-0.png",
+		"hullClass": "corvette"
 	},
 	{
 		"id": "Kopye",
