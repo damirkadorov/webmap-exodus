@@ -2270,13 +2270,13 @@
 	{
 		"id": "MolotSoyuza",
 		"name": "Молот Союза",
-		"description": "Тяжёлый корабль СССП, дрейфующий в глубоком космосе в полуразрушенном состоянии со старта раунда.",
+		"description": "«Молот Союза» — модернизированный тяжёлый корвет СССП типа «Зенит», дрейфующий в глубоком космосе в полуразрушенном состоянии в качестве космической руины-данжа с технологическими дисками.",
 		"price": 0,
 		"group": "ussp",
 		"size": "large",
-		"classes": ["scrapyard"],
+		"classes": ["scrapyard", "fighter"],
 		"engines": ["ame"],
-		"image": "/molotok-0.png",
+		"image": "/hammeroftheunion-0.png",
 		"hullClass": "corvette"
 	},
 	{
