@@ -3178,5 +3178,41 @@
 		"engines": ["rtg"],
 		"image": "/lens-0.png",
 		"hullClass": "fighter"
+	},
+	{
+		"id": "Suicidebike",
+		"name": "Суисайдбайк",
+		"description": "Что может быть лучше, чем на 400 метров в секунду ушататься о метеор? Лёгкий шаттл, оборудованный солнечными панелями и несколькими движками. ВНИМАНИЕ! На данном шаттле нет базого минимума, в т.ч. скафандра и атмосии!",
+		"price": 34200,
+		"group": "shipyard",
+		"size": "micro",
+		"classes": ["salvage"],
+		"engines": ["solar"],
+		"image": "/suicidebike-0.png",
+		"hullClass": "shuttle"
+	},
+	{
+		"id": "Kosmobike",
+		"name": "ММС «Космобайк»",
+		"description": "Улучшенная силами ММС новейшая модель Суисайдбайка. Обладает двумя большими двигателями и дополнительными маленькими. Всё это питает плазменные соляры. ВНИМАНИЕ! На данном шаттле нет базого минимума, в т.ч. скафандра и атмосии!",
+		"price": 68200,
+		"group": "mms",
+		"size": "micro",
+		"classes": ["salvage"],
+		"engines": ["solar", "plasma"],
+		"image": "/kosmobike-0.png",
+		"hullClass": "shuttle"
+	},
+	{
+		"id": "regenerator",
+		"name": "HME «Регенератор»",
+		"description": "Это полноценный полевой госпиталь от корпорации Harmony Medical Enterprises, созданный для лечения всех типов заболеваний в глубоком космосе. Пригоден для автономного проживания большого экипажа. Оснащен всем необходимым медицинским оборудованием и щитом МС-100.",
+		"price": 444444,
+		"group": "companies",
+		"size": "large",
+		"classes": ["mercenary", "medical", "chemistry"],
+		"engines": ["plasma"],
+		"image": "/regenerator-0.png",
+		"hullClass": "frigate"
 	}
 ]
