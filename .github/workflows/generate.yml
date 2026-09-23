@@ -5,6 +5,11 @@ name: Generate webmap
 
 on:
   workflow_dispatch:
+    inputs:
+      force_render_all:
+        description: 'Force re-render all maps (slow)'
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -30,17 +35,25 @@ jobs:
       - name: Setup Submodule
         run: |
           cd monolith
-          git submodule update --init --recursive
+          git submodule update --init --recursive --depth 1 --jobs 4
 
       - name: Update Engine Submodules
         run: |
           cd monolith/RobustToolbox/
-          git submodule update --init --recursive
+          git submodule update --init --recursive --depth 1 --jobs 4
 
       - name: Setup .NET Core
         uses: actions/setup-dotnet@v4.1.0
         with:
           dotnet-version: 10.0.x
+
+      - name: Cache NuGet packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('monolith/**/*.csproj', 'monolith/**/*.props') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
 
       - name: Install Dependencies
         run: |
@@ -64,35 +77,32 @@ jobs:
             node current-repo/scripts/convert-colossus.js monolith/Resources/Maps/_Exodus/Outpost/colossus_central.yml
           fi
 
+      - name: Check which maps need rendering
+        id: check_maps
+        run: |
+          node current-repo/scripts/get-maps-to-render.js monolith current-repo
+        env:
+          FORCE_RENDER_ALL: ${{ github.event.inputs.force_render_all || 'false' }}
+
       - name: Build Map Renderer
+        if: steps.check_maps.outputs.render_needed == 'true'
         run: |
           cd monolith
           dotnet build Content.MapRenderer --configuration Release --no-restore /p:WarningsAsErrors=nullable /m
 
       - name: Run Map Renderer
+        if: steps.check_maps.outputs.render_needed == 'true'
         run: |
           cd monolith
-          map_dirs=()
-          for dir in \
-            Resources/SharedMaps \
-            Resources/SharedMaps/_Mono/Shuttles/Mieyo \
-            Resources/Maps/_Mono/Shuttles \
-            Resources/Maps/_Exodus/Shuttles \
-            Resources/Maps/_Exodus/ShuttleEvent \
-            Resources/Maps/_Exodus/POI \
-            Resources/Maps/_Exodus/Supercapitals \
-            Resources/Maps/_Exodus/Outpost \
-            Resources/Maps/Shuttles
-          do
-            if [ -d "$dir" ]; then
-              map_dirs+=("$dir")
-            fi
-          done
+          map_args=()
+          while IFS= read -r line; do
+            line="${line%$'\r'}"
+            [ -n "$line" ] && map_args+=("$line")
+          done < ../current-repo/maps_to_render.txt
 
-          if [ "${#map_dirs[@]}" -eq 0 ]; then
-            echo "No shuttle directories found, skipping renderer run"
-          else
-            find "${map_dirs[@]}" -name "*.yml" -type f -exec dotnet run --project Content.MapRenderer --no-build -- {} +
+          if [ "${#map_args[@]}" -gt 0 ]; then
+            echo "Rendering ${#map_args[@]} maps..."
+            dotnet run --project Content.MapRenderer --no-build -- "${map_args[@]}"
           fi
         continue-on-error: true
 
@@ -182,6 +192,10 @@ jobs:
             echo "No ShuttleEvent or POI files to process, skipping generated entries"
           fi
 
+      - name: Update map checksums
+        run: |
+          node current-repo/scripts/update-maps-checksums.js monolith current-repo
+
       - name: Commit and push
         run: |
           cd current-repo
@@ -189,6 +203,7 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add src/
           git add static/
+          git add scripts/maps_checksums.json 2>/dev/null || true
           git add ShuttleEvent/ 2>/dev/null || true
           git add POI/ 2>/dev/null || true
           if git diff --staged --quiet; then
