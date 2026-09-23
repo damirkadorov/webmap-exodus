@@ -2880,6 +2880,18 @@
 		"hullClass": "station"
 	},
 	{
+		"id": "station-pdvhelios",
+		"name": "ДФ | Крепость Гелиос",
+		"description": "Оборонительный форпост Династии Фаэтон.",
+		"price": 0,
+		"group": "station",
+		"size": "large",
+		"classes": ["pirate"],
+		"engines": ["ame"],
+		"image": "/pdvhelios-0.png",
+		"hullClass": "station"
+	},
+	{
 		"id": "pdv-jupiter",
 		"name": "ДФ | Авианосец класса «Юпитер»",
 		"description": "Крупный авианосец мехов, управляемый имперским авангардом Династии Фаэтон. Оснащён ангарами для тяжёлых боевых мехов и системами точечной обороны.",

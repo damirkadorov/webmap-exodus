@@ -324,6 +324,12 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 		classes: [],
 		engines: ['ame']
 	},
+	'pdvhelios.yml': {
+		name: 'ДФ | Крепость Гелиос',
+		desc: 'Оборонительный форпост Династии Фаэтон.',
+		classes: ['pirate'],
+		engines: ['ame']
+	},
 	'sevastopol.yml': {
 		name: 'Дата-центр Севастополь',
 		desc: 'Высокотехнологичный серверный дата-центр.',
@@ -365,8 +371,7 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 const EXCLUDED_POI_FILES = new Set([
 	'hospital.yml',
 	'beaconstation_a.yml',
-	'beaconstation_wilds.yml',
-	'pdvhelios.yml'
+	'beaconstation_wilds.yml'
 ]);
 
 function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {

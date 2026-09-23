@@ -5,8 +5,7 @@ import crypto from 'crypto';
 const EXCLUDED_POI_FILES = new Set([
 	'hospital.yml',
 	'beaconstation_a.yml',
-	'beaconstation_wilds.yml',
-	'pdvhelios.yml'
+	'beaconstation_wilds.yml'
 ]);
 
 const MAP_DIRS = [
@@ -98,7 +97,8 @@ export function getMapsToRender(monolithDir, currentRepoDir, options = {}) {
 }
 
 const args = process.argv.slice(2);
-if (process.argv[1] && process.argv[1].endsWith('get-maps-to-render.js')) {
+const isDirectRun = process.argv[1] && /get-maps-to-render(\.[cm]?js)?$/.test(process.argv[1]);
+if (isDirectRun) {
 	const monolithDir = args[0] || 'monolith';
 	const currentRepoDir = args[1] || '.';
 	const outputFile = args[2] || path.join(currentRepoDir, 'maps_to_render.txt');

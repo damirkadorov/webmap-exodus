@@ -5,8 +5,7 @@ import crypto from 'crypto';
 const EXCLUDED_POI_FILES = new Set([
 	'hospital.yml',
 	'beaconstation_a.yml',
-	'beaconstation_wilds.yml',
-	'pdvhelios.yml'
+	'beaconstation_wilds.yml'
 ]);
 
 const MAP_DIRS = [
@@ -70,7 +69,8 @@ export function updateMapsChecksums(monolithDir, currentRepoDir) {
 }
 
 const args = process.argv.slice(2);
-if (process.argv[1] && process.argv[1].endsWith('update-maps-checksums.js')) {
+const isDirectRun = process.argv[1] && /update-maps-checksums(\.[cm]?js)?$/.test(process.argv[1]);
+if (isDirectRun) {
 	const monolithDir = args[0] || 'monolith';
 	const currentRepoDir = args[1] || '.';
 	updateMapsChecksums(monolithDir, currentRepoDir);
