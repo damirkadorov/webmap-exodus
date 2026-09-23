@@ -2688,30 +2688,6 @@
 		"hullClass": "station"
 	},
 	{
-		"id": "station-beaconstation-a",
-		"name": "INSO-357k Asteroid Cluster",
-		"description": "Астероидный кластер и добывающая станция.",
-		"price": 0,
-		"group": "station",
-		"size": "small",
-		"classes": ["salvage"],
-		"engines": ["solar"],
-		"image": "/beaconstation_a-0.png",
-		"hullClass": "station"
-	},
-	{
-		"id": "station-beaconstation-wilds",
-		"name": "LINEAR-21 Asteroid Cluster",
-		"description": "Удаленный астероидный кластер.",
-		"price": 0,
-		"group": "station",
-		"size": "small",
-		"classes": ["salvage"],
-		"engines": ["solar"],
-		"image": "/beaconstation_wilds-0.png",
-		"hullClass": "station"
-	},
-	{
 		"id": "station-burnedshuttle",
 		"name": "Погибшая спасательная капсула",
 		"description": "Обгоревшие останки спасательного шаттла.",
@@ -2808,18 +2784,6 @@
 		"hullClass": "station"
 	},
 	{
-		"id": "station-hospital",
-		"name": "Госпиталь",
-		"description": "Медицинский комплекс экстренной помощи и реанимации.",
-		"price": 0,
-		"group": "station",
-		"size": "large",
-		"classes": ["medical"],
-		"engines": ["solar"],
-		"image": "/hospital-0.png",
-		"hullClass": "station"
-	},
-	{
 		"id": "station-lpbravo",
 		"name": "Прослушивающий Пункт Браво",
 		"description": "Секретный разведывательный пункт прослушивания.",
@@ -2829,18 +2793,6 @@
 		"classes": [],
 		"engines": ["ame"],
 		"image": "/lpbravo-0.png",
-		"hullClass": "station"
-	},
-	{
-		"id": "station-pdvhelios",
-		"name": "ДФ | Крепость Гелиос",
-		"description": "Оборонительный форпост Династии Фаэтон.",
-		"price": 0,
-		"group": "station",
-		"size": "large",
-		"classes": ["pirate"],
-		"engines": ["ame"],
-		"image": "/pdvhelios-0.png",
 		"hullClass": "station"
 	},
 	{
@@ -2913,6 +2865,18 @@
 		"classes": [],
 		"engines": ["supermatter"],
 		"image": "/whale-0.png",
+		"hullClass": "station"
+	},
+	{
+		"id": "station-colossus-central",
+		"name": "Колосс-Централ",
+		"description": "Крупнейшая центральная узловая станция сектора Колосс.",
+		"price": 0,
+		"group": "station",
+		"size": "large",
+		"classes": ["civilian", "cargo", "security"],
+		"engines": ["solar", "ame"],
+		"image": "/colossus_central-0.png",
 		"hullClass": "station"
 	},
 	{

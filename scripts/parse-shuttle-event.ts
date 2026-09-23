@@ -258,17 +258,17 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 		classes: ['kitchen', 'civilian'],
 		engines: ['apu']
 	},
-	'beaconstation_a.yml': {
-		name: 'INSO-357k Asteroid Cluster',
-		desc: 'Астероидный кластер и добывающая станция.',
-		classes: ['salvage'],
-		engines: ['solar']
+	'colossus_central.yml': {
+		name: 'Колосс-Централ',
+		desc: 'Крупнейшая центральная узловая станция сектора Колосс.',
+		classes: ['civilian', 'cargo', 'security'],
+		engines: ['solar', 'ame']
 	},
-	'beaconstation_wilds.yml': {
-		name: 'LINEAR-21 Asteroid Cluster',
-		desc: 'Удаленный астероидный кластер.',
-		classes: ['salvage'],
-		engines: ['solar']
+	'colossus_central_grid.yml': {
+		name: 'Колосс-Централ',
+		desc: 'Крупнейшая центральная узловая станция сектора Колосс.',
+		classes: ['civilian', 'cargo', 'security'],
+		engines: ['solar', 'ame']
 	},
 	'burnedshuttle.yml': {
 		name: 'Погибшая спасательная капсула',
@@ -318,22 +318,10 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 		classes: ['scrapyard'],
 		engines: ['apu']
 	},
-	'hospital.yml': {
-		name: 'Госпиталь',
-		desc: 'Медицинский комплекс экстренной помощи и реанимации.',
-		classes: ['medical'],
-		engines: ['solar']
-	},
 	'lpbravo.yml': {
 		name: 'Прослушивающий Пункт Браво',
 		desc: 'Секретный разведывательный пункт прослушивания.',
 		classes: [],
-		engines: ['ame']
-	},
-	'pdvhelios.yml': {
-		name: 'ДФ | Крепость Гелиос',
-		desc: 'Оборонительный форпост Династии Фаэтон.',
-		classes: ['pirate'],
 		engines: ['ame']
 	},
 	'sevastopol.yml': {
@@ -374,8 +362,19 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 	}
 };
 
+const EXCLUDED_POI_FILES = new Set([
+	'hospital.yml',
+	'beaconstation_a.yml',
+	'beaconstation_wilds.yml',
+	'pdvhelios.yml'
+]);
+
 function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {
-	const id = path.basename(filename, '.yml').toLowerCase().replace(/[_\s]/g, '-');
+	const id = path
+		.basename(filename, '.yml')
+		.toLowerCase()
+		.replace(/[_\s]/g, '-')
+		.replace(/-grid$/, '');
 	const ymlPath = path.join(poiDir, filename);
 
 	let rawName: string | null = null;
@@ -427,7 +426,7 @@ function main() {
 		? fs.readdirSync(shuttleEventDir).filter((f) => f.endsWith('.yml'))
 		: [];
 	const poiYmlFiles = fs.existsSync(poiDir)
-		? fs.readdirSync(poiDir).filter((f) => f.endsWith('.yml'))
+		? fs.readdirSync(poiDir).filter((f) => f.endsWith('.yml') && !EXCLUDED_POI_FILES.has(f))
 		: [];
 
 	if (shuttleEventYmlFiles.length === 0 && poiYmlFiles.length === 0) {
@@ -436,14 +435,18 @@ function main() {
 	}
 
 	const existingShuttles: Shuttle[] = JSON.parse(fs.readFileSync(outputPath, 'utf-8'));
-	const otherShuttles = existingShuttles.filter(
-		(s) => s.group !== 'eighth_fleet' && s.group !== 'hostile_ai' && s.group !== 'station'
-	);
+	const otherShuttles = existingShuttles.filter((s) => {
+		if (shuttleEventYmlFiles.length > 0 && s.group === 'eighth_fleet') return false;
+		if (poiYmlFiles.length > 0 && s.group === 'station') return false;
+		return true;
+	});
 
-	const newEighthFleetShuttles = shuttleEventYmlFiles.map((f) =>
-		createEighthFleetShuttleFromFile(f, shuttleEventDir)
-	);
-	const newPoiStations = poiYmlFiles.map((f) => createPoiStationFromFile(f, poiDir));
+	const newEighthFleetShuttles =
+		shuttleEventYmlFiles.length > 0
+			? shuttleEventYmlFiles.map((f) => createEighthFleetShuttleFromFile(f, shuttleEventDir))
+			: [];
+	const newPoiStations =
+		poiYmlFiles.length > 0 ? poiYmlFiles.map((f) => createPoiStationFromFile(f, poiDir)) : [];
 
 	const allShuttles = [...otherShuttles, ...newEighthFleetShuttles, ...newPoiStations];
 	fs.writeFileSync(outputPath, JSON.stringify(allShuttles, null, 2), 'utf-8');
