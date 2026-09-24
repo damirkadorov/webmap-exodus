@@ -365,13 +365,83 @@ const KNOWN_POI_INFO: Record<string, KnownPoi> = {
 		desc: 'Тяжелый корабль-осколок АСЗ под управлением воинов Асаким.',
 		classes: [],
 		engines: ['supermatter']
+	},
+	'hokkaido.yml': {
+		name: 'ММС «Хоккайдо»',
+		desc: 'Оборонно-промышленный форпост корпорации Мьеё (ММС).',
+		classes: ['cargo', 'security'],
+		engines: ['solar', 'ame']
+	},
+	'zvezda.yml': {
+		name: 'Среда Обитания "Звезда"',
+		desc: 'Полузаброшенная разрушающаяся станция на фронтире.',
+		classes: ['mercenary', 'salvage'],
+		engines: ['solar', 'ame']
+	},
+	'tsfmc_industry.yml': {
+		name: 'ТСФ-ГРАЖД «Звёздное благословение»',
+		desc: 'Колониальный корабль Федерации, направленный в радиус Колосса для промышленного освоения. Здесь живут гражданские ТСФ.',
+		classes: ['civilian', 'cargo'],
+		engines: ['solar']
+	},
+	'hammeroftheunion.yml': {
+		name: 'Молот Союза',
+		desc: 'Модернизированный тяжелый крейсер СССП.',
+		classes: ['security'],
+		engines: ['ame']
+	},
+	'lancelot.yml': {
+		name: 'Шахтёрский Аванпост Ланцелот',
+		desc: 'Заброшенный шахтёрский комплекс в поясе астероидов.',
+		classes: ['salvage', 'cargo'],
+		engines: ['solar']
+	},
+	'polaris.yml': {
+		name: 'Биологический центр Полярис',
+		desc: 'Секретный исследовательский биоцентр Синдиката.',
+		classes: ['syndicate', 'science'],
+		engines: ['solar']
+	},
+	'ruin_tanker.yml': {
+		name: 'Автоматизированный Межсекторальный Танкер',
+		desc: 'Крупный заброшенный межсекторальный топливный танкер.',
+		classes: ['salvage'],
+		engines: ['ame']
+	},
+	'zenith_poi.yml': {
+		name: 'ADS Zenith CK-395',
+		desc: 'Дрейфующие руины крейсера типа Зенит с технологическими дисками.',
+		classes: ['salvage'],
+		engines: ['ame']
+	},
+	'ads_medium_platform.yml': {
+		name: 'ВЭФ | Оборонительная платформа',
+		desc: 'Тяжелая боевая платформа сил обороны АСЗ.',
+		classes: ['security'],
+		engines: ['solar']
+	},
+	'damaged_arkansaw.yml': {
+		name: 'Подбитый Аркансоу',
+		desc: 'Поврежденный и покинутый боевой фрегат.',
+		classes: ['salvage'],
+		engines: ['ame']
 	}
 };
 
 const EXCLUDED_POI_FILES = new Set([
 	'hospital.yml',
 	'beaconstation_a.yml',
-	'beaconstation_wilds.yml'
+	'beaconstation_wilds.yml',
+	'beaconstation_empty.yml',
+	'azimuth_lobby.yml',
+	'jupiter.yml',
+	'pdvhelios_hw.yml',
+	'tsfmchalcyon_hw.yml',
+	'surface_outpost_desert.yml',
+	'usspbaikal.yml',
+	'zetanode.yml',
+	'caelestinus_central.yml',
+	'colonial.yml'
 ]);
 
 function createPoiStationFromFile(filename: string, poiDir: string): Shuttle {

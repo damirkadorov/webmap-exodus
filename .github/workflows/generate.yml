@@ -160,11 +160,15 @@ jobs:
 
       - name: Copy POI maps to current repo
         run: |
+          mkdir -p current-repo/POI
+          if [ -d "monolith/Resources/Maps/_Mono/POI" ]; then
+            cp monolith/Resources/Maps/_Mono/POI/*.yml current-repo/POI/ 2>/dev/null || true
+            cp monolith/Resources/Maps/_Mono/POI/Dungeons/*.yml current-repo/POI/ 2>/dev/null || true
+          fi
+
           if [ -d "monolith/Resources/Maps/_Exodus/POI" ]; then
-            mkdir -p current-repo/POI
             cp monolith/Resources/Maps/_Exodus/POI/*.yml current-repo/POI/ 2>/dev/null || echo "No POI YML files found"
-          else
-            echo "POI directory not found in game repository"
+            cp monolith/Resources/Maps/_Exodus/POI/Dungeons/*.yml current-repo/POI/ 2>/dev/null || true
           fi
 
           # Also copy converted Colossus Central so parse-shuttle-event can generate its station entry
@@ -173,7 +177,7 @@ jobs:
           fi
 
           # Exclude unwanted POI stations from generation and repository
-          rm -f current-repo/POI/hospital.yml current-repo/POI/beaconstation_a.yml current-repo/POI/beaconstation_wilds.yml
+          rm -f current-repo/POI/hospital.yml current-repo/POI/beaconstation_a.yml current-repo/POI/beaconstation_wilds.yml current-repo/POI/beaconstation_empty.yml current-repo/POI/azimuth_lobby.yml current-repo/POI/jupiter.yml current-repo/POI/pdvhelios_hw.yml current-repo/POI/tsfmchalcyon_hw.yml current-repo/POI/surface_outpost_desert.yml current-repo/POI/usspbaikal.yml current-repo/POI/zetanode.yml current-repo/POI/caelestinus_central.yml current-repo/POI/colonial.yml
 
       - name: Generate Eighth Fleet shuttles and POI stations
         run: |

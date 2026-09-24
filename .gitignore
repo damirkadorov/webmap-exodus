@@ -24,3 +24,5 @@ vite.config.ts.timestamp-*
 
 # Temp build artifacts
 maps_to_render.txt
+/POI/
+/ShuttleEvent/
