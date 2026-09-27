@@ -38,6 +38,23 @@ const MAP_DIRS = [
 export function updateMapsChecksums(monolithDir, currentRepoDir) {
 	const checksumsPath = path.join(currentRepoDir, 'scripts', 'maps_checksums.json');
 
+	// Ensure blackhawk scarab is copied to blackhawk_scarab.yml to avoid collision with PDV scarab
+	const blackhawkScarabSrc = path.join(
+		monolithDir,
+		'Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/scarab.yml'
+	);
+	const blackhawkScarabDest = path.join(
+		monolithDir,
+		'Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/blackhawk_scarab.yml'
+	);
+	if (fs.existsSync(blackhawkScarabSrc)) {
+		try {
+			fs.copyFileSync(blackhawkScarabSrc, blackhawkScarabDest);
+		} catch (e) {
+			console.warn(`Could not copy blackhawk scarab: ${e.message}`);
+		}
+	}
+
 	const allMapFiles = [];
 	function walk(dir) {
 		if (!fs.existsSync(dir)) return;
@@ -63,6 +80,8 @@ export function updateMapsChecksums(monolithDir, currentRepoDir) {
 		if (EXCLUDED_POI_FILES.has(filename)) continue;
 
 		const relPath = path.relative(monolithDir, file).replace(/\\/g, '/');
+		if (relPath === 'Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/scarab.yml') continue;
+
 		const content = fs.readFileSync(file);
 		const hash = crypto.createHash('sha256').update(content).digest('hex');
 		checksums[relPath] = hash;

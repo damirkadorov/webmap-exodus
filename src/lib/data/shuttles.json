@@ -3764,6 +3764,23 @@
     "hullClass": "fighter"
   },
   {
+    "id": "drone-reaper",
+    "name": "Юнит: Жнец",
+    "description": "Автоматизированный ударный боевой дрон типа «Жнец», курсирующий в заброшенных секторах космоса.",
+    "price": 0,
+    "group": "hostile_ai",
+    "size": "small",
+    "classes": [
+      "fighter"
+    ],
+    "engines": [
+      "rtg",
+      "apu"
+    ],
+    "image": "/reaper-0.png",
+    "hullClass": "fighter"
+  },
+  {
     "id": "Suicidebike",
     "name": "Суисайдбайк",
     "description": "Что может быть лучше, чем на 400 метров в секунду ушататься о метеор? Лёгкий шаттл, оборудованный солнечными панелями и несколькими движками. ВНИМАНИЕ! На данном шаттле нет базого минимума, в т.ч. скафандра и атмосии!",
@@ -3813,6 +3830,111 @@
     ],
     "image": "/regenerator-0.png",
     "hullClass": "frigate"
+  },
+  {
+    "id": "Privateer",
+    "name": "Капер",
+    "description": "Многоцелевой легкий шаттл. Всё что нужно небольшой команде наёмников.",
+    "price": 250000,
+    "group": "shipyard",
+    "size": "medium",
+    "classes": [
+      "patrol",
+      "corvette",
+      "science",
+      "salvage",
+      "medical",
+      "chemistry"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/privateer-0.png",
+    "hullClass": "corvette"
+  },
+  {
+    "id": "BlackhawkScarab",
+    "name": "Блэкхок «Скарабей»",
+    "description": "Средний боевой фрегат ЧВК «Блэкхок» для доминирования в космических боях.",
+    "price": 725000,
+    "group": "companies",
+    "size": "medium",
+    "classes": [
+      "mercenary",
+      "frigate"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/blackhawk_scarab-0.png",
+    "hullClass": "frigate"
+  },
+  {
+    "id": "DMEumbra",
+    "name": "ДМИ «Умбра»",
+    "description": "Тяжелый шахтерский шаттл корпорации Dark Matter Enterprises, созданный для автономной добычи ресурсов. Судно способно перерабатывать целые астероиды благодаря мощному комплексу из промышленных буров, плазменных лазеров и производственного отдела.",
+    "price": 350500,
+    "group": "companies",
+    "size": "medium",
+    "classes": [
+      "mercenary",
+      "salvage"
+    ],
+    "engines": [
+      "uranium"
+    ],
+    "image": "/umbra-0.png",
+    "hullClass": "corvette"
+  },
+  {
+    "id": "DrakeMackinaw",
+    "name": "Дрэйк «Макинав»",
+    "description": "Шахтёрский корабль Drake Industries с двумя буровыми лазерами, переработчиком жидкого металла и грузовым отсеком. Питается от двигателя антиматерии.",
+    "price": 4603400,
+    "group": "companies",
+    "size": "large",
+    "classes": [
+      "salvage",
+      "cargo"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/mackinaw-0.png",
+    "hullClass": "frigate"
+  },
+  {
+    "id": "DrakeHulk",
+    "name": "Дрэйк «Халк»",
+    "description": "Шахтёрский корабль Drake Industries с четырьмя буровыми лазерами, переработчиком жидкого металла и грузовым отсеком. Усиленная установка антиматерии обеспечивает работу добывающего оборудования.",
+    "price": 9000000,
+    "group": "companies",
+    "size": "large",
+    "classes": [
+      "salvage",
+      "cargo"
+    ],
+    "engines": [
+      "ame"
+    ],
+    "image": "/hulk-0.png",
+    "hullClass": "frigate"
+  },
+  {
+    "id": "HMIpod",
+    "name": "ХМИ «Труповозка»",
+    "description": "Мелкогабаритный медицинский шаттл быстрого реагирования, предназначенный для эвакуации и доставки пациентов.",
+    "price": 12000,
+    "group": "companies",
+    "size": "micro",
+    "classes": [
+      "medical"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/hmipod-0.png",
+    "hullClass": "fighter"
   },
   {
     "id": "eighth-azimuth",
