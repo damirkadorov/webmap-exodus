@@ -54,6 +54,7 @@ export function getMapsToRender(monolithDir, currentRepoDir, options = {}) {
 	}
 
 	const staticFiles = fs.existsSync(staticDir) ? new Set(fs.readdirSync(staticDir)) : new Set();
+	const staticFilesLower = new Set([...staticFiles].map((f) => f.toLowerCase()));
 
 	// Ensure blackhawk scarab is copied to blackhawk_scarab.yml to avoid collision with PDV scarab
 	const blackhawkScarabSrc = path.join(
@@ -104,6 +105,8 @@ export function getMapsToRender(monolithDir, currentRepoDir, options = {}) {
 		const hasImage =
 			staticFiles.has(`${baseNoExt}-0.png`) ||
 			staticFiles.has(`${baseNoExt}.png`) ||
+			staticFilesLower.has(`${baseNoExt.toLowerCase()}-0.png`) ||
+			staticFilesLower.has(`${baseNoExt.toLowerCase()}.png`) ||
 			(baseNoExt === 'jupiter_hw' && staticFiles.has('jupiter-0.png')) ||
 			(baseNoExt === 'damaged_arkansaw' && staticFiles.has('arkansaw-0.png'));
 
