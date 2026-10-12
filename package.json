@@ -12,7 +12,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"lint": "prettier --check . && eslint .",
 		"format": "prettier --write .",
-		"parse-shuttles": "node scripts/parse-shuttle-event.js"
+		"parse-shuttles": "node scripts/parse-shuttle-event.js",
+		"generate-shuttles": "node scripts/generate-shuttles.js"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^2.0.4",
