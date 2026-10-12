@@ -5260,6 +5260,23 @@
     "image": "/trademall-0.png"
   },
   {
+    "id": "station-tsfmc-industry",
+    "name": "ТСФ-ГРАЖД «Звёздное благословение»",
+    "description": "Колониальный корабль Федерации, направленный в радиус Колосса для промышленного освоения. Здесь живут гражданские ТСФ.",
+    "price": 0,
+    "group": "station",
+    "hullClass": "station",
+    "size": "large",
+    "classes": [
+      "civilian",
+      "cargo"
+    ],
+    "engines": [
+      "solar"
+    ],
+    "image": "/tsfmc_industry-0.png"
+  },
+  {
     "id": "station-tsfmchalcyon",
     "name": "КВП | Флагман Фалкон",
     "description": "Тяжелый флагманский крейсер сил правопорядка КВП.",
@@ -5288,23 +5305,6 @@
       "solar"
     ],
     "image": "/tsfmcoutpost-0.png"
-  },
-  {
-    "id": "station-tsfmc-industry",
-    "name": "ТСФ-ГРАЖД «Звёздное благословение»",
-    "description": "Колониальный корабль Федерации, направленный в радиус Колосса для промышленного освоения. Здесь живут гражданские ТСФ.",
-    "price": 0,
-    "group": "station",
-    "hullClass": "station",
-    "size": "large",
-    "classes": [
-      "civilian",
-      "cargo"
-    ],
-    "engines": [
-      "solar"
-    ],
-    "image": "/tsfmc_industry-0.png"
   },
   {
     "id": "station-whale",
