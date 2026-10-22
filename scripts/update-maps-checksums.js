@@ -55,6 +55,23 @@ export function updateMapsChecksums(monolithDir, currentRepoDir) {
 		}
 	}
 
+	// Ensure expedition medusa is copied to expedition_medusa.yml to avoid collision with drone medusa
+	const medusaSrc = path.join(
+		monolithDir,
+		'Resources/SharedMaps/_Exodus/Shuttles/Expedition/medusa.yml'
+	);
+	const medusaDest = path.join(
+		monolithDir,
+		'Resources/SharedMaps/_Exodus/Shuttles/Expedition/expedition_medusa.yml'
+	);
+	if (fs.existsSync(medusaSrc)) {
+		try {
+			fs.copyFileSync(medusaSrc, medusaDest);
+		} catch (e) {
+			console.warn(`Could not copy expedition medusa: ${e.message}`);
+		}
+	}
+
 	const allMapFiles = [];
 	function walk(dir) {
 		if (!fs.existsSync(dir)) return;
@@ -81,6 +98,7 @@ export function updateMapsChecksums(monolithDir, currentRepoDir) {
 
 		const relPath = path.relative(monolithDir, file).replace(/\\/g, '/');
 		if (relPath === 'Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/scarab.yml') continue;
+		if (relPath === 'Resources/SharedMaps/_Exodus/Shuttles/Expedition/medusa.yml') continue;
 
 		const content = fs.readFileSync(file);
 		const hash = crypto.createHash('sha256').update(content).digest('hex');

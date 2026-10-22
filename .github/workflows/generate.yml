@@ -63,6 +63,9 @@ jobs:
           if [ -f "monolith/Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/scarab.yml" ]; then
             cp monolith/Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/scarab.yml monolith/Resources/SharedMaps/_Exodus/Shuttles/Companies/blackhawk/blackhawk_scarab.yml
           fi
+          if [ -f "monolith/Resources/SharedMaps/_Exodus/Shuttles/Expedition/medusa.yml" ]; then
+            cp monolith/Resources/SharedMaps/_Exodus/Shuttles/Expedition/medusa.yml monolith/Resources/SharedMaps/_Exodus/Shuttles/Expedition/expedition_medusa.yml
+          fi
 
       - name: Check which maps need rendering
         id: check_maps

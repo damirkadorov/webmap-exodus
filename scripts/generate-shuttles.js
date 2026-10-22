@@ -198,6 +198,73 @@ function calculateHullClass(vessel, existingHullClass) {
 	return 'shuttle';
 }
 
+// Known shuttles restricted to vouchers only (purchasable: false in upstream)
+const VOUCHER_SHUTTLES = new Set([
+	'luxury',
+	'enceladus',
+	'enceladusprime',
+	'ferz',
+	'osa',
+	'scarab',
+	'klesh',
+	'antares',
+	'banshee',
+	'cinquedea',
+	'ladya',
+	'luda',
+	'sentinelf',
+	'termite',
+	'keelback',
+	'lancehead',
+	'leviathan',
+	'bastion',
+	'europa',
+	'fenrir',
+	'ganymede',
+	'garm',
+	'kalisto',
+	'kortik',
+	'kortikr',
+	'layak',
+	'motleyanne',
+	'neptune',
+	'prowler',
+	'saintie',
+	'scorpion',
+	'vulture',
+	'flyssa',
+	'saturn',
+	'inertia',
+	'mock',
+	'snakelet',
+	'aldebaran',
+	'altair',
+	'andromeda',
+	'calypso',
+	'dagger',
+	'fujian',
+	'mercury',
+	'tsfnpolaris',
+	'razorback',
+	'sentinel',
+	'spekter',
+	'spica',
+	'tarantula',
+	'ravager',
+	'hunter',
+	'hydra',
+	'infiltrator',
+	'talon',
+	'buran',
+	'ledokol',
+	'kopye',
+	'kupol',
+	'molotok',
+	'sulak',
+	'wolfsnake',
+	'flyssaabaddon'
+]);
+
 /**
  * Resolve the image filename for a vessel.
  */
@@ -208,27 +275,33 @@ function resolveImage(vessel, staticDir) {
 		BlackhawkScarab: '/blackhawk_scarab-0.png',
 		FlyssaAbaddon: '/flyssa_abaddon-0.png',
 		Arcturus: '/arcturus-0.png',
-		'drone-dreadnought': '/Dreadnought-0.png'
+		'drone-dreadnought': '/Dreadnought-0.png',
+		Medusa: '/expedition_medusa-0.png',
+		unsaNightHawk: '/nighthawk-0.png',
+		Hercules: '/Hercules-0.png'
 	};
 
 	if (REMAPS[vessel.id]) return REMAPS[vessel.id];
+
+	const staticFiles = fs.existsSync(staticDir)
+		? new Map(fs.readdirSync(staticDir).map((f) => [f.toLowerCase(), f]))
+		: new Map();
 
 	const candidates = [];
 
 	if (vessel.shuttlePath) {
 		const baseName = path.basename(vessel.shuttlePath, '.yml');
 		candidates.push(`${baseName}-0.png`);
-		candidates.push(`${baseName.toLowerCase()}-0.png`);
 		candidates.push(`${baseName}.png`);
 	}
 
 	candidates.push(`${vessel.id}-0.png`);
-	candidates.push(`${vessel.id.toLowerCase()}-0.png`);
 	candidates.push(`${vessel.id.replace(/-/g, '_')}-0.png`);
 
 	for (const cand of candidates) {
-		if (fs.existsSync(path.join(staticDir, cand))) {
-			return `/${cand}`;
+		const actual = staticFiles.get(cand.toLowerCase());
+		if (actual) {
+			return `/${actual}`;
 		}
 	}
 
@@ -361,6 +434,13 @@ export function generateShuttles(monolithDir, repoDir) {
 		// HullClass
 		const hullClass = calculateHullClass({ ...proto, size, classes }, existing?.hullClass);
 
+		// Voucher
+		const voucher =
+			proto.purchasable === 'false' ||
+			proto.purchasable === false ||
+			Boolean(existing?.voucher) ||
+			VOUCHER_SHUTTLES.has(proto.id.toLowerCase());
+
 		const vesselEntry = {
 			id: proto.id,
 			name,
@@ -371,7 +451,8 @@ export function generateShuttles(monolithDir, repoDir) {
 			classes,
 			engines,
 			image,
-			hullClass
+			hullClass,
+			voucher
 		};
 
 		generatedVessels.push(vesselEntry);
@@ -390,7 +471,8 @@ export function generateShuttles(monolithDir, repoDir) {
 			classes: ['fighter'],
 			engines: ['rtg', 'teg'],
 			image: '/Dreadnought-0.png',
-			hullClass: 'battleship'
+			hullClass: 'battleship',
+			voucher: false
 		},
 		{
 			id: 'FlyssaAbaddon',
@@ -403,7 +485,8 @@ export function generateShuttles(monolithDir, repoDir) {
 			classes: ['patrol', 'pursuit', 'fighter'],
 			engines: ['plasma', 'uranium'],
 			image: '/flyssa_abaddon-0.png',
-			hullClass: 'battleship'
+			hullClass: 'battleship',
+			voucher: true
 		},
 		{
 			id: 'Arcturus',
@@ -416,7 +499,8 @@ export function generateShuttles(monolithDir, repoDir) {
 			classes: ['patrol', 'pursuit', 'fighter'],
 			engines: ['plasma'],
 			image: '/arcturus-0.png',
-			hullClass: 'cruiser'
+			hullClass: 'cruiser',
+			voucher: false
 		}
 	];
 

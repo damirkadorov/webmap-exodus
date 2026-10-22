@@ -61,6 +61,7 @@
 			if (classes.length) filters.shuttleClass = classes;
 		}
 		if (params.get('sale') === '1') filters.onlyForSale = true;
+		if (params.get('voucher') === '1') filters.onlyVoucher = true;
 		if (params.has('sort')) filters.sortBy = (params.get('sort') as ShuttleSort) ?? 'default';
 	});
 
@@ -74,6 +75,7 @@
 		if (filters.engine) params.set('engine', filters.engine);
 		if (filters.shuttleClass.length > 0) params.set('class', filters.shuttleClass.join(','));
 		if (filters.onlyForSale) params.set('sale', '1');
+		if (filters.onlyVoucher) params.set('voucher', '1');
 		if (filters.sortBy !== 'default') params.set('sort', filters.sortBy);
 
 		const search = params.toString();
@@ -95,6 +97,7 @@
 		filters.shuttleClass = [...defaultShuttleFilters.shuttleClass];
 		filters.engine = defaultShuttleFilters.engine;
 		filters.onlyForSale = defaultShuttleFilters.onlyForSale;
+		filters.onlyVoucher = defaultShuttleFilters.onlyVoucher;
 		filters.sortBy = defaultShuttleFilters.sortBy;
 	}
 </script>

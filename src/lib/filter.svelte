@@ -39,7 +39,8 @@
 			filters.shuttleClass.length > 0 ||
 			filters.engine !== '' ||
 			filters.size !== '' ||
-			filters.onlyForSale
+			filters.onlyForSale ||
+			filters.onlyVoucher
 	);
 </script>
 
@@ -159,6 +160,14 @@
 			<label class="filter-checkbox-label">
 				<input type="checkbox" class="filter-checkbox" bind:checked={filters.onlyForSale} />
 				<span class="filter-checkbox-text">Только в продаже</span>
+			</label>
+		</div>
+
+		<!-- Only vouchers toggle -->
+		<div class="filter-toggle-group">
+			<label class="filter-checkbox-label">
+				<input type="checkbox" class="filter-checkbox" bind:checked={filters.onlyVoucher} />
+				<span class="filter-checkbox-text">🎫 Только ваучерные</span>
 			</label>
 		</div>
 	</div>

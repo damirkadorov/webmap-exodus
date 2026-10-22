@@ -92,6 +92,12 @@
 					<div class="title-row">
 						<h1 class="shuttle-name">{shuttle.name}</h1>
 						<div class="title-tags">
+							{#if shuttle.voucher}
+								<span class="voucher-badge-detail">
+									<span class="voucher-icon" aria-hidden="true">🎫</span>
+									Только по ваучеру
+								</span>
+							{/if}
 							{#if shuttle.hullClass}
 								<span class="hull-badge">
 									{shuttleConfig.hullClasses[shuttle.hullClass] ?? shuttle.hullClass}
@@ -115,7 +121,17 @@
 						<!-- Price -->
 						<div class="stat-block">
 							<span class="stat-label">Стоимость</span>
-							{#if shuttle.price > 0}
+							{#if shuttle.voucher}
+								<div class="voucher-stat-wrap">
+									<span class="stat-value voucher-val">
+										<span class="voucher-icon" aria-hidden="true">🎫</span>
+										По ваучеру
+									</span>
+									{#if shuttle.price > 0}
+										<span class="voucher-stat-sub">Оценка: {formatPrice(shuttle.price)} кред.</span>
+									{/if}
+								</div>
+							{:else if shuttle.price > 0}
 								<span class="stat-value price-display large">
 									{formatPrice(shuttle.price)}
 									<span style="font-size: 0.6em; opacity: 0.7; margin-left: 2px;">кред.</span>
@@ -472,6 +488,42 @@
 	.action-row {
 		padding-top: 8px;
 		border-top: 1px solid var(--border-dim);
+	}
+
+	.voucher-badge-detail {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		padding: 4px 10px;
+		border-radius: var(--radius-sm);
+		background: rgba(245, 158, 11, 0.15);
+		color: #f59e0b;
+		border: 1px solid rgba(245, 158, 11, 0.45);
+		display: inline-flex;
+		align-items: center;
+		gap: 5px;
+	}
+
+	.voucher-stat-wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 3px;
+	}
+
+	.voucher-val {
+		color: #f59e0b;
+		display: inline-flex;
+		align-items: center;
+		gap: 6px;
+	}
+
+	.voucher-stat-sub {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		color: var(--text-dim);
+		letter-spacing: 0.02em;
 	}
 
 	/* Image panel */

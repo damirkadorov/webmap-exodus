@@ -29,11 +29,16 @@
 	<div class="card-info">
 		<div class="card-title-row">
 			<span class="card-name">{shuttle.name}</span>
-			{#if shuttle.hullClass}
-				<span class="hull-badge"
-					>{shuttleConfig.hullClasses[shuttle.hullClass] ?? shuttle.hullClass}</span
-				>
-			{/if}
+			<div class="card-badges">
+				{#if shuttle.voucher}
+					<span class="voucher-badge" title="Покупка только по ваучеру">Ваучер</span>
+				{/if}
+				{#if shuttle.hullClass}
+					<span class="hull-badge"
+						>{shuttleConfig.hullClasses[shuttle.hullClass] ?? shuttle.hullClass}</span
+					>
+				{/if}
+			</div>
 		</div>
 
 		{#if shuttle.classes.length > 0}
@@ -48,7 +53,17 @@
 		{/if}
 
 		<div class="card-footer">
-			{#if shuttle.price > 0}
+			{#if shuttle.voucher}
+				<div class="price-voucher-wrap">
+					<span class="price-voucher-tag">
+						<span class="voucher-icon" aria-hidden="true">🎫</span>
+						По ваучеру
+					</span>
+					{#if shuttle.price > 0}
+						<span class="price-appraisal">Оценка: {formatPrice(shuttle.price)} кред.</span>
+					{/if}
+				</div>
+			{:else if shuttle.price > 0}
 				<span class="price-display">
 					<span class="price-icon" aria-hidden="true">◈</span>
 					{formatPrice(shuttle.price)} кред.
@@ -155,6 +170,27 @@
 		gap: 8px;
 	}
 
+	.card-badges {
+		display: flex;
+		align-items: center;
+		gap: 4px;
+		flex-shrink: 0;
+	}
+
+	.voucher-badge {
+		font-family: var(--font-mono);
+		font-size: 0.62rem;
+		font-weight: 700;
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+		padding: 2px 7px;
+		border-radius: var(--radius-sm);
+		background: rgba(245, 158, 11, 0.15);
+		color: #f59e0b;
+		border: 1px solid rgba(245, 158, 11, 0.45);
+		white-space: nowrap;
+	}
+
 	.card-name {
 		font-family: var(--font-display);
 		font-weight: 700;
@@ -181,6 +217,30 @@
 		margin-top: auto;
 		padding-top: 8px;
 		border-top: 1px solid var(--border-dim);
+	}
+
+	.price-voucher-wrap {
+		display: flex;
+		flex-direction: column;
+		gap: 2px;
+	}
+
+	.price-voucher-tag {
+		font-family: var(--font-mono);
+		font-size: 0.8rem;
+		font-weight: 700;
+		color: #f59e0b;
+		letter-spacing: 0.04em;
+		display: flex;
+		align-items: center;
+		gap: 4px;
+	}
+
+	.price-appraisal {
+		font-family: var(--font-mono);
+		font-size: 0.65rem;
+		color: var(--text-dim);
+		letter-spacing: 0.02em;
 	}
 
 	.price-free {

@@ -18,6 +18,7 @@ export interface Shuttle {
 	classes: ShuttleClass[];
 	engines: ShuttleEngine[];
 	image: string;
+	voucher?: boolean;
 }
 
 export type ShuttleSort = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
@@ -30,13 +31,18 @@ export function normalizeGroup(group: string): ShuttleGroup {
 }
 
 const rawShuttleData = shuttlesJson as Array<
-	Omit<Shuttle, 'group' | 'hullClass'> & { group: string; hullClass?: string }
+	Omit<Shuttle, 'group' | 'hullClass' | 'voucher'> & {
+		group: string;
+		hullClass?: string;
+		voucher?: boolean;
+	}
 >;
 
 const shuttleData: Shuttle[] = rawShuttleData.map((shuttle) => ({
 	...shuttle,
 	group: normalizeGroup(shuttle.group),
-	hullClass: (shuttle.hullClass as ShuttleHullClass) || 'shuttle'
+	hullClass: (shuttle.hullClass as ShuttleHullClass) || 'shuttle',
+	voucher: Boolean(shuttle.voucher)
 }));
 
 export interface ShuttleFilters {
@@ -47,6 +53,7 @@ export interface ShuttleFilters {
 	engine: ShuttleEngine | '';
 	size: ShuttleSize | '';
 	onlyForSale: boolean;
+	onlyVoucher: boolean;
 	sortBy: ShuttleSort;
 }
 
@@ -58,6 +65,7 @@ export const defaultShuttleFilters: ShuttleFilters = {
 	engine: '',
 	size: '',
 	onlyForSale: false,
+	onlyVoucher: false,
 	sortBy: 'default'
 };
 
@@ -92,6 +100,17 @@ function matchesSearch(shuttle: Shuttle, query: string): boolean {
 		if (engineLabel && engineLabel.toLowerCase().includes(clean)) return true;
 	}
 
+	if (
+		shuttle.voucher &&
+		(clean === 'ваучер' ||
+			clean === 'ваучерный' ||
+			clean === 'ваучерные' ||
+			clean === 'ваучерная' ||
+			clean === 'voucher')
+	) {
+		return true;
+	}
+
 	return false;
 }
 
@@ -117,7 +136,11 @@ export function filterShuttles(shuttles: Shuttle[], filters: ShuttleFilters): Sh
 			return false;
 		}
 
-		if (filters.onlyForSale && shuttle.price <= 0) {
+		if (filters.onlyForSale && (shuttle.price <= 0 || shuttle.voucher)) {
+			return false;
+		}
+
+		if (filters.onlyVoucher && !shuttle.voucher) {
 			return false;
 		}
 

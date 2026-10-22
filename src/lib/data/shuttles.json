@@ -14,7 +14,8 @@
       "plasma"
     ],
     "image": "/atom-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Bazalt",
@@ -31,7 +32,8 @@
       "plasma"
     ],
     "image": "/bazalt-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Bastion",
@@ -47,7 +49,8 @@
       "uranium"
     ],
     "image": "/bastion-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Vulture",
@@ -64,7 +67,8 @@
       "ame"
     ],
     "image": "/vulture-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Europa",
@@ -81,7 +85,8 @@
       "ame"
     ],
     "image": "/europa-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Carrion",
@@ -98,7 +103,8 @@
       "plasma"
     ],
     "image": "/carrion-0.png",
-    "hullClass": "carrier"
+    "hullClass": "carrier",
+    "voucher": false
   },
   {
     "id": "Kynda",
@@ -116,7 +122,8 @@
       "uranium"
     ],
     "image": "/kynda-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Kresta",
@@ -133,7 +140,8 @@
       "uranium"
     ],
     "image": "/kresta-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "MotleyAnne",
@@ -150,7 +158,8 @@
       "ame"
     ],
     "image": "/motleyanne-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Neptune",
@@ -168,7 +177,8 @@
       "uranium"
     ],
     "image": "/neptune-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Gadfly",
@@ -185,7 +195,8 @@
       "uranium"
     ],
     "image": "/gadfly-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Ontos",
@@ -201,7 +212,8 @@
       "uranium"
     ],
     "image": "/ontos-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Osa",
@@ -219,7 +231,8 @@
       "ame"
     ],
     "image": "/osa-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Saturn",
@@ -241,7 +254,8 @@
       "ame"
     ],
     "image": "/saturn-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": true
   },
   {
     "id": "Scarab",
@@ -259,7 +273,8 @@
       "uranium"
     ],
     "image": "/scarab-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Scorpion",
@@ -277,7 +292,8 @@
       "uranium"
     ],
     "image": "/scorpion-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Saintie",
@@ -294,7 +310,8 @@
       "ame"
     ],
     "image": "/saintie-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Tethys",
@@ -310,7 +327,8 @@
       "uranium"
     ],
     "image": "/tethys-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Fenrir",
@@ -327,7 +345,8 @@
       "ame"
     ],
     "image": "/fenrir-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Ferz",
@@ -344,7 +363,8 @@
       "ame"
     ],
     "image": "/ferz-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": true
   },
   {
     "id": "Hazel",
@@ -361,7 +381,8 @@
       "ame"
     ],
     "image": "/hazel-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Enceladus",
@@ -379,7 +400,8 @@
       "plasma"
     ],
     "image": "/enceladus-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "EnceladusPrime",
@@ -397,7 +419,8 @@
       "plasma"
     ],
     "image": "/enceladus_prime-0.png",
-    "hullClass": "destroyer"
+    "hullClass": "destroyer",
+    "voucher": true
   },
   {
     "id": "Kalisto",
@@ -414,7 +437,8 @@
       "bananium"
     ],
     "image": "/kalisto-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Metis",
@@ -431,7 +455,8 @@
       "bananium"
     ],
     "image": "/metis-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Ganymede",
@@ -448,7 +473,8 @@
       "ame"
     ],
     "image": "/ganymede-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Layak",
@@ -466,7 +492,8 @@
       "ame"
     ],
     "image": "/layak-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Eris",
@@ -482,7 +509,8 @@
       "bananium"
     ],
     "image": "/eris-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Prowler",
@@ -498,7 +526,8 @@
       "plasma"
     ],
     "image": "/prowler-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Kortik",
@@ -515,7 +544,8 @@
       "ame"
     ],
     "image": "/kortik_em-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "KortikR",
@@ -532,7 +562,8 @@
       "ame"
     ],
     "image": "/kortik_r-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Garm",
@@ -548,7 +579,8 @@
       "uranium"
     ],
     "image": "/garm-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Luxury",
@@ -565,7 +597,8 @@
       "rtg"
     ],
     "image": "/luxury-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "BlackhawkKortic",
@@ -581,7 +614,8 @@
       "ame"
     ],
     "image": "/kortic-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "BlackhawkScarab",
@@ -598,7 +632,26 @@
       "plasma"
     ],
     "image": "/blackhawk_scarab-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
+  },
+  {
+    "id": "unsaNightHawk",
+    "name": "ВША «Ночной ястреб»",
+    "description": "Средний ударный истребитель Всемирных Штатов Америки. Хищный силуэт этого корабля внушает трепет врагам свободы. Оснащен экспериментальным генератором щита «Либерти»,  БСС-25У и артиллерией дальнего боя. Свобода не просит — она забирает свое",
+    "price": 435000,
+    "group": "companies",
+    "size": "medium",
+    "classes": [
+      "mercenary",
+      "frigate"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/nighthawk-0.png",
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "HorizonSiphon",
@@ -614,7 +667,8 @@
       "uranium"
     ],
     "image": "/siphon-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Genshiro",
@@ -631,7 +685,8 @@
       "uranium"
     ],
     "image": "/genshiro-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "DMEumbra",
@@ -648,7 +703,8 @@
       "uranium"
     ],
     "image": "/umbra-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "DmiKrot",
@@ -664,7 +720,8 @@
       "plasma"
     ],
     "image": "/dmikrot-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "DrakeMackinaw",
@@ -682,7 +739,8 @@
       "ame"
     ],
     "image": "/mackinaw-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "DrakeOrca",
@@ -700,7 +758,8 @@
       "ame"
     ],
     "image": "/orca-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "DrakeSkiff",
@@ -718,7 +777,8 @@
       "ame"
     ],
     "image": "/skiff-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "DrakeHulk",
@@ -736,7 +796,8 @@
       "ame"
     ],
     "image": "/hulk-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "BunoRevizor",
@@ -752,7 +813,8 @@
       "ame"
     ],
     "image": "/revizor-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "NosskeVector",
@@ -773,7 +835,8 @@
       "plasma"
     ],
     "image": "/vector-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "regenerator",
@@ -791,7 +854,8 @@
       "plasma"
     ],
     "image": "/regenerator-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "HMIpod",
@@ -807,7 +871,8 @@
       "apu"
     ],
     "image": "/hmipod-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Veska",
@@ -824,7 +889,8 @@
       "apu"
     ],
     "image": "/veska-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Hound",
@@ -840,7 +906,8 @@
       "apu"
     ],
     "image": "/hound-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Rook",
@@ -856,7 +923,8 @@
       "apu"
     ],
     "image": "/rook-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Zephyr",
@@ -873,7 +941,8 @@
       "apu"
     ],
     "image": "/zephyr-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Snakelet",
@@ -890,7 +959,8 @@
       "apu"
     ],
     "image": "/snakelet-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": true
   },
   {
     "id": "Inertia",
@@ -907,7 +977,8 @@
       "apu"
     ],
     "image": "/inertia-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": true
   },
   {
     "id": "QJ270",
@@ -924,7 +995,8 @@
       "apu"
     ],
     "image": "/qj270-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "QJ340",
@@ -941,7 +1013,8 @@
       "apu"
     ],
     "image": "/qj340-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "QJ490",
@@ -958,7 +1031,8 @@
       "apu"
     ],
     "image": "/qj490-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Kopye",
@@ -970,7 +1044,8 @@
     "classes": [],
     "engines": [],
     "image": "/kopye-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Kupol",
@@ -982,7 +1057,8 @@
     "classes": [],
     "engines": [],
     "image": "/kupol-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Molotok",
@@ -994,7 +1070,8 @@
     "classes": [],
     "engines": [],
     "image": "/molotok-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Mock",
@@ -1011,7 +1088,8 @@
       "apu"
     ],
     "image": "/mock-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": true
   },
   {
     "id": "Antlion",
@@ -1028,7 +1106,8 @@
       "apu"
     ],
     "image": "/antlion-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "StratoRat",
@@ -1044,7 +1123,8 @@
       "apu"
     ],
     "image": "/stratorat-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Taser",
@@ -1060,7 +1140,8 @@
       "apu"
     ],
     "image": "/taser-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Ample",
@@ -1076,7 +1157,8 @@
       "apu"
     ],
     "image": "/ample-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "ZephyrEC",
@@ -1093,7 +1175,8 @@
       "apu"
     ],
     "image": "/zephyr_ec-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Bow-Man",
@@ -1109,7 +1192,8 @@
       "apu"
     ],
     "image": "/bowman-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Rac-Man",
@@ -1125,7 +1209,8 @@
       "apu"
     ],
     "image": "/racman-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Arkansaw",
@@ -1143,7 +1228,8 @@
       "bananium"
     ],
     "image": "/arkansaw-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Duran",
@@ -1159,7 +1245,8 @@
       "uranium"
     ],
     "image": "/duran-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Siebel",
@@ -1176,7 +1263,8 @@
       "ame"
     ],
     "image": "/siebel-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Comet",
@@ -1194,7 +1282,8 @@
       "plasma"
     ],
     "image": "/comet-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Littora",
@@ -1210,7 +1299,8 @@
       "ame"
     ],
     "image": "/littora-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Magus",
@@ -1226,7 +1316,26 @@
       "ame"
     ],
     "image": "/magus-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
+  },
+  {
+    "id": "Medusa",
+    "name": "Медуза",
+    "description": "Средний экспедиционный корабль специализирующийся на работе в туманностях.",
+    "price": 300000,
+    "group": "expedition",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "expedition"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/expedition_medusa-0.png",
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Meteor",
@@ -1245,7 +1354,8 @@
       "ame"
     ],
     "image": "/meteor-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Padval",
@@ -1261,7 +1371,8 @@
       "ame"
     ],
     "image": "/padval-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Pelican",
@@ -1284,7 +1395,8 @@
       "ame"
     ],
     "image": "/pelican-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "Picses",
@@ -1300,7 +1412,8 @@
       "ame"
     ],
     "image": "/picses-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Sabinemk2",
@@ -1317,7 +1430,8 @@
       "uranium"
     ],
     "image": "/sabinemk2-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Sagittarius",
@@ -1335,7 +1449,8 @@
       "ame"
     ],
     "image": "/sagittarius-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Sirius",
@@ -1352,7 +1467,8 @@
       "ame"
     ],
     "image": "/sirius-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Judiciary",
@@ -1368,7 +1484,8 @@
       "ame"
     ],
     "image": "/judiciary-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "twilightmk2",
@@ -1385,7 +1502,8 @@
       "bananium"
     ],
     "image": "/twilightmk2-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Trilobit",
@@ -1402,7 +1520,8 @@
       "plasma"
     ],
     "image": "/trilobit-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Fortunate",
@@ -1420,7 +1539,8 @@
       "plasma"
     ],
     "image": "/FortunaUNSA-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "drone-assembly",
@@ -1506,7 +1626,8 @@
       "teg"
     ],
     "image": "/Dreadnought-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": false
   },
   {
     "id": "drone-reaper",
@@ -1819,7 +1940,8 @@
       "ame"
     ],
     "image": "/intermission-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Artemis",
@@ -1835,7 +1957,8 @@
       "uranium"
     ],
     "image": "/artemis-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Velios",
@@ -1852,7 +1975,8 @@
       "ame"
     ],
     "image": "/velios-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Dervi",
@@ -1868,7 +1992,8 @@
       "plasma"
     ],
     "image": "/dervi-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Leaf",
@@ -1885,7 +2010,8 @@
       "bananium"
     ],
     "image": "/leaf-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Medicus",
@@ -1903,7 +2029,8 @@
       "uranium"
     ],
     "image": "/medicus-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Kuldi",
@@ -1920,7 +2047,8 @@
       "ame"
     ],
     "image": "/kuldi-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Promise",
@@ -1937,7 +2065,8 @@
       "ame"
     ],
     "image": "/promise-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Odenta",
@@ -1955,7 +2084,8 @@
       "uranium"
     ],
     "image": "/odenta-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Shirokami",
@@ -1972,7 +2102,8 @@
       "ame"
     ],
     "image": "/shirokami-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Skalpel",
@@ -1989,7 +2120,8 @@
       "uranium"
     ],
     "image": "/skalpel-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Stubby",
@@ -2005,7 +2137,8 @@
       "plasma"
     ],
     "image": "/stubby-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Tzipora",
@@ -2022,7 +2155,8 @@
       "ame"
     ],
     "image": "/tzipora-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Tokarev",
@@ -2039,7 +2173,8 @@
       "ame"
     ],
     "image": "/tokarev-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Triage",
@@ -2055,7 +2190,8 @@
       "uranium"
     ],
     "image": "/triage-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Phantom",
@@ -2071,7 +2207,8 @@
       "bananium"
     ],
     "image": "/phantom-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Epione",
@@ -2089,7 +2226,8 @@
       "plasma"
     ],
     "image": "/epione-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Kami",
@@ -2105,7 +2243,8 @@
       "uranium"
     ],
     "image": "/kami-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Kosmobike",
@@ -2121,7 +2260,8 @@
       "solar"
     ],
     "image": "/kosmobike-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Pebble",
@@ -2137,7 +2277,8 @@
       "uranium"
     ],
     "image": "/pebble-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Kite",
@@ -2153,7 +2294,8 @@
       "ame"
     ],
     "image": "/kite-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Yukikaze",
@@ -2169,7 +2311,8 @@
       "ame"
     ],
     "image": "/yukikaze-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "MieyoAutumn",
@@ -2185,7 +2328,8 @@
       "ame"
     ],
     "image": "/autumn_mieyo-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "MieyoNoble",
@@ -2201,7 +2345,8 @@
       "plasma"
     ],
     "image": "/noble-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "MieyoSakuratsu",
@@ -2218,7 +2363,8 @@
       "uranium"
     ],
     "image": "/sakuratsu_mieyo-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Betelgeuse",
@@ -2234,7 +2380,8 @@
       "plasma"
     ],
     "image": "/betelgeuse-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Tick",
@@ -2251,7 +2398,8 @@
       "apu"
     ],
     "image": "/tick-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Mite",
@@ -2268,7 +2416,8 @@
       "plasma"
     ],
     "image": "/mite-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Mudskipper",
@@ -2285,7 +2434,8 @@
       "plasma"
     ],
     "image": "/mudskipper-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Scallywag",
@@ -2302,7 +2452,8 @@
       "uranium"
     ],
     "image": "/scallywag-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Serkesh",
@@ -2319,7 +2470,8 @@
       "ame"
     ],
     "image": "/serkesh-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Horsefly",
@@ -2336,7 +2488,8 @@
       "plasma"
     ],
     "image": "/horsefly-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "skelraak",
@@ -2353,7 +2506,8 @@
       "ame"
     ],
     "image": "/skelraak-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": false
   },
   {
     "id": "Vrikaash",
@@ -2370,7 +2524,8 @@
       "plasma"
     ],
     "image": "/vrikaash-0.png",
-    "hullClass": "destroyer"
+    "hullClass": "destroyer",
+    "voucher": false
   },
   {
     "id": "Aldebaran",
@@ -2387,7 +2542,8 @@
       "plasma"
     ],
     "image": "/aldebaran-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Altair",
@@ -2405,7 +2561,8 @@
       "plasma"
     ],
     "image": "/altair-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Andromeda",
@@ -2421,7 +2578,8 @@
       "plasma"
     ],
     "image": "/andromeda-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Antares",
@@ -2442,7 +2600,8 @@
       "ame"
     ],
     "image": "/antares-0.png",
-    "hullClass": "destroyer"
+    "hullClass": "destroyer",
+    "voucher": true
   },
   {
     "id": "Banshee",
@@ -2460,7 +2619,8 @@
       "plasma"
     ],
     "image": "/banshee-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Welder",
@@ -2477,7 +2637,8 @@
       "uranium"
     ],
     "image": "/welder-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Hoplite",
@@ -2494,7 +2655,8 @@
       "bananium"
     ],
     "image": "/hoplite-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Dagger",
@@ -2511,7 +2673,8 @@
       "ame"
     ],
     "image": "/dagger-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Xiphos",
@@ -2527,7 +2690,8 @@
       "plasma"
     ],
     "image": "/xiphos-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Ladya",
@@ -2544,7 +2708,8 @@
       "bananium"
     ],
     "image": "/ladya-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Luda",
@@ -2562,7 +2727,8 @@
       "ame"
     ],
     "image": "/luda-0.png",
-    "hullClass": "destroyer"
+    "hullClass": "destroyer",
+    "voucher": true
   },
   {
     "id": "Ocelot",
@@ -2578,7 +2744,8 @@
       "uranium"
     ],
     "image": "/ocelot-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Paladin",
@@ -2594,7 +2761,8 @@
       "plasma"
     ],
     "image": "/paladin-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Seax",
@@ -2610,7 +2778,8 @@
       "bananium"
     ],
     "image": "/seax-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Syringe",
@@ -2626,7 +2795,8 @@
       "uranium"
     ],
     "image": "/syringe-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Spica",
@@ -2643,7 +2813,8 @@
       "bananium"
     ],
     "image": "/spica-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": true
   },
   {
     "id": "Tarantula",
@@ -2660,7 +2831,8 @@
       "ame"
     ],
     "image": "/tarantula-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Termite",
@@ -2677,7 +2849,8 @@
       "plasma"
     ],
     "image": "/termite-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Arcturus",
@@ -2695,7 +2868,8 @@
       "plasma"
     ],
     "image": "/arcturus-0.png",
-    "hullClass": "cruiser"
+    "hullClass": "cruiser",
+    "voucher": false
   },
   {
     "id": "Tumour",
@@ -2712,7 +2886,8 @@
       "uranium"
     ],
     "image": "/tumour-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Flyssa",
@@ -2733,7 +2908,8 @@
       "ame"
     ],
     "image": "/flyssa-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": true
   },
   {
     "id": "FlyssaAbaddon",
@@ -2752,7 +2928,8 @@
       "uranium"
     ],
     "image": "/flyssa_abaddon-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": true
   },
   {
     "id": "Sentinel",
@@ -2769,7 +2946,8 @@
       "ame"
     ],
     "image": "/sentinel-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "SentinelF",
@@ -2786,7 +2964,8 @@
       "ame"
     ],
     "image": "/sentinel_f-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Cinquedea",
@@ -2804,7 +2983,8 @@
       "plasma"
     ],
     "image": "/cinquedea-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Shiv",
@@ -2821,7 +3001,8 @@
       "plasma"
     ],
     "image": "/shiv-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "QJ271",
@@ -2837,7 +3018,8 @@
       "uranium"
     ],
     "image": "/qj271-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Calypso",
@@ -2854,7 +3036,8 @@
       "ame"
     ],
     "image": "/calypso-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Fracture",
@@ -2871,7 +3054,8 @@
       "uranium"
     ],
     "image": "/fracture-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Fujian",
@@ -2888,7 +3072,8 @@
       "nfr"
     ],
     "image": "/fujian-0.png",
-    "hullClass": "carrier"
+    "hullClass": "carrier",
+    "voucher": true
   },
   {
     "id": "Jaguar",
@@ -2904,7 +3089,8 @@
       "uranium"
     ],
     "image": "/jaguar-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Mercury",
@@ -2921,7 +3107,8 @@
       "ame"
     ],
     "image": "/mercury-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Razorback",
@@ -2937,7 +3124,8 @@
       "plasma"
     ],
     "image": "/razorback-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Spekter",
@@ -2954,7 +3142,8 @@
       "nfr"
     ],
     "image": "/spekter-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "TSFNPolaris",
@@ -2971,7 +3160,8 @@
       "ame"
     ],
     "image": "/polaris-0.png",
-    "hullClass": "cruiser"
+    "hullClass": "cruiser",
+    "voucher": true
   },
   {
     "id": "Argent",
@@ -2987,7 +3177,8 @@
       "uranium"
     ],
     "image": "/argent-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "Arribane",
@@ -3003,7 +3194,8 @@
       "ame"
     ],
     "image": "/arribane-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Archer",
@@ -3019,7 +3211,8 @@
       "uranium"
     ],
     "image": "/archer-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Autumn",
@@ -3035,7 +3228,8 @@
       "ame"
     ],
     "image": "/autumn-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Baeg",
@@ -3052,7 +3246,8 @@
       "apu"
     ],
     "image": "/baeg-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Borer",
@@ -3068,7 +3263,8 @@
       "plasma"
     ],
     "image": "/borer-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Bratan",
@@ -3087,7 +3283,8 @@
       "solar"
     ],
     "image": "/bratan-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Brute",
@@ -3103,7 +3300,8 @@
       "uranium"
     ],
     "image": "/brute-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Vaquita",
@@ -3119,7 +3317,8 @@
       "uranium"
     ],
     "image": "/vaquita-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Valkyrie",
@@ -3135,7 +3334,8 @@
       "ame"
     ],
     "image": "/valkyrie-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Victoria",
@@ -3152,7 +3352,8 @@
       "uranium"
     ],
     "image": "/victoria-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Windreign",
@@ -3170,7 +3371,8 @@
       "ame"
     ],
     "image": "/windreign-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Takeaway",
@@ -3189,7 +3391,8 @@
       "solar"
     ],
     "image": "/takeaway-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Guppy",
@@ -3205,7 +3408,8 @@
       "plasma"
     ],
     "image": "/guppy-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Jitterbug",
@@ -3222,7 +3426,8 @@
       "uranium"
     ],
     "image": "/jitterbug-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Zeros",
@@ -3240,7 +3445,8 @@
       "ame"
     ],
     "image": "/zeros-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Iapetus",
@@ -3256,7 +3462,8 @@
       "uranium"
     ],
     "image": "/iapetus-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "IridaMk2",
@@ -3272,7 +3479,8 @@
       "plasma"
     ],
     "image": "/irida_mk2-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Canister",
@@ -3288,7 +3496,8 @@
       "uranium"
     ],
     "image": "/canister-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Privateer",
@@ -3309,7 +3518,8 @@
       "plasma"
     ],
     "image": "/privateer-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Caracara",
@@ -3326,7 +3536,8 @@
       "plasma"
     ],
     "image": "/caracara-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "caracara",
@@ -3343,7 +3554,8 @@
       "plasma"
     ],
     "image": "/caracara-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "Kestrel",
@@ -3359,7 +3571,8 @@
       "uranium"
     ],
     "image": "/kestrel-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Claymore",
@@ -3376,7 +3589,8 @@
       "rtg"
     ],
     "image": "/claymore-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Kunai",
@@ -3392,7 +3606,8 @@
       "ame"
     ],
     "image": "/kunai-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "MClass",
@@ -3408,7 +3623,8 @@
       "ame"
     ],
     "image": "/mclass-0.png",
-    "hullClass": "carrier"
+    "hullClass": "carrier",
+    "voucher": false
   },
   {
     "id": "Merchant",
@@ -3424,7 +3640,8 @@
       "ame"
     ],
     "image": "/merchant-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "McChicken",
@@ -3441,7 +3658,8 @@
       "uranium"
     ],
     "image": "/mcchicken-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "McChilly",
@@ -3458,7 +3676,8 @@
       "apu"
     ],
     "image": "/mcchilly-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Hammerhead",
@@ -3479,7 +3698,8 @@
       "ame"
     ],
     "image": "/hammerhead-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "HeavensDrill",
@@ -3497,7 +3717,8 @@
       "plasma"
     ],
     "image": "/heavensdrill-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Noble",
@@ -3513,7 +3734,8 @@
       "plasma"
     ],
     "image": "/noble-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Notch",
@@ -3529,7 +3751,8 @@
       "plasma"
     ],
     "image": "/notch-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Olympus",
@@ -3545,7 +3768,8 @@
       "ame"
     ],
     "image": "/olympus-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Framework",
@@ -3562,7 +3786,8 @@
       "plasma"
     ],
     "image": "/framework-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Shareholder",
@@ -3578,7 +3803,8 @@
       "plasma"
     ],
     "image": "/shareholder-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Peregrine",
@@ -3594,7 +3820,8 @@
       "plasma"
     ],
     "image": "/peregrine-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Piva",
@@ -3610,7 +3837,8 @@
       "uranium"
     ],
     "image": "/piva-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Pillbox",
@@ -3626,7 +3854,8 @@
       "uranium"
     ],
     "image": "/pillbox-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Plutomkii",
@@ -3642,7 +3871,8 @@
       "uranium"
     ],
     "image": "/plutomkii-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Praetorian",
@@ -3658,7 +3888,8 @@
       "uranium"
     ],
     "image": "/praetorian-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Rig",
@@ -3674,7 +3905,8 @@
       "uranium"
     ],
     "image": "/rig-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Sakuratsu",
@@ -3691,7 +3923,8 @@
       "uranium"
     ],
     "image": "/sakuratsu-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Sellsword",
@@ -3707,7 +3940,8 @@
       "uranium"
     ],
     "image": "/sellsword-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Xinhua",
@@ -3726,7 +3960,8 @@
       "ame"
     ],
     "image": "/xinhua-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Scout",
@@ -3742,7 +3977,8 @@
       "plasma"
     ],
     "image": "/scout-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Spyglass",
@@ -3758,7 +3994,8 @@
       "uranium"
     ],
     "image": "/spyglass-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Spessbite",
@@ -3776,7 +4013,8 @@
       "uranium"
     ],
     "image": "/spessbite-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Suicidebike",
@@ -3792,7 +4030,8 @@
       "solar"
     ],
     "image": "/suicidebike-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Twilight",
@@ -3808,7 +4047,8 @@
       "uranium"
     ],
     "image": "/twilight-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Tanuki",
@@ -3824,7 +4064,8 @@
       "plasma"
     ],
     "image": "/tanuki-0.png",
-    "hullClass": "carrier"
+    "hullClass": "carrier",
+    "voucher": false
   },
   {
     "id": "Tiger",
@@ -3840,7 +4081,8 @@
       "uranium"
     ],
     "image": "/tiger-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Phaeron",
@@ -3856,7 +4098,8 @@
       "uranium"
     ],
     "image": "/phaeron-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Femur",
@@ -3872,7 +4115,8 @@
       "uranium"
     ],
     "image": "/femur-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Zhuangzi",
@@ -3888,7 +4132,8 @@
       "nfr"
     ],
     "image": "/zhuangzi-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "Shuilian",
@@ -3906,7 +4151,8 @@
       "ame"
     ],
     "image": "/shuilian-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": false
   },
   {
     "id": "Ethereal",
@@ -3923,7 +4169,8 @@
       "solar"
     ],
     "image": "/ethereal-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Rosetta",
@@ -3939,7 +4186,8 @@
       "uranium"
     ],
     "image": "/rosetta-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Balor",
@@ -3956,7 +4204,8 @@
       "plasma"
     ],
     "image": "/balor-0.png",
-    "hullClass": "cruiser"
+    "hullClass": "cruiser",
+    "voucher": false
   },
   {
     "id": "Bucket",
@@ -3972,7 +4221,8 @@
       "plasma"
     ],
     "image": "/bucket-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Sunrise",
@@ -3988,7 +4238,8 @@
       "uranium"
     ],
     "image": "/sunrise-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Hermes",
@@ -4004,7 +4255,8 @@
       "plasma"
     ],
     "image": "/hermes-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Lightning",
@@ -4023,7 +4275,8 @@
       "plasma"
     ],
     "image": "/lightning-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Manus",
@@ -4039,7 +4292,8 @@
       "uranium"
     ],
     "image": "/manus-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Ravager",
@@ -4056,7 +4310,8 @@
       "ame"
     ],
     "image": "/ravager-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": true
   },
   {
     "id": "Parabellum",
@@ -4072,7 +4327,8 @@
       "uranium"
     ],
     "image": "/parabellum-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Solarsail",
@@ -4088,7 +4344,8 @@
       "plasma"
     ],
     "image": "/solarsail-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Pacem",
@@ -4104,7 +4361,8 @@
       "bananium"
     ],
     "image": "/pacem-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Petra",
@@ -4123,7 +4381,8 @@
       "uranium"
     ],
     "image": "/petra-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Thorax",
@@ -4139,7 +4398,8 @@
       "uranium"
     ],
     "image": "/thorax-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Hornet",
@@ -4157,7 +4417,8 @@
       "uranium"
     ],
     "image": "/hornet-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Spitfire",
@@ -4173,7 +4434,8 @@
       "apu"
     ],
     "image": "/spitfire-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Hydra",
@@ -4189,7 +4451,8 @@
       "uranium"
     ],
     "image": "/hydra-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Klesh",
@@ -4205,7 +4468,8 @@
       "uranium"
     ],
     "image": "/klesh-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Talon",
@@ -4221,7 +4485,8 @@
       "uranium"
     ],
     "image": "/talon-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": true
   },
   {
     "id": "Infiltrator",
@@ -4237,7 +4502,8 @@
       "ame"
     ],
     "image": "/infiltrator-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Hunter",
@@ -4253,7 +4519,8 @@
       "uranium"
     ],
     "image": "/hunter-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Akula",
@@ -4269,7 +4536,8 @@
       "uranium"
     ],
     "image": "/akula-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Buran",
@@ -4285,7 +4553,26 @@
       "nfr"
     ],
     "image": "/buran-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
+  },
+  {
+    "id": "Hercules",
+    "name": "Геркулес",
+    "description": "Быстрый боевой шаттл с довольно опасным баллистическим арсеналом орудий.",
+    "price": 350000,
+    "group": "ussp",
+    "size": "medium",
+    "classes": [
+      "pursuit",
+      "corvette"
+    ],
+    "engines": [
+      "plasma"
+    ],
+    "image": "/Hercules-0.png",
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Gruznyk",
@@ -4302,7 +4589,8 @@
       "uranium"
     ],
     "image": "/gruznyk-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Drakon",
@@ -4319,7 +4607,8 @@
       "ame"
     ],
     "image": "/drakon-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Ledokol",
@@ -4338,7 +4627,8 @@
       "ame"
     ],
     "image": "/ledokol-0.png",
-    "hullClass": "battleship"
+    "hullClass": "battleship",
+    "voucher": true
   },
   {
     "id": "Natisk",
@@ -4354,7 +4644,8 @@
       "ame"
     ],
     "image": "/natisk-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Remontnik",
@@ -4371,7 +4662,8 @@
       "uranium"
     ],
     "image": "/remontnik-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": false
   },
   {
     "id": "Svinya",
@@ -4387,7 +4679,8 @@
       "plasma"
     ],
     "image": "/svinya-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Sekunda",
@@ -4405,7 +4698,8 @@
       "uranium"
     ],
     "image": "/sekunda-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Strayk",
@@ -4421,7 +4715,8 @@
       "uranium"
     ],
     "image": "/strayk-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Sulak",
@@ -4438,7 +4733,8 @@
       "ame"
     ],
     "image": "/sulak-0.png",
-    "hullClass": "destroyer"
+    "hullClass": "destroyer",
+    "voucher": true
   },
   {
     "id": "Tayfun",
@@ -4456,7 +4752,8 @@
       "ame"
     ],
     "image": "/tayfun-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": false
   },
   {
     "id": "Venom",
@@ -4473,7 +4770,8 @@
       "ame"
     ],
     "image": "/venom-0.png",
-    "hullClass": "destroyer"
+    "hullClass": "destroyer",
+    "voucher": false
   },
   {
     "id": "Wolfsnake",
@@ -4490,7 +4788,8 @@
       "bananium"
     ],
     "image": "/wolfsnake-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Keelback",
@@ -4508,7 +4807,8 @@
       "ame"
     ],
     "image": "/keelback-0.png",
-    "hullClass": "corvette"
+    "hullClass": "corvette",
+    "voucher": true
   },
   {
     "id": "Lancehead",
@@ -4525,7 +4825,8 @@
       "plasma"
     ],
     "image": "/lancehead-0.png",
-    "hullClass": "shuttle"
+    "hullClass": "shuttle",
+    "voucher": true
   },
   {
     "id": "Leviathan",
@@ -4541,7 +4842,8 @@
       "nfr"
     ],
     "image": "/leviathan-0.png",
-    "hullClass": "frigate"
+    "hullClass": "frigate",
+    "voucher": true
   },
   {
     "id": "Reaver",
@@ -4558,7 +4860,8 @@
       "uranium"
     ],
     "image": "/reaver-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "Talonuran",
@@ -4575,7 +4878,8 @@
       "uranium"
     ],
     "image": "/talonuran-0.png",
-    "hullClass": "fighter"
+    "hullClass": "fighter",
+    "voucher": false
   },
   {
     "id": "eighth-azimuth",
@@ -5160,6 +5464,22 @@
       "ame"
     ],
     "image": "/pdvhelios-0.png"
+  },
+  {
+    "id": "station-pdv-civilian-outpost",
+    "name": "ДФ-ГРАЖД | Аванпост гражданских ДФ",
+    "description": "Станция (POI).",
+    "price": 0,
+    "group": "station",
+    "hullClass": "station",
+    "size": "large",
+    "classes": [
+      "science"
+    ],
+    "engines": [
+      "apu"
+    ],
+    "image": "/pdv_civilian_outpost-0.png"
   },
   {
     "id": "station-polaris",
