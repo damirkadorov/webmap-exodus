@@ -14,8 +14,8 @@
 			</span>
 		</div>
 		<div class="footer-right">
-			<span class="footer-credit">Сделано Lokilife</span>
-			<span class="footer-copy">Максим Бычков &copy; 2026</span>
+			<span class="footer-credit">Сделано cempeleti</span>
+			<span class="footer-copy">cempeleti &copy; 2026</span>
 		</div>
 	</div>
 </footer>
