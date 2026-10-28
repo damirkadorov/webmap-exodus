@@ -16,7 +16,7 @@ Current release build size is ~134 KB (without images), it shouldn't be more tha
 
 ## License
 
-Author: Maxim Bychkov (Lokilife)
+Author: cempeleti
 
 All rights reserved. If you want to use this project, contact author in Discord.
 
